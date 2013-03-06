@@ -1,4 +1,4 @@
-Style-Guide
-===========
+Style-Guide-Boilerplate
+=======================
 
-A simple style guide boilerplate
+A starting point for crafting clean stlye guides.
