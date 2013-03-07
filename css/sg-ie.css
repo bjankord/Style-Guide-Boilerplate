@@ -1,0 +1,21 @@
+/* IE 6
+========================================================================== */
+.sg-font-stacks-mod{
+  _clear: both;
+}
+
+.pattern .display {
+  _float: none;
+  _width: 100%;
+}
+
+.pattern .source {
+  _float: none;
+  _width: 100%;
+}
+
+pre{
+  _white-space: pre;
+  _white-space: pre-wrap;
+  _word-wrap: break-word;
+}

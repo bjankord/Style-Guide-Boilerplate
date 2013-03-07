@@ -1,0 +1,158 @@
+/* Layout
+========================================================================== */
+body {
+  margin: 0;
+}
+
+.sg-container {
+  margin: 0 auto;
+  padding: .8em 0;
+  overflow: hidden;
+  width: 90%;
+}
+
+.sg-header {
+  background: #000;
+  color: #fff;
+  font-size: 1.6em;
+}
+
+.sg-intro {
+  padding: 0 0 3em 0;
+}
+
+.sg-styles-base {
+  padding-bottom: 4em;
+}
+
+
+
+/* Modules
+========================================================================== */
+/* Bradning
+------------------------------------- */
+.sg-logo {
+  float: right;
+}
+
+
+/* Navigation
+------------------------------------- */
+.sg-wrap {
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;  
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.sg-wrap.active {
+  left: 16em;
+}
+
+.sg-nav-toggle {
+  display: none;
+  float: left;
+  text-decoration: none;
+}
+
+
+/* Hide this button in oldIE */
+@media only screen {
+  .sg-nav-toggle {
+    display: block;
+  }
+}
+
+.sg-nav {
+  background: #333;
+  -webkit-box-shadow: inset -3px 0px 15px -3px rgba(0, 0, 0, 1);
+  box-shadow: inset -3px 0px 15px -3px rgba(0, 0, 0, 1);
+  color: #fff;
+  clear: both;
+  overflow: hidden;
+}
+
+.sg-nav-inner {
+  padding: 1em;
+}
+
+.js .sg-nav {
+  height: 100%;
+  left: -16em;
+  position: absolute;
+  top: 0;
+  width: 16em;
+}
+
+.sg-nav ul {
+  border-top: 1px solid #808080;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sg-nav li a {
+  border-bottom: 1px solid #3f3f3f;
+  color: #fff;
+  display: block;
+  padding: 0.8em;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.sg-nav li a:hover {
+  background: #444;
+}
+
+.sg-nav h2 {
+  font-weight: normal;
+} 
+
+
+/* Headings
+------------------------------------- */
+.sg-heading-primary {
+  border-bottom: 3px solid #ddd;
+  margin-top: 0;    
+  padding-bottom: .5em;
+}
+
+.sg-heading-secondary {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: .5em;
+  text-transform: capitalize;    
+}
+
+
+/* Patterns
+------------------------------------- */
+.sg-pattern {
+  clear: both;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 60em) {
+  .sg-pattern .sg-display {
+    float: left;
+    width: 65%;
+  }
+
+  .sg-pattern .sg-source {
+    float: right;
+    width: 30%;
+  }
+}
+
+.sg-pattern .sg-source pre {
+  background: #f6f6f6;
+  border: 1px solid #ddd;
+  border-radius: .5em;
+  overflow-x: scroll;
+  padding: .5em .3em;
+}
+
+.sg-pattern .sg-source pre code {
+    background: transparent;
+}
