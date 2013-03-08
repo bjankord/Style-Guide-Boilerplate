@@ -79,6 +79,18 @@ Navigation has been included to quickly jump to a certain point in your style gu
 ## Browser Support
 The Style Guide Boilerplate has been tested in the latest stable version of Chrome, Firefox, Safari, Opera. It has also been tested IE6+. Aside from the menu not showing in IE8 or lower, the boilerplate is functional and usable in oldIE. It's also been tested on a handful of mobile devices. If you come across an browser rendering bug, or have any other issues with the boilerplate, please open an issue here on GitHub.
 
+
+## Additional Resources
+[Front-end Style Guides](http://24ways.org/2011/front-end-style-guides/)
+[Front-end Style Guide Roundup](https://gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides)
+[Future-Friendly Style Guides](https://speakerdeck.com/lukebrooker/future-friendly-style-guides)
+[HTML KickStart](http://www.99lime.com/elements/)
+[Oli.jp Style Guide](http://oli.jp/2011/style-guide/)
+[Jeremy Keith's Pattern Primer](http://adactio.com/journal/5028/)
+[Paul Robert Llyod's Style Guide](http://www.paulrobertlloyd.com/about/styleguide/)
+[Pears](http://pea.rs/)
+[Starbucks Style Guide](http://www.starbucks.com/static/reference/styleguide/)
+
 ## Credit
 Thanks to Jeremy Keith for letting me build on top of [Pattern Primer](https://github.com/adactio/Pattern-Primer).
 
