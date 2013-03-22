@@ -22,12 +22,6 @@ Below the custom styles for the boilerplate, you will add in your own custom sty
     <!-- Replace below stylesheet with your own stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
-There is also a stylesheet and script file for **highlight.js** which is used add syntax highlighting to the code examples.
-
-    <!-- Highlight.js Styles and Scripts -->
-    <link rel="stylesheet" href="http://softwaremaniacs.org/media/soft/highlight/styles/github.css">
-    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-
 
 ## Intro
 
@@ -100,7 +94,11 @@ The Style Guide Boilerplate has been tested in the latest stable version of Chro
 [Starbucks Style Guide](http://www.starbucks.com/static/reference/styleguide/)
 
 ## Credit
-Thanks to Jeremy Keith for letting me build on top of [Pattern Primer](https://github.com/adactio/Pattern-Primer).
+Thanks to: 
+
+Jeremy Keith for letting me build on top of [Pattern Primer](https://github.com/adactio/Pattern-Primer).
+Dustin Diaz for the [domready](https://github.com/ded/domready) code
+[Highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in the code blocks.
 
 ## Licensing 
 **Style Guide Boilerplate** is public domain. 
