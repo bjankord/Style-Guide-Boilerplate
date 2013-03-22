@@ -66,7 +66,7 @@ Pattern styles are for your modular pieces of markup. Here you will have things 
 
 ## Navigation
 
-Navigation has been included to quickly jump to a certain point in your style guide. Currently the menu does not work in IE8 or lower, though has been tested in modern browsers and a handful of mobile devices. I've hidden the navicon in IE8 and lower since it is not functionaly though users can still scroll up and down through the style guide in oldIE.
+Navigation has been included to quickly jump to a certain point in your style guide. Currently the menu does not work in IE8 or lower, though has been tested in modern browsers and a handful of mobile devices. I've hidden the navicon in IE8 and lower since it is not functional, though users can still scroll up and down through the style guide in oldIE.
 
 ## Browser Support
 The Style Guide Boilerplate has been tested in the latest stable version of Chrome, Firefox, Safari, Opera. It has also been tested IE6+. Aside from the menu not showing in IE8 or lower, the boilerplate is functional and usable in oldIE. It's also been tested on a handful of mobile devices. If you come across an browser rendering bug, or have any other issues with the boilerplate, please open an issue here on GitHub.
