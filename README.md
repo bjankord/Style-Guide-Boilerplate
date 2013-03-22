@@ -3,8 +3,6 @@ Style-Guide-Boilerplate
 
 A starting point for crafting web style guides.
 
-## Demo
-
 [View Demo](http://brettjankord.com/projects/style-guide-boilerplate/)
 
 *Note: Sample patterns have been included in the demo. Your site will have it's own unique patterns.*
