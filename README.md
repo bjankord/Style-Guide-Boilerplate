@@ -95,7 +95,9 @@ The Style Guide Boilerplate has been tested in the latest stable version of Chro
 Thanks to: 
 
 Jeremy Keith for letting me build on top of [Pattern Primer](https://github.com/adactio/Pattern-Primer).
-Dustin Diaz for the [domready](https://github.com/ded/domready) code
+
+Dustin Diaz for the [domready](https://github.com/ded/domready) code.
+
 [Highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in the code blocks.
 
 ## Licensing 
