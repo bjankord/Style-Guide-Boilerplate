@@ -1,7 +1,7 @@
 Style-Guide-Boilerplate
 =======================
 
-A starting point for crafting web stlye guides.
+A starting point for crafting web style guides.
 
 ## Demo
 
