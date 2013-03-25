@@ -1,5 +1,6 @@
 /* Layout
 ========================================================================== */
+
 body {
   margin: 0;
 }
@@ -11,17 +12,17 @@ body {
   width: 90%;
 }
 
-.sg-header {
+.sg-header{
   background: #000;
   color: #fff;
   font-size: 1.6em;
 }
 
-.sg-intro {
+.sg-intro{
   padding: 0 0 3em 0;
 }
 
-.sg-styles-base {
+.sg-styles-base{
   padding-bottom: 4em;
 }
 
@@ -31,6 +32,7 @@ body {
 ========================================================================== */
 /* Bradning
 ------------------------------------- */
+
 .sg-logo {
   float: right;
 }
@@ -38,6 +40,7 @@ body {
 
 /* Navigation
 ------------------------------------- */
+
 .sg-wrap {
   position: relative;
   -webkit-transition: all 0.3s ease-out;  
@@ -54,9 +57,9 @@ body {
 .sg-nav-toggle {
   display: none;
   float: left;
+  color: #fff;
   text-decoration: none;
 }
-
 
 /* Hide this button in oldIE */
 @media only screen {
@@ -74,7 +77,7 @@ body {
   overflow: hidden;
 }
 
-.sg-nav-inner {
+.sg-nav-inner{
   padding: 1em;
 }
 
@@ -102,24 +105,25 @@ body {
   text-transform: capitalize;
 }
 
-.sg-nav li a:hover {
+.sg-nav li a:hover{
   background: #444;
 }
 
-.sg-nav h2 {
+.sg-nav h2{
   font-weight: normal;
 } 
 
 
 /* Headings
 ------------------------------------- */
-.sg-heading-primary {
+
+.pattern-main-heading{
   border-bottom: 3px solid #ddd;
   margin-top: 0;    
   padding-bottom: .5em;
 }
 
-.sg-heading-secondary {
+.pattern-heading{
   border-bottom: 2px solid #ddd;
   padding-bottom: .5em;
   text-transform: capitalize;    
@@ -128,24 +132,23 @@ body {
 
 /* Patterns
 ------------------------------------- */
-.sg-pattern {
+
+.pattern {
   clear: both;
   overflow: hidden;
 }
 
-@media only screen and (min-width: 60em) {
-  .sg-pattern .sg-display {
-    float: left;
-    width: 65%;
-  }
-
-  .sg-pattern .sg-source {
-    float: right;
-    width: 30%;
-  }
+.pattern .display {
+  float: left;
+  width: 65%;
 }
 
-.sg-pattern .sg-source pre {
+.pattern .source {
+  float: right;
+  width: 30%;
+}
+
+.pattern .source pre{
   background: #f6f6f6;
   border: 1px solid #ddd;
   border-radius: .5em;
@@ -153,6 +156,135 @@ body {
   padding: .5em .3em;
 }
 
-.sg-pattern .sg-source pre code {
+.pattern .source pre code{
     background: transparent;
+}
+
+
+/* Highlight.js Syntax Highlighting
+========================================================================== */
+/**
+ * github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+ */
+
+pre code {
+  display: block; padding: 0.5em;
+  color: #333;
+  background: #f8f8ff
+}
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .javadoc {
+  color: #998;
+  font-style: italic
+}
+
+pre .keyword,
+pre .css .rule .keyword,
+pre .winutils,
+pre .javascript .title,
+pre .nginx .title,
+pre .subst,
+pre .request,
+pre .status {
+  color: #333;
+  font-weight: bold
+}
+
+pre .number,
+pre .hexcolor,
+pre .ruby .constant {
+  color: #099;
+}
+
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula {
+  color: #d14
+}
+
+pre .title,
+pre .id {
+  color: #900;
+  font-weight: bold
+}
+
+pre .javascript .title,
+pre .lisp .title,
+pre .clojure .title,
+pre .subst {
+  font-weight: normal
+}
+
+pre .class .title,
+pre .haskell .type,
+pre .vhdl .literal,
+pre .tex .command {
+  color: #458;
+  font-weight: bold
+}
+
+pre .tag,
+pre .tag .title,
+pre .rules .property,
+pre .django .tag .keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+pre .attribute,
+pre .variable,
+pre .lisp .body {
+  color: #008080
+}
+
+pre .regexp {
+  color: #009926
+}
+
+pre .class {
+  color: #458;
+  font-weight: bold
+}
+
+pre .symbol,
+pre .ruby .symbol .string,
+pre .lisp .keyword,
+pre .tex .special,
+pre .prompt {
+  color: #990073
+}
+
+pre .built_in,
+pre .lisp .title,
+pre .clojure .built_in {
+  color: #0086b3
+}
+
+pre .preprocessor,
+pre .pi,
+pre .doctype,
+pre .shebang,
+pre .cdata {
+  color: #999;
+  font-weight: bold
+}
+
+pre .deletion {
+  background: #fdd
+}
+
+pre .addition {
+  background: #dfd
+}
+
+pre .diff .change {
+  background: #0086b3
+}
+
+pre .chunk {
+  color: #aaa
 }
