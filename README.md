@@ -101,6 +101,6 @@ Dustin Diaz for the [domready](https://github.com/ded/domready) code.
 [Highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in the code blocks.
 
 ## Licensing 
-**Style Guide Boilerplate** is public domain. 
+**Style Guide Boilerplate** is licensed under the [MIT License](http://en.wikipedia.org/wiki/MIT_License)
 
-I havn't gotten around to finding a specific license for it yet. Use it, build upon it, make awesome shit with it.
+Use it, build upon it, make awesome shit with it.
