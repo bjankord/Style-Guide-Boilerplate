@@ -148,6 +148,15 @@ body {
   width: 30%;
 }
 
+@media only screen and (max-width: 800px){
+  .pattern .display,
+  .pattern .source {
+    float: none;
+    width: 100%;
+  }
+}
+
+
 .pattern .source pre{
   background: #f6f6f6;
   border: 1px solid #ddd;
