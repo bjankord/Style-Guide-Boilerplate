@@ -1,3 +1,20 @@
+1.7.0 / 2013-05-24
+==================
+  
+ * Add datalist fields
+
+1.6.0 / 2013-05-24
+==================
+ 
+ * Reworked Form Buttons section
+ * Add disabled buttons
+ * Add fieldset examples
+ * Reworked Form Fields
+ * Add speech recognition input
+ * Add time input
+ * Add disabled fields
+ * Add readonly fields
+
 1.5.0 / 2013-05-24
 ==================
  
