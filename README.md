@@ -7,11 +7,23 @@ A starting point for crafting web style guides.
 
 *Note: Sample patterns have been included in the demo. Your site will have it's own unique patterns.*
 
-## About The Boilerplate
 
-In the `<head>` of **Style Guide Boilerplate** are styles custom for the boilerplate itself. These have all been prefixed with `sg-` so they hopefully shouldn't cause any conflicts with your website's own styles.
+## How to use Style Guide Boilerplate
 
-Below the custom styles for the boilerplate, you will add in your own custom stylesheet which you use on your live site.
+### Download the Style Guide Boilerplate
+You can clone the repo, fork the repo, or download the zip file for the repo from GitHub.
+Once you have the files for **Style Guide Boilerplate**, you'll create a place on your site for them.
+
+### Set up a directory on your site for the style guide
+I recommend creating a directory on your site in your root directory named `style-guide`. Really this folder can be anywhere, though I think it would be awesome if I could go to `anysite.com/style-guide/` and check out that site's style guide.
+
+### Upload the Style Guide Boilerplate files
+**Style Guide Boilerplate** is PHP based so you will need a server that supports PHP. Just upload the files from the GitHub repo to your newly created directory and your almost done.
+
+### Hook up your own CSS into the style guide
+In the `<head>` of **Style Guide Boilerplate** are custom styles for the boilerplate itself. These have all been prefixed with sg- so they hopefully shouldn't cause any conflicts with your website's own styles.
+
+Below the custom styles for the boilerplate, you will add in your own custom stylesheet(s) which you use on your live site.
 
     <!-- Style Guide Boilerplate Styles -->
     <link rel="stylesheet" href="css/sg-style.css">
@@ -19,11 +31,25 @@ Below the custom styles for the boilerplate, you will add in your own custom sty
 	  
     <!-- Replace below stylesheet with your own stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    
+    
+### Review your live site CSS
+You should be able to go to `yoursite.com/style-guide/` and see how your live site's CSS affects base elements.
+The last step is creating your sites custom patterns/modules.
+
+### Create custom patterns
+To create custom patterns like buttons, breadcrumbs, alert messages, etc., create a new .html file and add your HTML markup into the file.
+
+Save the file as `pattern-name.html` into the `markup/patterns` directory inside of your `style-guide` directory.
+
+You should now be able to see the new patterns at `yoursite.com/style-guide/`
 
 
-## Intro
+## About The Boilerplate
 
-At the top of the style guide is place to add your own comments/documentation about your style guide. Along with that, there is a section to document when the style guide was created, when it was last modified, and what the current version of your styleguide is.
+### Intro
+
+At the top of the style guide is place to add your own comments/documentation about your style guide.
 
 ### Colors
 This section is for you to add the colors you use throughout your site. This is great to keep track of things like link colors, backgrounds, etc. and make sure they are consistent.
@@ -54,19 +80,15 @@ The markup for the font stacks looks like:
       <div class="sg-font sg-font--c">HelveticaNeue, Helvetica, Arial, sans-serif</div>
     </div><!--/.sg-font-stacks-mod-->
 
-## Folder Structure
+### Folder Structure
  
 There are two parts to the styleguide. Base styles and pattern styles. Inside the root directory is a folder named **markup**. In here are the folders for your markup snippets for base styles and pattern styles. Whatever **.html** files you add in to these folders will show up in the style guide.
  
-### Base
+#### Base
 Base styles are for your base elements. Here you will have default styles for things like H1s-H6s, Blockquotes, Tabular Data, etc.
 
-### Patterns
+#### Patterns
 Pattern styles are for your modular pieces of markup. Here you will have things like pagination, buttons, alerts, etc. Though you may also have custom styles for your base elements like your H1s-H6s, Blockquotes, Tabular Data, etc.
-
-## Navigation
-
-Navigation has been included to quickly jump to a certain point in your style guide. Currently the menu does not work in IE8 or lower, though has been tested in modern browsers and a handful of mobile devices. I've hidden the navicon in IE8 and lower since it is not functional, though users can still scroll up and down through the style guide in oldIE.
 
 ## Browser Support
 The Style Guide Boilerplate has been tested in the latest stable version of Chrome, Firefox, Safari, Opera. It has also been tested IE6+. Aside from the menu not showing in IE8 or lower, the boilerplate is functional and usable in oldIE. It's also been tested on a handful of mobile devices. If you come across an browser rendering bug, or have any other issues with the boilerplate, please open an issue here on GitHub.
