@@ -1,3 +1,13 @@
+1.8.0 / 2013-05-29
+==================
+
+ * Reworked Media section
+ * Add Audio example
+ * Add Video example
+ * Reworked preformatted text
+ * Reworked tabular data
+ * Add table with side headings
+
 1.7.1 / 2013-05-28
 ==================
   
