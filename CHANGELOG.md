@@ -1,3 +1,9 @@
+1.9.0 / 2013-06-07
+==================
+ 
+ * Normalize formatting for all markup snippets
+ * Update tabular data example
+
 1.8.1 / 2013-05-29
 ==================
  

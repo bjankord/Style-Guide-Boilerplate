@@ -75,11 +75,6 @@
 
       <p>Comments and documentation about your style guide. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nobis enim labore facilis consequuntur! Veritatis neque est suscipit tenetur temporibus enim consequatur deserunt perferendis. Neque nemo iusto minima deserunt amet.<p>
 
-      <h2>Info</h2>    
-      <p>Created: 05-05-13</p>
-      <p>Modified: 05-07-13</p>
-      <p>Version: 1.0.1</p>
-
       <div class="sg-colors-mod">
         <h2>Colors</h2>
         <ul class="sg-colors">
@@ -116,7 +111,7 @@
           $title = preg_replace("/\-/i", " ", $filename);
           echo '<div class="pattern">';
           echo '<div class="display">';
-          echo '<h2 class="pattern-heading"><a name="'.$filename.'">'.$title.'</a></h2>';
+          echo '<h2 class="pattern-heading"><a id="'.$filename.'">'.$title.'</a></h2>';
           include('markup/base/'.$file);
           echo '</div>';
           echo '<div class="source">';
@@ -148,7 +143,7 @@
           $title = preg_replace("/\-/i", " ", $filename);
           echo '<div class="pattern">';
           echo '<div class="display">';
-          echo '<h2 class="pattern-heading"><a name="'.$filename.'">'.$title.'</a></h2>';
+          echo '<h2 class="pattern-heading"><a id="'.$filename.'">'.$title.'</a></h2>';
           include('markup/patterns/'.$file);
           echo '</div>';
           echo '<div class="source">';
