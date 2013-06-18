@@ -43,6 +43,7 @@ Save the file as `pattern-name.html` into the `markup/patterns` directory inside
 
 You should now be able to see the new patterns at `yoursite.com/style-guide/`
 
+![Screenshot](http://bjankord.github.io/Style-Guide-Boilerplate/assets/screenshot-1.jpg)
 
 ## Browser Support
 I've built **Style Guide Boilerplate** with progressive enhancement in mind to work on a wide range of browsers.
