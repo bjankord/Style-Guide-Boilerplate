@@ -7,6 +7,7 @@ A starting point for crafting web style guides.
 
 *Note: Sample patterns have been included in the demo. Your site will have it's own unique patterns.*
 
+![Screenshot](http://bjankord.github.io/Style-Guide-Boilerplate/assets/screenshot-1.jpg)
 
 ## Getting Started With Style Guide Boilerplate
 
@@ -42,8 +43,6 @@ To create custom patterns like buttons, breadcrumbs, alert messages, etc., creat
 Save the file as `pattern-name.html` into the `markup/patterns` directory inside of your `style-guide` directory.
 
 You should now be able to see the new patterns at `yoursite.com/style-guide/`
-
-![Screenshot](http://bjankord.github.io/Style-Guide-Boilerplate/assets/screenshot-1.jpg)
 
 ## Browser Support
 I've built **Style Guide Boilerplate** with progressive enhancement in mind to work on a wide range of browsers.
