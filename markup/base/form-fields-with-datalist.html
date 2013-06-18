@@ -22,10 +22,12 @@
         <option>75</option> 
       </datalist>
       <script>
+      if (document.querySelector) {
         document.querySelector('#number_input').onchange = function(e) {
           e.target.nextElementSibling.innerText = e.target.value;
         }
-      </script>
+      }
+    </script>
     </div>
     <div>
       <label>Color input with datalist</label>

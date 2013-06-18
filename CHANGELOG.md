@@ -1,3 +1,15 @@
+2.0.0 / 2013-06-18
+==================
+ 
+ * Reworked navigation
+ * Reworked layout
+ * Added hex values to color swatches
+ * Added ability to toggle code snippets
+ * Switched to placehold.it for images
+ * Switched to prettify.js for code highlighting
+ * Improved usability across mobile and legacy browsers
+ * Normalized time element formatting
+
 1.9.0 / 2013-06-07
 ==================
  

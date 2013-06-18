@@ -22,7 +22,15 @@
     <div><label>Textarea</label> <textarea cols="30" rows="5" >Textarea text</textarea></div>
     <div><label>Color input</label> <input type="color" value="#000000"></div>
     <div><label>Number input</label> <input type="number" value="5" min="0" max="10"></div>
-    <div><label>Range input</label> <input type="range" id="range" value="0" min="0" max="100"> <output for="range">0</output> <script>document.querySelector('#range').onchange = function(e) {e.target.nextElementSibling.innerText = e.target.value;}</script></div>
+    <div><label>Range input</label> <input type="range" id="range" value="0" min="0" max="100"> <output for="range">0</output> 
+    <script>
+      if (document.querySelector) {
+        document.querySelector('#range').onchange = function(e) {
+          e.target.nextElementSibling.innerText = e.target.value;
+        }
+      }
+    </script>
+    </div>
     <div><label>Date input</label> <input type="date"></div>
     <div><label>Month input</label> <input type="month"></div>
     <div><label>Week input</label> <input type="week"></div>
