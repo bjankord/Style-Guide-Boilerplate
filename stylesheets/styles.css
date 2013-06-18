@@ -159,7 +159,7 @@ blockquote > :last-child {margin-bottom: 0;}
 
 
 
-/* Buttons
+/* Lists
 -------------------------------------------------------------- */
 .list--inline {
 	margin: 0;
@@ -172,6 +172,11 @@ blockquote > :last-child {margin-bottom: 0;}
 	padding: 0 1em;
 }
 
+@media screen and (max-width: 400px) {
+.list--inline li {
+	padding: 0 .3em;
+}
+}
 
 /* Highlights
 -------------------------------------------------------------- */
