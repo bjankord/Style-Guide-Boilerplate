@@ -1,6 +1,6 @@
 /* -------------------------------------------------------------------------
 
- Style Guide Boilerplate v2.0.0
+ Style Guide Boilerplate v2.0.1
  Repo: https://github.com/bjankord/Style-Guide-Boilerplate
  Author: Brett Jankord
  License: MIT
@@ -311,36 +311,6 @@ ol.linenums li {
   color: #bebec5;
   line-height: 1.5;
   padding-left: .8em;
-}
-
-
-/* -------------------------------------------------------------------------
- Scrollbars
----------------------------------------------------------------------------- */
-::-webkit-scrollbar {
-  height: 14px;
-  width: 14px;
-}
- 
-::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.1); 
-  -webkit-border-radius: 7px;
-          border-radius: 7px;
-  -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0);
-          box-shadow: inset 0 0 8px rgba(0,0,0,0); 
-}
- 
-::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.15);
-  -webkit-border-radius: 7px;
-          border-radius: 7px; 
-  -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0);
-          box-shadow: inset 0 0 8px rgba(0,0,0,0);
-}
-
-::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(0,0,0,0.1); 
 }
 
 
