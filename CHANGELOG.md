@@ -1,3 +1,9 @@
+2.1.0 / 2013-07-13
+==================
+
+ * Add button that selects sample markup to be copied
+ * Resolves issue #4 and issue #6 
+
 2.0.2 / 2013-07-09
 ==================
 
