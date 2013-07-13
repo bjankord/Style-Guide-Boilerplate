@@ -1,4 +1,4 @@
-Style-Guide-Boilerplate v2.0.2
+Style-Guide-Boilerplate v2.1.0
 ==============================
 
 A starting point for crafting web style guides.
