@@ -146,6 +146,13 @@ body {margin: 0;}
   float: right;
 }
 
+.sg-btn--select {
+  border-radius: 0 0.3em;
+  position: absolute;
+  right: 1px;
+  top: 14px;
+}
+
 
 /* Sections
 ---------------------------------------------------------------------------- */
@@ -215,6 +222,10 @@ body {margin: 0;}
 .sg-markup-controls {
   overflow: hidden;
   padding-top: 1.5em;
+}
+
+.sg-source {
+  position: relative;
 }
 
 .sg-source pre {
