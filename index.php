@@ -48,7 +48,7 @@
         echo '</div>';
         echo '<div class="sg-markup-controls"><a class="sg-btn sg-btn--source" href="#">View Source</a> <a class="sg-btn--top" href="#top">Back to Top</a> </div>';
         echo '<div class="sg-source sg-animated">';
-        echo '<a class="sg-btn sg-btn--select" href="#">Get the code</a>';
+        echo '<a class="sg-btn sg-btn--select" href="#">Copy Source</a>';
         echo '<pre class="prettyprint linenums"><code>';
         echo htmlspecialchars(file_get_contents('markup/'.$type.'/'.$file));
         echo '</code></pre>';

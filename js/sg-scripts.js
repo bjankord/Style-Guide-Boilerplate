@@ -65,6 +65,7 @@
     [].forEach.call( document.querySelectorAll('.sg-btn--select'), function(el) {
       el.onclick = function() {
         selectText(this.nextSibling);
+        toggleClass(this, 'is-active');
         return false;
       };
     }, false);

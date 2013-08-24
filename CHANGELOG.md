@@ -1,3 +1,9 @@
+2.2.0 / 2013-08-24
+==================
+
+ * Update wording on button that selects sample markup to be copied
+ * Add tooltip to copy source button
+
 2.1.0 / 2013-07-13
 ==================
 

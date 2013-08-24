@@ -132,16 +132,6 @@ body {margin: 0;}
   text-decoration: none;
 }
 
-.js .sg-btn--source {
-  display: block;
-}
-
-.sg-btn--source, 
-.operamini .sg-btn--source,
-.legacy .sg-btn--source {
-  display: none;
-}
-
 .sg-btn--top {
   float: right;
 }
@@ -151,6 +141,52 @@ body {margin: 0;}
   position: absolute;
   right: 1px;
   top: 14px;
+}
+
+.sg-btn--select.is-active:hover:after{
+  background:#111;
+  background:rgba(0,0,0,.8);
+  border-radius:5px;
+  top:45px;
+  color:#fff;
+  content:"Selected code ready to be copied";
+  font-size: .8em;
+  display:block;
+  right:5px;
+  padding:5px 15px;
+  position:absolute;
+  white-space:nowrap;
+  z-index:98
+}
+
+.sg-btn--select.is-active:hover:before{
+  border:solid;
+  border-color:#111 transparent;
+  border-width:0 6px 6px 6px;
+  top:40px;
+  content:"";
+  display:block;
+  left:75%;
+  position:absolute;
+  z-index:99
+}
+
+/* Hide specific buttons for use with JS */
+.sg-btn--source,
+.sg-btn--select {
+  display: none;
+}
+
+/* Show specific buttons if JS enabled */
+.js .sg-btn--source,
+.js .sg-btn--select {
+  display: block;
+}
+
+/* Hide specific buttons conditionally */
+.operamini .sg-btn--source,
+.legacy .sg-btn--source {
+  display: none;
 }
 
 
