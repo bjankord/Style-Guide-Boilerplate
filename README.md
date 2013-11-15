@@ -1,7 +1,7 @@
 Style-Guide-Boilerplate v2.3.0
 ==============================
 
-A starting point for crafting web style guides.
+A starting point for crafting living style guides.
 
 [View Demo](http://brettjankord.com/projects/style-guide-boilerplate/)
 
