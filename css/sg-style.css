@@ -10,6 +10,11 @@
 /* -------------------------------------------------------------------------
  Layout
 ---------------------------------------------------------------------------- */
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {margin: 0;}
 
 .sg-header {
@@ -210,23 +215,24 @@ body {margin: 0;}
   background: #fff;
   border: 1px solid #bbb;
   display: inline-block;
-  height: 77px;
+  height: 89px;
   margin: 0 .5em .5em 0;
   padding: 5px;
   position: relative;
-  width: 77px;
+  width: 89px;
 }
 
 .sg-color-swatch {
   display: block;
   height: 100%;
+  position: relative;
   width: 100%;
 }
 
 .sg-color-swatch span {
   background: #000;
   background: rgba(0,0,0,.7);
-  bottom: 5px;
+  bottom: 0;
   color: #fff;
   font-size: .8em;
   margin: 0;
@@ -235,7 +241,7 @@ body {margin: 0;}
   position: absolute;
   text-align: center;
   text-transform: uppercase;
-  width: 77px;
+  width: 100%;
 }
 
 .sg-color-swatch:hover span {
