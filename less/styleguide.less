@@ -7,6 +7,9 @@
 
 ---------------------------------------------------------------------------- */
 
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
 /* -------------------------------------------------------------------------
  Layout
 ---------------------------------------------------------------------------- */
@@ -164,17 +167,10 @@ body {margin: 0;}
 
 /* Colors
 ---------------------------------------------------------------------------- */
-.sg-color {
-  background: #fff;
-  border: 1px solid #bbb;
-  display: inline-block;
-  height: 77px;
-  margin: 0 .5em .5em 0;
-  padding: 5px;
-  position: relative;
-  width: 77px;
+.sg-lg{
+	width: 110px;
+	height: 110px;
 }
-
 .sg-color-swatch {
   display: block;
   height: 100%;
@@ -193,12 +189,31 @@ body {margin: 0;}
   position: absolute;
   text-align: center;
   text-transform: uppercase;
-  width: 77px;
+  width: 70px;
+}
+.sg-lg .sg-color-swatch span{
+	width: 110px;
 }
 
 .sg-color-swatch:hover span {
   opacity: 1;
 }
+/* -------------------------------------------------------------------------
+ Colors
+---------------------------------------------------------------------------- */
+
+//main
+.sg-brand-primary .sg-color-swatch {background: @brand-primary;}
+.sg-gray-lighter .sg-color-swatch {background: @gray-lighter;}
+.sg-gray-light .sg-color-swatch {background: @gray-light;}
+.sg-gray .sg-color-swatch {background: @gray;}
+.sg-gray-dark .sg-color-swatch {background: @gray-dark;}
+.sg-gray-darker .sg-color-swatch {background: @gray-darker;}
+
+.sg-brandsuccess .sg-color-swatch {background: @brand-success;}
+.sg-brand-info .sg-color-swatch {background: @brand-info;}
+.sg-brand-warning .sg-color-swatch {background: @brand-warning;}
+.sg-brand-danger .sg-color-swatch {background: @brand-danger;}
 
 
 /* Fonts

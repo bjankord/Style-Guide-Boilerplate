@@ -142,15 +142,9 @@ body {
 }
 /* Colors
 ---------------------------------------------------------------------------- */
-.sg-color {
-  background: #fff;
-  border: 1px solid #bbb;
-  display: inline-block;
-  height: 77px;
-  margin: 0 .5em .5em 0;
-  padding: 5px;
-  position: relative;
-  width: 77px;
+.sg-lg {
+  width: 110px;
+  height: 110px;
 }
 .sg-color-swatch {
   display: block;
@@ -169,10 +163,46 @@ body {
   position: absolute;
   text-align: center;
   text-transform: uppercase;
-  width: 77px;
+  width: 70px;
+}
+.sg-lg .sg-color-swatch span {
+  width: 110px;
 }
 .sg-color-swatch:hover span {
   opacity: 1;
+}
+/* -------------------------------------------------------------------------
+ Colors
+---------------------------------------------------------------------------- */
+.sg-brand-primary .sg-color-swatch {
+  background: #bbbbbb;
+}
+.sg-gray-lighter .sg-color-swatch {
+  background: #dddddd;
+}
+.sg-gray-light .sg-color-swatch {
+  background: #808080;
+}
+.sg-gray .sg-color-swatch {
+  background: #555555;
+}
+.sg-gray-dark .sg-color-swatch {
+  background: #333333;
+}
+.sg-gray-darker .sg-color-swatch {
+  background: #222222;
+}
+.sg-brandsuccess .sg-color-swatch {
+  background: #469408;
+}
+.sg-brand-info .sg-color-swatch {
+  background: #029acf;
+}
+.sg-brand-warning .sg-color-swatch {
+  background: #9b479f;
+}
+.sg-brand-danger .sg-color-swatch {
+  background: #d9831f;
 }
 /* Fonts
 ---------------------------------------------------------------------------- */

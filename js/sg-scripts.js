@@ -82,16 +82,6 @@
     // Init prettyprint
     prettyPrint();
   
-    // Get nav form
-    var nav = document.getElementById('js-sg-section-switcher');
-    
-    // Toggle active class on navToggle click
-    nav.onchange = function() {
-      var val = this.value;
-      if (val !== "") {
-        window.location = val;
-      }
-    };
   }
  
  })(document);

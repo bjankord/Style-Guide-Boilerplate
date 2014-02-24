@@ -69,7 +69,7 @@
   <!-- Replace below stylesheet with your own stylesheet -->
   <link rel="stylesheet" href="css/theme.css">
 </head>
-<body  data-spy="scroll" data-target=".navbar-right">
+<body   data-spy="scroll" data-target=".navbar-default" data-offset="30" >
     <!-- Fixed navbar -->
        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
          <div class="container">
@@ -84,19 +84,17 @@
            </div>
            <div class="navbar-collapse collapse">
            <ul class="nav navbar-nav navbar-right">
-                           <li><a href="#"></a></li>
-                           <li>
-                             <div class="btn-group navbar-btn">
-                               <button class="btn">Jump to Section:</button>
-                               <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
-                               <ul class="dropdown-menu">
+                         <li class="dropdown active">
+                         						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Select an element: <b class="caret"></b></a>
+                          
+                               <ul class="dropdown-menu  sg-sect">
                                <li><a href="#sg-about">About</a></li>
                                <li role="presentation" class="divider"></li>
                                  <li role="presentation" class="dropdown-header">Foundation</li>
                                   
                                  
                                  <li><a href="#sg-colors">Colors</a></li>
-                                 <li><a href="#sg-colors">Font-Stacks</a></li>
+                                 <li><a href="#sg-font-stacks">Font-Stacks</a></li>
                                   <li role="presentation" class="divider"></li>
                                    <li role="presentation" class="dropdown-header">Base Styles</li>
                                     <?php listMarkupAsOptions('base'); ?>
@@ -105,7 +103,7 @@
                                      <?php listMarkupAsOptions('patterns'); ?>
                                  
                                </ul>
-                             </div>
+                            
                            </li>
                        </ul>
                        
@@ -117,21 +115,34 @@
 <div class="sg-body sg-container container">
   <div class="sg-info">               
     <div class="sg-about sg-section">
-      <h1 class="page-header" id="sg-about">About</h2>
-      <p>Comments and documentation about your style guide. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nobis enim labore facilis consequuntur! Veritatis neque est suscipit tenetur temporibus enim consequatur deserunt perferendis. Neque nemo iusto minima deserunt amet.</p>
+      <h1 class="page-header" id="sg-about">About</h1>
+      <p>Comments and documentation about your style guide. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nobis enim labore facilis consequuntur! Veritatis neque est suscipit tenetur temporibus enim </p>
+  </div>
+      <div class="sg-base-styles">    
+  <h1 class="page-header">Base Styles</h1>
+  <?php showMarkup('base'); ?>
+</div>consequatur deserunt perferendis. Neque nemo iusto minima deserunt amet.</p>
     </div><!--/.sg-about-->
     
     <div class="sg-colors sg-section">
     <h1 class="page-header">Foundation</h1>
-      <h2 class="sg-h2"><a id="sg-colors" class="sg-anchor">Colors</a></h2>
-        <div class="sg-color sg-color--a"><span class="sg-color-swatch"><span class="sg-animated">#88ffda</span></span></div>
-        <div class="sg-color sg-color--b"><span class="sg-color-swatch"><span class="sg-animated">#4dd3c9</span></span></div>
-        <div class="sg-color sg-color--c"><span class="sg-color-swatch"><span class="sg-animated">#339db0</span></span></div>
-        <div class="sg-color sg-color--d"><span class="sg-color-swatch"><span class="sg-animated">#2078aa</span></span></div>
-        <div class="sg-color sg-color--e"><span class="sg-color-swatch"><span class="sg-animated">#3a517a</span></span></div>
-        <div class="sg-color sg-color--f"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
-        <div class="sg-markup-controls"><a class="sg-btn--top" href="#top">Back to Top</a></div>
-    </div><!--/.sg-colors-->
+    <h2>Colors</h2>
+<h4>Main Colors</h4>
+    <div class="sg-color sg-brand-primary sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#57DAE6</span></span></div>
+    <div class="sg-color sg-gray-lighter sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#57DAE6</span></span></div>
+    <div class="sg-color sg-gray-light sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#57DAE6</span></span></div>
+    <div class="sg-color sg-gray sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#57DAE6</span></span></div>
+    <div class="sg-color sg-gray-dark sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#4dd3c9</span></span></div>
+    <div class="sg-color sg-gray-darker sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#339db0</span></span></div>
+    
+    <h4>Complementary Colors</h4>
+    <div class="sg-color sg-brand-success"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
+    <div class="sg-color sg-brand-warning"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
+    <div class="sg-color sg-brand-danger"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
+    <div class="sg-color sg-brand-info"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
+    <div class="sg-markup-controls"><a class="sg-btn--top" href="#top">Ir al inicio</a></div>
+</div><!--/.sg-colors-->
+
     
     <div class="sg-font-stacks sg-section">
       <h2 class="sg-h2"><a id="sg-fontStacks" class="sg-anchor">Font Stacks</a></h2>
