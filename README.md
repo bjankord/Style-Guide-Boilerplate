@@ -1,7 +1,7 @@
-Style-Guide-Boilerplate v2.3.0
+Style-Guide-Boilerplate Bootstrap Edition
 ==============================
 
-A starting point for crafting living style guides.
+A starting point for crafting living style guides for Bootstrap-based projects.
 
 [View Demo](http://brettjankord.com/projects/style-guide-boilerplate/)
 
