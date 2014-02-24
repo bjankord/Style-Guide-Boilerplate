@@ -23,7 +23,7 @@
         $filename = preg_replace("/\.html$/i", "", $file); 
         $title = preg_replace("/\-/i", " ", $filename);
         $title = ucwords($title);
-        echo '<option value="#sg-'.$filename.'">'.$title.'</option>';
+        echo '<li><a href="#sg-'.$filename.'">'.$title.'</a></li>';
     endforeach;
   }
 
@@ -43,7 +43,7 @@
         $title = preg_replace("/\-/i", " ", $filename);
         echo '<div class="sg-markup sg-section">';
         echo '<div class="sg-display">';
-        echo '<h2 class="sg-h2"><a id="sg-'.$filename.'" class="sg-anchor">'.$title.'</a></h2>';
+        echo '<h2 class="sg-h2" id="sg-'.$filename.'">'.$title.'</h2>';
         include('markup/'.$type.'/'.$file);
         echo '</div>';
         echo '<div class="sg-markup-controls"><a class="sg-btn sg-btn--source" href="#">View Source</a> <a class="sg-btn--top" href="#top">Back to Top</a> </div>';
@@ -69,7 +69,7 @@
   <!-- Replace below stylesheet with your own stylesheet -->
   <link rel="stylesheet" href="css/theme.css">
 </head>
-<body>
+<body  data-spy="scroll" data-target=".navbar-right">
     <!-- Fixed navbar -->
        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
          <div class="container">
@@ -84,76 +84,45 @@
            </div>
            <div class="navbar-collapse collapse">
            <ul class="nav navbar-nav navbar-right">
-                           <li><a href="#">Link</a></li>
+                           <li><a href="#"></a></li>
                            <li>
                              <div class="btn-group navbar-btn">
-                               <button class="btn btn-danger">Action</button>
-                               <button data-toggle="dropdown" class="btn btn-danger dropdown-toggle"><span class="caret"></span></button>
+                               <button class="btn">Jump to Section:</button>
+                               <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
                                <ul class="dropdown-menu">
-                                 <li><a href="#">Action</a></li>
-                                 <li><a href="#">Another action</a></li>
-                                 <li><a href="#">Something else here</a></li>
-                                 <li class="divider"></li>
-                                 <li><a href="#">Separated link</a></li>
+                               <li><a href="#sg-about">About</a></li>
+                               <li role="presentation" class="divider"></li>
+                                 <li role="presentation" class="dropdown-header">Foundation</li>
+                                  
+                                 
+                                 <li><a href="#sg-colors">Colors</a></li>
+                                 <li><a href="#sg-colors">Font-Stacks</a></li>
+                                  <li role="presentation" class="divider"></li>
+                                   <li role="presentation" class="dropdown-header">Base Styles</li>
+                                    <?php listMarkupAsOptions('base'); ?>
+                                   <li role="presentation" class="divider"></li>
+                                    <li role="presentation" class="dropdown-header">Patterns</li>
+                                     <?php listMarkupAsOptions('patterns'); ?>
+                                 
                                </ul>
                              </div>
                            </li>
                        </ul>
-                       <div class="col-sm-3 col-md-3 pull-right">
-                     
-             		<form class="navbar-form sg-nav"  id="js-sg-nav" action=""  method="post" >
-             	
-             			<select id="js-sg-section-switcher" class="sg-section-switcher" name="sg_section_switcher">
-             			    <option value="">Jump To Section:</option>
-             			    <optgroup label="Intro">
-             			      <option value="#sg-about">About</option>
-             			      <option value="#sg-colors">Colors</option>
-             			      <option value="#sg-fontStacks">Font-Stacks</option>
-             			    </optgroup>
-             			    <optgroup label="Base Styles">
-             			      <?php listMarkupAsOptions('base'); ?>
-             			    </optgroup>
-             			    <optgroup label="Pattern Styles">
-             			      <?php listMarkupAsOptions('patterns'); ?>
-             			    </optgroup>
-             			</select>
-             			<input type="hidden" name="sg_uri" value="<?php echo $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]; ?>">
-             			<button type="submit" class="sg-submit-btn">Go</button>             			
-             		</div>
-             		</form>
-             		</div>
+                       
            </div><!--/.nav-collapse -->
          </div>
        </div>
-<div id="top" class="sg-header sg-container">
-  <h1 class="sg-logo">STYLE GUIDE <span>BOILERPLATE</span></h1>
-  <form id="js-sg-nav" action=""  method="post" class="sg-nav">
-    <select id="js-sg-section-switcher" class="sg-section-switcher" name="sg_section_switcher">
-        <option value="">Jump To Section:</option>
-        <optgroup label="Intro">
-          <option value="#sg-about">About</option>
-          <option value="#sg-colors">Colors</option>
-          <option value="#sg-fontStacks">Font-Stacks</option>
-        </optgroup>
-        <optgroup label="Base Styles">
-          <?php listMarkupAsOptions('base'); ?>
-        </optgroup>
-        <optgroup label="Pattern Styles">
-          <?php listMarkupAsOptions('patterns'); ?>
-        </optgroup>
-    </select>
+<!--/.sg-header-->
 
-  </form><!--/.sg-nav-->
-</div><!--/.sg-header-->
-
-<div class="sg-body sg-container">
+<div class="sg-body sg-container container">
   <div class="sg-info">               
     <div class="sg-about sg-section">
-      <h2 class="sg-h2"><a id="sg-about" class="sg-anchor">About</a></h2>
+      <h1 class="page-header" id="sg-about">About</h2>
       <p>Comments and documentation about your style guide. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nobis enim labore facilis consequuntur! Veritatis neque est suscipit tenetur temporibus enim consequatur deserunt perferendis. Neque nemo iusto minima deserunt amet.</p>
     </div><!--/.sg-about-->
     
     <div class="sg-colors sg-section">
+    <h1 class="page-header">Foundation</h1>
       <h2 class="sg-h2"><a id="sg-colors" class="sg-anchor">Colors</a></h2>
         <div class="sg-color sg-color--a"><span class="sg-color-swatch"><span class="sg-animated">#88ffda</span></span></div>
         <div class="sg-color sg-color--b"><span class="sg-color-swatch"><span class="sg-animated">#4dd3c9</span></span></div>
@@ -173,16 +142,18 @@
   </div><!--/.sg-info-->    
 
   <div class="sg-base-styles">    
-    <h1 class="sg-h1">Base Styles</h1>
+    <h1 class="page-header">Base Styles</h1>
     <?php showMarkup('base'); ?>
   </div><!--/.sg-base-styles-->
 
   <div class="sg-pattern-styles">
-    <h1 class="sg-h1">Pattern Styles<small> - Design and mark-up patterns unique to your site.</small></h1>
+    <h1 class="page-header">Patterns<small> - Design and mark-up patterns unique to your site.</small></h1>
     <?php showMarkup('patterns'); ?>
     </div><!--/.sg-pattern-styles-->
   </div><!--/.sg-body-->
-
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/scrollspy.js"></script>
+	<script src="js/dropdown.js"></script>
   <script src="js/sg-plugins.js"></script>
   <script src="js/sg-scripts.js"></script>
 </body>
