@@ -63,13 +63,68 @@
   <title>Style Guide Boilerplate</title>
   <meta name="viewport" content="width=device-width">
   <!-- Style Guide Boilerplate Styles -->
-  <link rel="stylesheet" href="css/sg-style.css">
+  <link rel="stylesheet" href="css/styleguide.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
   
   <!-- Replace below stylesheet with your own stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/theme.css">
 </head>
 <body>
-    
+    <!-- Fixed navbar -->
+       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+         <div class="container">
+           <div class="navbar-header">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+             </button>
+             <a class="navbar-brand" href="#"><strong>Project name</strong> Style Guide</a>
+           </div>
+           <div class="navbar-collapse collapse">
+           <ul class="nav navbar-nav navbar-right">
+                           <li><a href="#">Link</a></li>
+                           <li>
+                             <div class="btn-group navbar-btn">
+                               <button class="btn btn-danger">Action</button>
+                               <button data-toggle="dropdown" class="btn btn-danger dropdown-toggle"><span class="caret"></span></button>
+                               <ul class="dropdown-menu">
+                                 <li><a href="#">Action</a></li>
+                                 <li><a href="#">Another action</a></li>
+                                 <li><a href="#">Something else here</a></li>
+                                 <li class="divider"></li>
+                                 <li><a href="#">Separated link</a></li>
+                               </ul>
+                             </div>
+                           </li>
+                       </ul>
+                       <div class="col-sm-3 col-md-3 pull-right">
+                     
+             		<form class="navbar-form sg-nav"  id="js-sg-nav" action=""  method="post" >
+             	
+             			<select id="js-sg-section-switcher" class="sg-section-switcher" name="sg_section_switcher">
+             			    <option value="">Jump To Section:</option>
+             			    <optgroup label="Intro">
+             			      <option value="#sg-about">About</option>
+             			      <option value="#sg-colors">Colors</option>
+             			      <option value="#sg-fontStacks">Font-Stacks</option>
+             			    </optgroup>
+             			    <optgroup label="Base Styles">
+             			      <?php listMarkupAsOptions('base'); ?>
+             			    </optgroup>
+             			    <optgroup label="Pattern Styles">
+             			      <?php listMarkupAsOptions('patterns'); ?>
+             			    </optgroup>
+             			</select>
+             			<input type="hidden" name="sg_uri" value="<?php echo $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]; ?>">
+             			<button type="submit" class="sg-submit-btn">Go</button>             			
+             		</div>
+             		</form>
+             		</div>
+           </div><!--/.nav-collapse -->
+         </div>
+       </div>
 <div id="top" class="sg-header sg-container">
   <h1 class="sg-logo">STYLE GUIDE <span>BOILERPLATE</span></h1>
   <form id="js-sg-nav" action=""  method="post" class="sg-nav">
@@ -87,8 +142,7 @@
           <?php listMarkupAsOptions('patterns'); ?>
         </optgroup>
     </select>
-    <input type="hidden" name="sg_uri" value="<?php echo $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]; ?>">
-    <button type="submit" class="sg-submit-btn">Go</button>
+
   </form><!--/.sg-nav-->
 </div><!--/.sg-header-->
 
