@@ -41,14 +41,14 @@
     foreach ($files as $file):
         $filename = preg_replace("/\.html$/i", "", $file);
         $title = preg_replace("/\-/i", " ", $filename);
-        echo '<div class="sg-markup sg-section">';
+        echo '<div class="col-lg-12 sg-section">';
         echo '<div class="sg-display">';
         echo '<h2 class="sg-h2" id="sg-'.$filename.'">'.$title.'</h2>';
         include('markup/'.$type.'/'.$file);
         echo '</div>';
-        echo '<div class="sg-markup-controls"><a class="sg-btn sg-btn--source" href="#">View Source</a> <a class="sg-btn--top" href="#top">Back to Top</a> </div>';
+        echo '<div class="sg-markup-controls"><a class="btn btn-primary sg-btn sg-btn--source" href="#">View Source</a> <a class="sg-btn--top" href="#top">Back to Top</a> </div>';
         echo '<div class="sg-source sg-animated">';
-        echo '<a class="sg-btn sg-btn--select" href="#">Copy Source</a>';
+        echo '<a class="btn btn-default sg-btn sg-btn--select" href="#">Copy Source</a>';
         echo '<pre class="prettyprint linenums"><code>';
         echo htmlspecialchars(file_get_contents('markup/'.$type.'/'.$file));
         echo '</code></pre>';
@@ -113,18 +113,15 @@
 <!--/.sg-header-->
 
 <div class="sg-body sg-container container">
-  <div class="sg-info">               
-    <div class="sg-about sg-section">
+   <div class="row">           
+    <div class="col-lg-12 sg-section">
       <h1 class="page-header" id="sg-about">About</h1>
       <p>Comments and documentation about your style guide. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nobis enim labore facilis consequuntur! Veritatis neque est suscipit tenetur temporibus enim </p>
-  </div>
-      <div class="sg-base-styles">    
-  <h1 class="page-header">Base Styles</h1>
-  <?php showMarkup('base'); ?>
-</div>consequatur deserunt perferendis. Neque nemo iusto minima deserunt amet.</p>
-    </div><!--/.sg-about-->
-    
-    <div class="sg-colors sg-section">
+
+          </div><!--/.sg-about-->
+    </div>
+    <div class="row">           
+     <div class="col-lg-12 sg-section">
     <h1 class="page-header">Foundation</h1>
     <h2>Colors</h2>
 <h4>Main Colors</h4>
@@ -140,19 +137,18 @@
     <div class="sg-color sg-brand-warning"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
     <div class="sg-color sg-brand-danger"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
     <div class="sg-color sg-brand-info"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
-    <div class="sg-markup-controls"><a class="sg-btn--top" href="#top">Ir al inicio</a></div>
 </div><!--/.sg-colors-->
 
     
-    <div class="sg-font-stacks sg-section">
+    <div class="col-lg-12 sg-font-stacks sg-section">
       <h2 class="sg-h2"><a id="sg-fontStacks" class="sg-anchor">Font Stacks</a></h2>
       <p class="sg-font sg-font-primary">"HelveticaNeue", "Helvetica", Arial, sans-serif;</p>
       <p class="sg-font sg-font-secondary">Georgia, Times, "Times New Roman", serif;</p>
       <div class="sg-markup-controls"><a class="sg-btn--top" href="#top">Back to Top</a></div>
     </div><!--/.sg-font-stacks-->
-  </div><!--/.sg-info-->    
+   </div>
 
-  <div class="sg-base-styles">    
+  <div class="row sg-base-styles">    
     <h1 class="page-header">Base Styles</h1>
     <?php showMarkup('base'); ?>
   </div><!--/.sg-base-styles-->

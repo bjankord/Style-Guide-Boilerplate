@@ -15,23 +15,6 @@
 ---------------------------------------------------------------------------- */
 body {margin: 0;}
 
-.sg-header {
-  background: #666;
-  color: #fff;
-  zoom: 1; /* IE6 Fix */
-}
-
-@media screen and (max-width: 650px) {
-  .sg-header {
-    text-align: center;
-  }
-}
-
-
-.sg-info, .sg-base-styles {
-  padding-bottom: 24px; /* For older browsers */
-  padding-bottom: 2rem;
-}
 
 
 /* -------------------------------------------------------------------------
@@ -86,11 +69,13 @@ body {margin: 0;}
 /* Buttons
 ---------------------------------------------------------------------------- */
 .sg-btn {
-  background: #cbcbcb;
+/*  background: #cbcbcb;
   color: #222;
-  float: left;
   padding: .5em .9em;
-  text-decoration: none;
+  text-decoration: none;*/
+  float: left;
+  text-shadow: none!important;
+
 }
 
 .sg-btn--top {
@@ -100,7 +85,7 @@ body {margin: 0;}
 .sg-btn--select {
   border-radius: 0 0.3em;
   position: absolute;
-  right: 1px;
+  right: 5px;
   top: 14px;
 }
 
@@ -167,9 +152,19 @@ body {margin: 0;}
 
 /* Colors
 ---------------------------------------------------------------------------- */
+.sg-color {
+  background: #fff;
+  border: 1px solid lighten(@gray-light, 10%);
+  display: inline-block;
+  height: 80px;
+  margin: 0 .5em .5em 0;
+  padding: 5px;
+  position: relative;
+  width: 80px;
+}
 .sg-lg{
-	width: 110px;
-	height: 110px;
+	width: 120px;
+	height: 120px;
 }
 .sg-color-swatch {
   display: block;
@@ -210,7 +205,7 @@ body {margin: 0;}
 .sg-gray-dark .sg-color-swatch {background: @gray-dark;}
 .sg-gray-darker .sg-color-swatch {background: @gray-darker;}
 
-.sg-brandsuccess .sg-color-swatch {background: @brand-success;}
+.sg-brand-success .sg-color-swatch {background: @brand-success;}
 .sg-brand-info .sg-color-swatch {background: @brand-info;}
 .sg-brand-warning .sg-color-swatch {background: @brand-warning;}
 .sg-brand-danger .sg-color-swatch {background: @brand-danger;}
