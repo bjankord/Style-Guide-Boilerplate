@@ -1,3 +1,8 @@
+2.4.0 / 2014-02-24
+==================
+
+ * Update Style Guide Boilerplate to use box-sizing border-box globally
+
 2.3.0 / 2013-08-24
 ==================
 

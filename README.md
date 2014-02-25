@@ -1,4 +1,4 @@
-Style-Guide-Boilerplate v2.3.0
+Style-Guide-Boilerplate v2.4.0
 ==============================
 
 A starting point for crafting living style guides.
