@@ -45,15 +45,15 @@
         echo '<div class="sg-display">';
         echo '<h2 class="sg-h2" id="sg-'.$filename.'">'.$title.'</h2>';
         include('markup/'.$type.'/'.$file);
-        echo '</div>';
+        echo '</div><!--/.sg-display-->';
         echo '<div class="sg-markup-controls"><a class="btn btn-primary sg-btn sg-btn--source" href="#">View Source</a> <a class="sg-btn--top" href="#top">Back to Top</a> </div>';
         echo '<div class="sg-source sg-animated">';
         echo '<a class="btn btn-default sg-btn sg-btn--select" href="#">Copy Source</a>';
         echo '<pre class="prettyprint linenums"><code>';
         echo htmlspecialchars(file_get_contents('markup/'.$type.'/'.$file));
         echo '</code></pre>';
-        echo '</div>';
-        echo '</div>';
+        echo '</div><!--/.sg-source-->';
+        echo '</div><!--/.sg-section-->';
     endforeach;
   }
 ?>
@@ -69,25 +69,20 @@
   <!-- Replace below stylesheet with your own stylesheet -->
   <link rel="stylesheet" href="css/theme.css">
 </head>
-<body   data-spy="scroll" data-target=".navbar-default" data-offset="30" >
+<body   data-spy="scroll" data-target=".navbar-default" data-offset="60" >
     <!-- Fixed navbar -->
        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
          <div class="container">
            <div class="navbar-header">
-             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-               <span class="sr-only">Toggle navigation</span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-             </button>
+          
              <a class="navbar-brand" href="#"><strong>Project name</strong> Style Guide</a>
            </div>
-           <div class="navbar-collapse collapse">
+          
            <ul class="nav navbar-nav navbar-right">
                          <li class="dropdown active">
                          						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Select an element: <b class="caret"></b></a>
                           
-                               <ul class="dropdown-menu  sg-sect">
+                               <ul class="dropdown-menu  scroll-menu sg-sect">
                                <li><a href="#sg-about">About</a></li>
                                <li role="presentation" class="divider"></li>
                                  <li role="presentation" class="dropdown-header">Foundation</li>
@@ -95,6 +90,7 @@
                                  
                                  <li><a href="#sg-colors">Colors</a></li>
                                  <li><a href="#sg-font-stacks">Font-Stacks</a></li>
+                                 <li><a href="#sg-grid">Grid</a></li>
                                   <li role="presentation" class="divider"></li>
                                    <li role="presentation" class="dropdown-header">Base Styles</li>
                                     <?php listMarkupAsOptions('base'); ?>
@@ -107,7 +103,7 @@
                            </li>
                        </ul>
                        
-           </div><!--/.nav-collapse -->
+         
          </div>
        </div>
 <!--/.sg-header-->
@@ -119,11 +115,11 @@
       <p>Comments and documentation about your style guide. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nobis enim labore facilis consequuntur! Veritatis neque est suscipit tenetur temporibus enim </p>
 
           </div><!--/.sg-about-->
-    </div>
+    </div><!--/.row-->
     <div class="row">           
      <div class="col-lg-12 sg-section">
     <h1 class="page-header">Foundation</h1>
-    <h2>Colors</h2>
+    <h2 class="sg-h2" id="sg-colors">Colors</h2>
 <h4>Main Colors</h4>
     <div class="sg-color sg-brand-primary sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#57DAE6</span></span></div>
     <div class="sg-color sg-gray-lighter sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#57DAE6</span></span></div>
@@ -140,18 +136,50 @@
 </div><!--/.sg-colors-->
 
     
-    <div class="col-lg-12 sg-font-stacks sg-section">
-      <h2 class="sg-h2"><a id="sg-fontStacks" class="sg-anchor">Font Stacks</a></h2>
+    <div class="col-lg-12 sg-section">
+      <h2 class="sg-h2" id="sg-font-stacks">Font Stacks</h2>
       <p class="sg-font sg-font-primary">"HelveticaNeue", "Helvetica", Arial, sans-serif;</p>
       <p class="sg-font sg-font-secondary">Georgia, Times, "Times New Roman", serif;</p>
       <div class="sg-markup-controls"><a class="sg-btn--top" href="#top">Back to Top</a></div>
     </div><!--/.sg-font-stacks-->
+   </div><!--/.row-->
+   <div class="col-lg-12  sg-section">
+   <h2 class="sg-h2" id="sg-grid">Grid</h2>
+<div class="row show-grid">
+     <div class="col-md-1">.col-md-1</div>
+     <div class="col-md-1">.col-md-1</div>
+     <div class="col-md-1">.col-md-1</div>
+     <div class="col-md-1">.col-md-1</div>
+     <div class="col-md-1">.col-md-1</div>
+     <div class="col-md-1">.col-md-1</div>
+     <div class="col-md-1">.col-md-1</div>
+     <div class="col-md-1">.col-md-1</div>
+     <div class="col-md-1">.col-md-1</div>
+     <div class="col-md-1">.col-md-1</div>
+     <div class="col-md-1">.col-md-1</div>
+     <div class="col-md-1">.col-md-1</div>
    </div>
+   <div class="row show-grid">
+     <div class="col-md-8">.col-md-8</div>
+     <div class="col-md-4">.col-md-4</div>
+   </div>
+   <div class="row show-grid">
+     <div class="col-md-4">.col-md-4</div>
+     <div class="col-md-4">.col-md-4</div>
+     <div class="col-md-4">.col-md-4</div>
+   </div>
+   <div class="row show-grid">
+     <div class="col-md-6">.col-md-6</div>
+     <div class="col-md-6">.col-md-6</div>
+   </div>
+</div><!--/.row-->
+
+
 
   <div class="row sg-base-styles">    
     <h1 class="page-header">Base Styles</h1>
     <?php showMarkup('base'); ?>
-  </div><!--/.sg-base-styles-->
+  <!--</div>/.sg-base-styles-->
 
   <div class="sg-pattern-styles">
     <h1 class="page-header">Patterns<small> - Design and mark-up patterns unique to your site.</small></h1>

@@ -11,6 +11,7 @@
 ---------------------------------------------------------------------------- */
 body {
   margin: 0;
+  padding-top: 50px;
 }
 /* -------------------------------------------------------------------------
  Utility Classes
@@ -42,15 +43,18 @@ body {
   margin-top: 0;
 }
 .sg-h1 {
-  font-size: 1.75em;
   font-weight: bold;
   padding-bottom: .2em;
+  margin-top: 1.5em;
 }
 .sg-h2 {
-  border-bottom-width: 2px;
-  font-size: 1.5em;
   margin-bottom: .5em;
+  padding-bottom: .5em;
   text-transform: capitalize;
+  margin-top: 1.5em;
+}
+.sg-about {
+  margin-top: 2em;
 }
 /* Buttons
 ---------------------------------------------------------------------------- */
@@ -64,6 +68,16 @@ body {
 }
 .sg-btn--top {
   float: right;
+}
+ul.scroll-menu {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -ms-overflow-scrolling: touch;
+  -o-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  width: 100%;
+  max-height: 500px;
 }
 .sg-btn--select {
   border-radius: 0 0.3em;
@@ -98,6 +112,9 @@ body {
   z-index: 99;
 }
 /* Hide specific buttons for use with JS */
+.sg-btn--source {
+  clear: both;
+}
 .sg-btn--source,
 .sg-btn--select {
   display: none;
@@ -204,11 +221,22 @@ body {
   font-size: 1.4em;
   padding: 0 0 .2em 0;
 }
+/* Grid
+---------------------------------------------------------------------------- */
+.show-grid {
+  padding: .5em 0;
+}
+.show-grid div {
+  background-color: #dddddd;
+  border: 1px solid #808080;
+  padding: 0.5em;
+}
 /* Markup
 ---------------------------------------------------------------------------- */
 .sg-markup-controls {
   overflow: hidden;
   padding-top: 1.5em;
+  clear: both;
 }
 .sg-source {
   position: relative;
