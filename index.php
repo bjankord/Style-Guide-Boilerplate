@@ -41,9 +41,9 @@
     foreach ($files as $file):
         $filename = preg_replace("/\.html$/i", "", $file);
         $title = preg_replace("/\-/i", " ", $filename);
-        echo '<div class="col-lg-12 sg-section">';
+        echo '<div class="col-lg-12 sg-section" id="sg-'.$filename.'">';
         echo '<div class="sg-display">';
-        echo '<h2 class="sg-h2" id="sg-'.$filename.'">'.$title.'</h2>';
+        echo '<h2 class="sg-h2">'.$title.'</h2>';
         include('markup/'.$type.'/'.$file);
         echo '</div><!--/.sg-display-->';
         echo '<div class="sg-markup-controls"><a class="btn btn-primary sg-btn sg-btn--source" href="#">View Source</a> <a class="sg-btn--top" href="#top">Back to Top</a> </div>';
@@ -110,16 +110,17 @@
 
 <div class="sg-body sg-container container">
    <div class="row">           
-    <div class="col-lg-12 sg-section">
-      <h1 class="page-header" id="sg-about">About</h1>
+    <div class="col-lg-12 sg-section" id="sg-about">
+      <h1 class="page-header">About</h1>
       <p>Comments and documentation about your style guide. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nobis enim labore facilis consequuntur! Veritatis neque est suscipit tenetur temporibus enim </p>
 
           </div><!--/.sg-about-->
     </div><!--/.row-->
-    <div class="row">           
-     <div class="col-lg-12 sg-section">
-    <h1 class="page-header">Foundation</h1>
-    <h2 class="sg-h2" id="sg-colors">Colors</h2>
+    <div class="row">
+    <h1 class="page-header">Foundation</h1>           
+     <div class="col-lg-12 sg-section"  id="sg-colors">
+    
+    <h2 class="sg-h2">Colors</h2>
 <h4>Main Colors</h4>
     <div class="sg-color sg-brand-primary sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#57DAE6</span></span></div>
     <div class="sg-color sg-gray-lighter sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#57DAE6</span></span></div>
@@ -136,15 +137,15 @@
 </div><!--/.sg-colors-->
 
     
-    <div class="col-lg-12 sg-section">
-      <h2 class="sg-h2" id="sg-font-stacks">Font Stacks</h2>
+    <div class="col-lg-12 sg-section" id="sg-font-stacks">
+      <h2 class="sg-h2">Font Stacks</h2>
       <p class="sg-font sg-font-primary">"HelveticaNeue", "Helvetica", Arial, sans-serif;</p>
       <p class="sg-font sg-font-secondary">Georgia, Times, "Times New Roman", serif;</p>
       <div class="sg-markup-controls"><a class="sg-btn--top" href="#top">Back to Top</a></div>
     </div><!--/.sg-font-stacks-->
    </div><!--/.row-->
-   <div class="col-lg-12  sg-section">
-   <h2 class="sg-h2" id="sg-grid">Grid</h2>
+   <div class="col-lg-12  sg-section" id="sg-grid">
+   <h2 class="sg-h2">Grid</h2>
 <div class="row show-grid">
      <div class="col-md-1">.col-md-1</div>
      <div class="col-md-1">.col-md-1</div>
