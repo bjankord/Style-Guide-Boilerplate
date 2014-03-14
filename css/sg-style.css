@@ -108,7 +108,6 @@ body {margin: 0;}
 .sg-h1,
 .sg-h2,
 .sg-h3 {
-  border-bottom: 3px solid #ddd;
   font-family: sans-serif;
   font-weight: normal;
   margin-bottom: 1em;
@@ -122,10 +121,14 @@ body {margin: 0;}
 }
 
 .sg-h2 {
-  border-bottom-width: 2px;
+  border-bottom: 2px solid #ddd;
   font-size: 1.5em;
   margin-bottom: .5em;
   text-transform: capitalize; 
+}
+
+.sg-h3 {
+  font-size: 1.2em;
 }
 
 
@@ -262,6 +265,11 @@ body {margin: 0;}
 /* Markup
 ---------------------------------------------------------------------------- */
 .sg-markup {}
+
+.sg-doc {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1em;
+}
 
 .sg-markup-controls {
   overflow: hidden;

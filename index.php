@@ -41,9 +41,17 @@
     foreach ($files as $file):
         $filename = preg_replace("/\.html$/i", "", $file);
         $title = preg_replace("/\-/i", " ", $filename);
+        $documentation = 'doc/'.$type.'/'.$file;
         echo '<div class="sg-markup sg-section">';
         echo '<div class="sg-display">';
         echo '<h2 class="sg-h2"><a id="sg-'.$filename.'" class="sg-anchor">'.$title.'</a></h2>';
+        if (file_exists($documentation)) {
+          echo '<div class="sg-doc">';
+          echo '<h3 class="sg-h3">Usage</h3>';
+          include($documentation);
+          echo '</div>';
+        }
+        echo '<h3 class="sg-h3">Example</h3>';
         include('markup/'.$type.'/'.$file);
         echo '</div>';
         echo '<div class="sg-markup-controls"><a class="sg-btn sg-btn--source" href="#">View Source</a> <a class="sg-btn--top" href="#top">Back to Top</a> </div>';
@@ -133,3 +141,4 @@
   <script src="js/sg-scripts.js"></script>
 </body>
 </html>
+ 

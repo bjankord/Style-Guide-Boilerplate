@@ -1,3 +1,8 @@
+2.5.0 / 2014-03-14
+==================
+
+ * Add ability to add personalized doc for each markup snippet
+
 2.4.0 / 2014-02-24
 ==================
 
