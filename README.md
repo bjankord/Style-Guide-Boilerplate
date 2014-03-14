@@ -44,6 +44,15 @@ Save the file as `pattern-name.html` into the `markup/patterns` directory inside
 
 You should now be able to see the new patterns at `yoursite.com/style-guide/`
 
+### Create personalized documentation
+To create personalized documentation for your markup examples, create a new .html file and name it whatever your markup snippet is named.
+
+Save the file as `markup-name.html` into the `doc/base` or `doc/patterns` directory inside of your `style-guide` directory.
+
+For example, if you want to create doc for `markup/patterns/breadcrumbs.html`, create a file called `breadcrumbs.html` and save it into `doc/patterns`.
+
+You should now be able to see the new doc at `yoursite.com/style-guide/`
+
 ## Browser Support
 I've built **Style Guide Boilerplate** with progressive enhancement in mind to work on a wide range of browsers.
 
