@@ -5,6 +5,7 @@
 
   if (isset($_POST['sg_uri']) && isset($_POST['sg_section_switcher'])) {
      $pageURL .= $_POST[sg_uri].$_POST[sg_section_switcher];
+     $pageURL = htmlspecialchars( filter_var( $pageURL, FILTER_SANITIZE_URL ) );
      header("Location: $pageURL");
   }
 
