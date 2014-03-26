@@ -28,14 +28,16 @@
   };
 
   var selectText = function(text) {
-      var doc = document;
+      var doc = document,
+          range,
+          selection = window.getSelection();
+
       if (doc.body.createTextRange) {
-          var range = doc.body.createTextRange();
+          range = doc.body.createTextRange();
           range.moveToElementText(text);
           range.select();
       } else if (window.getSelection) {
-          var selection = window.getSelection();
-          var range = doc.createRange();
+          range = doc.createRange();
           range.selectNodeContents(text);
           selection.removeAllRanges();
           selection.addRange(range);
@@ -72,26 +74,15 @@
   }
 
   
-  // Add operamini class to body
-  if (window.operamini) {
-    document.getElementsByTagName('body')[0].className+=' operamini';    
-  } 
-  // Opera Mini has trouble with these enhancements
-  // So we'll make sure they don't get them
-  else {
-    // Init prettyprint
+  // Opera Mini has trouble with some enhancements
+  // So this allows us to cut mustard
+  if (!window.operamini) {
+     // Init prettyprint
     prettyPrint();
-  
-    // Get nav form
-    var nav = document.getElementById('js-sg-section-switcher');
-    
-    // Toggle active class on navToggle click
-    nav.onchange = function() {
-      var val = this.value;
-      if (val !== "") {
-        window.location = val;
-      }
-    };
+  }
+  else {
+  // Add operamini class to body
+   document.getElementsByTagName('body')[0].className+=' operamini';
   }
  
  })(document);

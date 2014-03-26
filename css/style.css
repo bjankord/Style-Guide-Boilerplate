@@ -2,29 +2,6 @@
   font-family: "HelveticaNeue", "Helvetica", Arial, sans-serif;
 }
 
-/* -------------------------------------------------------------------------
- Colors
----------------------------------------------------------------------------- */
-.sg-color--a .sg-color-swatch {background: #88ffda;}
-
-.sg-color--b .sg-color-swatch {background: #4dd3c9;}
-
-.sg-color--c .sg-color-swatch {background: #339db0;}
-
-.sg-color--d .sg-color-swatch {background: #2078aa;}
-
-.sg-color--e .sg-color-swatch {background: #3a517a;}
-
-.sg-color--f .sg-color-swatch {background: #384355;}
-
-
-/* -------------------------------------------------------------------------
- Fonts
----------------------------------------------------------------------------- */
-.sg-font-primary {font-family: "HelveticaNeue", "Helvetica", Arial, sans-serif;}
-
-.sg-font-secondary {font-family: Georgia, Times, "Times New Roman", serif;}
-
 
 /* -------------------------------------------------------------------------
  Alerts
