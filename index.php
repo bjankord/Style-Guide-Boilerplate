@@ -1,4 +1,5 @@
 <?php
+	$project_name = "Project Name";
   // Build out URI to reload from form dropdown
   // Need full url for this to work in Opera Mini
   $pageURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
@@ -7,7 +8,24 @@
      $pageURL .= $_POST[sg_uri].$_POST[sg_section_switcher];
      header("Location: $pageURL");
   }
-
+ // Display title of each markup samples as a select option
+  function listElementsAsOptions ($type) {
+    $files = array();
+    $handle=opendir($type.'/');
+    while (false !== ($file = readdir($handle))):
+        if(stristr($file,'.html')):
+            $files[] = $file;
+        endif;
+    endwhile;
+echo '<li role="presentation" class="divider"></li><li role="presentation" class="dropdown-header">'.$type.'</li>';
+    sort($files);
+    foreach ($files as $file):
+        $filename = preg_replace("/\.html$/i", "", $file); 
+        $title = preg_replace("/\-/i", " ", $filename);
+        $title = ucwords($title);
+        echo '<li><a href="#sg-'.$filename.'">'.$title.'</a></li>';
+    endforeach;
+  }
   // Display title of each markup samples as a select option
   function listMarkupAsOptions ($type) {
     $files = array();
@@ -26,6 +44,28 @@
         echo '<li><a href="#sg-'.$filename.'">'.$title.'</a></li>';
     endforeach;
   }
+    // Display foundation elements
+    function showDocs() {
+      $files = array();
+      $handle=opendir('docs/');
+      while (false !== ($file = readdir($handle))):
+          if(stristr($file,'.html')):
+              $files[] = $file;
+          endif;
+      endwhile;
+  
+      sort($files);
+      foreach ($files as $file):
+          $filename = preg_replace("/\.html$/i", "", $file);
+          $title = preg_replace("/\-/i", " ", $filename);
+          echo '<div class="col-lg-12 sg-section" id="sg-'.$filename.'">';
+          echo '<div class="sg-display">';
+          echo '<h2 class="sg-h2">'.$title.'</h2>';
+          include('docs/'.$file);
+          echo '</div><!--/.sg-display-->';
+          echo '</div><!--/.sg-section-->';
+      endforeach;
+    }
   // Display foundation elements
   function showFoundation() {
     $files = array();
@@ -81,7 +121,7 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
-  <title>Style Guide Boilerplate</title>
+  <title><?php echo($project_name)?> Style Guide</title>
   <meta name="viewport" content="width=device-width">
   <!-- Style Guide Boilerplate Styles -->
   <link rel="stylesheet" href="css/styleguide.css">
@@ -96,7 +136,7 @@
          <div class="container">
            <div class="navbar-header">
           
-             <a class="navbar-brand" href="#"><strong>Project name</strong> Style Guide</a>
+             <a class="navbar-brand" href="#"><strong><?php echo($project_name)?></strong> Style Guide</a>
            </div>
           
            <ul class="nav navbar-nav navbar-right">
@@ -104,14 +144,8 @@
                          						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Select an element: <b class="caret"></b></a>
                           
                                <ul class="dropdown-menu  scroll-menu sg-sect">
-                               <li><a href="#sg-about">About</a></li>
-                               <li role="presentation" class="divider"></li>
-                                 <li role="presentation" class="dropdown-header">Foundation</li>
-                                  
-                                 
-                                 <li><a href="#sg-colors">Colors</a></li>
-                                 <li><a href="#sg-font-stacks">Font-Stacks</a></li>
-                                 <li><a href="#sg-grid">Grid</a></li>
+                                <?php listElementsAsOptions('docs'); ?>
+                                <?php listElementsAsOptions('foundation'); ?>
                                   <li role="presentation" class="divider"></li>
                                    <li role="presentation" class="dropdown-header">Base Styles</li>
                                     <?php listMarkupAsOptions('base'); ?>
@@ -131,11 +165,11 @@
 
 <div class="sg-body sg-container container">
    <div class="row">           
-    <div class="col-lg-12 sg-section" id="sg-about">
-      <h1 class="page-header">About</h1>
-      <p>Comments and documentation about your style guide. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nobis enim labore facilis consequuntur! Veritatis neque est suscipit tenetur temporibus enim </p>
 
-          </div><!--/.sg-about-->
+      <h1 class="page-header">Style Guide Documentation</h1>
+       <?php showDocs(); ?>  
+      
+
     </div><!--/.row-->
     <div class="row">
     <h1 class="page-header">Foundation</h1>  
