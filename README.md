@@ -2,8 +2,9 @@ Style-Guide-Boilerplate Bootstrap Edition
 ==============================
 
 A starting point for crafting living style guides for Bootstrap-based projects.
+Based on Brett Jankord's [Style Guide Boilerplate](http://brettjankord.com/projects/style-guide-boilerplate/)
 
-[View Demo](http://brettjankord.com/projects/style-guide-boilerplate/)
+[Read More about the project](http://www.monolinea.com/labs/bootstrap-stye-guide-boilerplate/ ‎)
 
 *Note: Sample patterns have been included in the demo. Your site will have it's own unique patterns.*
 

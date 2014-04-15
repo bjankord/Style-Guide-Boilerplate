@@ -26,7 +26,28 @@
         echo '<li><a href="#sg-'.$filename.'">'.$title.'</a></li>';
     endforeach;
   }
+  // Display foundation elements
+  function showFoundation() {
+    $files = array();
+    $handle=opendir('foundation/');
+    while (false !== ($file = readdir($handle))):
+        if(stristr($file,'.html')):
+            $files[] = $file;
+        endif;
+    endwhile;
 
+    sort($files);
+    foreach ($files as $file):
+        $filename = preg_replace("/\.html$/i", "", $file);
+        $title = preg_replace("/\-/i", " ", $filename);
+        echo '<div class="col-lg-12 sg-section" id="sg-'.$filename.'">';
+        echo '<div class="sg-display">';
+        echo '<h2 class="sg-h2">'.$title.'</h2>';
+        include('foundation/'.$file);
+        echo '</div><!--/.sg-display-->';
+        echo '</div><!--/.sg-section-->';
+    endforeach;
+  }
   // Display markup view & source
   function showMarkup($type) {
     $files = array();
@@ -117,65 +138,16 @@
           </div><!--/.sg-about-->
     </div><!--/.row-->
     <div class="row">
-    <h1 class="page-header">Foundation</h1>           
-     <div class="col-lg-12 sg-section"  id="sg-colors">
-    
-    <h2 class="sg-h2">Colors</h2>
-<h4>Main Colors</h4>
-    <div class="sg-color sg-brand-primary sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#57DAE6</span></span></div>
-    <div class="sg-color sg-gray-lighter sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#57DAE6</span></span></div>
-    <div class="sg-color sg-gray-light sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#57DAE6</span></span></div>
-    <div class="sg-color sg-gray sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#57DAE6</span></span></div>
-    <div class="sg-color sg-gray-dark sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#4dd3c9</span></span></div>
-    <div class="sg-color sg-gray-darker sg-lg"><span class="sg-color-swatch"><span class="sg-animated">#339db0</span></span></div>
-    
-    <h4>Complementary Colors</h4>
-    <div class="sg-color sg-brand-success"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
-    <div class="sg-color sg-brand-warning"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
-    <div class="sg-color sg-brand-danger"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
-    <div class="sg-color sg-brand-info"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
-</div><!--/.sg-colors-->
+    <h1 class="page-header">Foundation</h1>  
+     <?php showFoundation(); ?>         
+ 
 
     
-    <div class="col-lg-12 sg-section" id="sg-font-stacks">
-      <h2 class="sg-h2">Font Stacks</h2>
-      <p class="sg-font sg-font-primary">"HelveticaNeue", "Helvetica", Arial, sans-serif;</p>
-      <p class="sg-font sg-font-secondary">Georgia, Times, "Times New Roman", serif;</p>
-      <div class="sg-markup-controls"><a class="sg-btn--top" href="#top">Back to Top</a></div>
-    </div><!--/.sg-font-stacks-->
-   </div><!--/.row-->
-   <div class="col-lg-12  sg-section" id="sg-grid">
-   <h2 class="sg-h2">Grid</h2>
-<div class="row show-grid">
-     <div class="col-md-1">.col-md-1</div>
-     <div class="col-md-1">.col-md-1</div>
-     <div class="col-md-1">.col-md-1</div>
-     <div class="col-md-1">.col-md-1</div>
-     <div class="col-md-1">.col-md-1</div>
-     <div class="col-md-1">.col-md-1</div>
-     <div class="col-md-1">.col-md-1</div>
-     <div class="col-md-1">.col-md-1</div>
-     <div class="col-md-1">.col-md-1</div>
-     <div class="col-md-1">.col-md-1</div>
-     <div class="col-md-1">.col-md-1</div>
-     <div class="col-md-1">.col-md-1</div>
-   </div>
-   <div class="row show-grid">
-     <div class="col-md-8">.col-md-8</div>
-     <div class="col-md-4">.col-md-4</div>
-   </div>
-   <div class="row show-grid">
-     <div class="col-md-4">.col-md-4</div>
-     <div class="col-md-4">.col-md-4</div>
-     <div class="col-md-4">.col-md-4</div>
-   </div>
-   <div class="row show-grid">
-     <div class="col-md-6">.col-md-6</div>
-     <div class="col-md-6">.col-md-6</div>
-   </div>
-</div><!--/.row-->
+   
+ 
 
 
+  </div><!--/.row-->
 
   <div class="row sg-base-styles">    
     <h1 class="page-header">Base Styles</h1>
