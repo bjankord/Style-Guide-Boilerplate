@@ -75,6 +75,9 @@ ul.scroll-menu {
   width: 100%;
   max-height: 500px;
 }
+.dropdown-header {
+  text-transform: uppercase;
+}
 .sg-btn--select {
   border-radius: 0 0.3em;
   position: absolute;
