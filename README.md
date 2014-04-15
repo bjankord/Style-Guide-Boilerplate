@@ -6,7 +6,9 @@ A starting point for crafting living style guides for Bootstrap-based projects.
 
 Based on Brett Jankord's [Style Guide Boilerplate](http://brettjankord.com/projects/style-guide-boilerplate/)
 
-[Read More about the project](http://www.monolinea.com/labs/bootstrap-stye-guide-boilerplate/ ‎)
+[Read More about the project](http://www.monolinea.com/labs/bootstrap-stye-guide-boilerplate/‎)
+
+[Demo](http://www.monolinea.com/projects/styleguide/)
 
 *Note: Sample patterns have been included in the demo. Your site will have it's own unique patterns.*
 
