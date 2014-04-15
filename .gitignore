@@ -12,3 +12,7 @@ README.html
 Style-Guide-Boilerplate.esproj/user.kemie.espressostorage
 
 Style-Guide-Boilerplate.esproj/Project.espressostorage
+
+*.espressostorage
+
+Style-Guide-Boilerplate.esproj/Project.espressostorage
