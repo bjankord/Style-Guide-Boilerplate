@@ -1,6 +1,6 @@
 /* -------------------------------------------------------------------------
 
- Style Guide Boilerplate v2.0.1
+ Style Guide Boilerplate v3.0.0
  Repo: https://github.com/bjankord/Style-Guide-Boilerplate
  Author: Brett Jankord
  License: MIT
@@ -125,10 +125,6 @@ body {
   display: none;
 }
 
-.operamini .sg-nav {
-  display: none;
-}
-
 @media screen and (max-width: 1023px) {
   .sg-nav {
     display: inline;
@@ -229,7 +225,7 @@ body {
   border-radius: 0 0.3em;
 }
 
-.sg-btn--select.is-active:hover:after {
+.sg-btn--select.is-active:focus:after {
   position: absolute;
   top: 45px;
   right: 5px;
@@ -245,7 +241,7 @@ body {
   content: "Selected code ready to be copied";
 }
 
-.sg-btn--select.is-active:hover:before {
+.sg-btn--select.is-active:focus:before {
   position: absolute;
   top: 40px;
   left: 75%;
@@ -269,13 +265,6 @@ body {
 .js .sg-btn--source,
 .js .sg-btn--select {
   display: block;
-}
-
-/* Hide specific buttons conditionally */
-
-.operamini .sg-btn--source,
-.legacy .sg-btn--source {
-  display: none;
 }
 
 /* Sections

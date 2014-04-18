@@ -1,14 +1,8 @@
 <?php
   include_once('functions.php');
-  // Build out URI to reload from form dropdown
-  // Need full url for this to work in Opera Mini
-  $pageURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
-  if (isset($_POST['sg_uri']) && isset($_POST['sg_section_switcher'])) {
-     $pageURL .= $_POST[sg_uri].$_POST[sg_section_switcher];
-     header("Location: $pageURL");
-  }
 ?>
 <!DOCTYPE html>
+<html class="no-js" lang="en">
 <head>
 <meta charset="utf-8">
   <title>Style Guide Boilerplate</title>
@@ -211,6 +205,12 @@
  
   <script src="js/sg-plugins.js"></script>
   <script src="js/sg-scripts.js"></script>
+  <script>
+    // Initialize style guide js
+    sg.init();
+    // Initialize syntax highlighter
+    prettyPrint();
+  </script>
 </body>
 </html>
  
