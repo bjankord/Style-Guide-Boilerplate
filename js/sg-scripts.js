@@ -1,97 +1,83 @@
 /**
  * sg-scripts.js
  */
-(function (document, undefined) {
+(function (w, undefined) {
   "use strict";
 
-  // Add js class to body
-  document.getElementsByTagName('body')[0].className+=' js';
-
-
-  // Add functionality to toggle classes on elements
-  var hasClass = function (el, cl) {
-      var regex = new RegExp('(?:\\s|^)' + cl + '(?:\\s|$)');
-      return !!el.className.match(regex);
-  },
-
-  addClass = function (el, cl) {
-      el.className += ' ' + cl;
-  },
-
-  removeClass = function (el, cl) {
-      var regex = new RegExp('(?:\\s|^)' + cl + '(?:\\s|$)');
-      el.className = el.className.replace(regex, ' ');
-  },
-
-  toggleClass = function (el, cl) {
-      hasClass(el, cl) ? removeClass(el, cl) : addClass(el, cl);
-  };
-
-  var selectText = function(text) {
-      var doc = document;
-      if (doc.body.createTextRange) {
-          var range = doc.body.createTextRange();
-          range.moveToElementText(text);
-          range.select();
-      } else if (window.getSelection) {
-          var selection = window.getSelection();
-          var range = doc.createRange();
-          range.selectNodeContents(text);
-          selection.removeAllRanges();
-          selection.addRange(range);
-      }
-  };
-
-
-  // Cut the mustard
-  if ( !Array.prototype.forEach ) {
+  var d = w.document,
+      docEl = d.documentElement,
+      sg = {};
     
-    // Add legacy class for older browsers
-    document.getElementsByTagName('body')[0].className+=' legacy';
-
-  } else {
-
-    // View Source Toggle
-    [].forEach.call( document.querySelectorAll('.sg-btn--source'), function(el) {
-      el.onclick = function() {
-        var that = this;
-        var sourceCode = that.parentNode.nextElementSibling;
-        toggleClass(sourceCode, 'is-active');
-        return false;
-      };
-    }, false);
-
-    // Select Code Button
-    [].forEach.call( document.querySelectorAll('.sg-btn--select'), function(el) {
-      el.onclick = function() {
-        selectText(this.nextSibling);
-        toggleClass(this, 'is-active');
-        return false;
-      };
-    }, false);
-  }
-
-  
-  // Add operamini class to body
-  if (window.operamini) {
-    document.getElementsByTagName('body')[0].className+=' operamini';    
-  } 
-  // Opera Mini has trouble with these enhancements
-  // So we'll make sure they don't get them
-  else {
-    // Init prettyprint
-    prettyPrint();
-  
-    // Get nav form
-    var nav = document.getElementById('js-sg-section-switcher');
-    
-    // Toggle active class on navToggle click
-    nav.onchange = function() {
-      var val = this.value;
-      if (val !== "") {
-        window.location = val;
+    // Kicks off out style guide boilerplate js
+    sg.init = function() {
+      // Cut the mustard
+      if ( !Array.prototype.forEach || w.operamini) {
+        return;
+      } else {
+        this.jsEnabled();
+        this.toggleSource();
+        this.selectCode();
       }
     };
-  }
+
+
+    // Add js class to body
+    sg.jsEnabled = function() {
+      Apollo.removeClass(docEl, 'no-js');
+      Apollo.addClass(docEl, 'js');
+    };
+    
+
+    // Toggles source code example
+    sg.toggleSource = function() {
+      
+      // Util function for toggling source code examples
+      var toggler = function() {
+        var sourceCode = this.parentNode.nextElementSibling;
+        Apollo.toggleClass(sourceCode, 'is-active');
+      };
+
+      // Loops through all "View Source" buttons and attaches toggler function on click
+      [].forEach.call( d.querySelectorAll('.sg-btn--source'), function(el) {
+        el.addEventListener("click", toggler, false);
+      }, false);
+    };
+
+
+    // Toggles source code to be copied
+    sg.selectCode = function() {
+      
+      // Util function to select text for copying to clipboard
+      var selectText = function(text) {
+        var range,
+            selection = w.getSelection();
+
+        if (d.body.createTextRange) {
+            range = d.body.createTextRange();
+            range.moveToElementText(text);
+            range.select();
+        } else if (w.getSelection) {
+            range = d.createRange();
+            range.selectNodeContents(text);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        }
+      };
+      
+
+      // Util function for toggling selected text to be copied
+      var toggler = function() {
+        selectText(this.nextSibling);
+        Apollo.toggleClass(this, 'is-active');
+      };
+
+      // Loops through all "Copy Source" buttons and attaches toggler function on click
+      [].forEach.call( d.querySelectorAll('.sg-btn--select'), function(el) {
+        el.addEventListener("click", toggler, false);
+      }, false);
+
+    };
+   
+    w.sg = sg;
  
- })(document);
+ })(this);

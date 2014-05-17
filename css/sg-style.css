@@ -1,6 +1,6 @@
 /* -------------------------------------------------------------------------
 
- Style Guide Boilerplate v2.0.1
+ Style Guide Boilerplate v3.0.0
  Repo: https://github.com/bjankord/Style-Guide-Boilerplate
  Author: Brett Jankord
  License: MIT
@@ -10,51 +10,80 @@
 /* -------------------------------------------------------------------------
  Layout
 ---------------------------------------------------------------------------- */
+.sg-body,
+.sg-aside {
+  padding-top: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .sg-body {
+    float: left;
+    width: 73%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sg-aside {
+    float: right;
+    width: 25%;
+  }
+}
+
 /* http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box; 
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-body {margin: 0;}
-
-.sg-header {
-  background: #000;
-  color: #fff;
-  zoom: 1; /* IE6 Fix */
+body {
+  margin: 0;
 }
 
-@media screen and (max-width: 650px) {
+.sg-header {
+  color: #fff;
+  background: #000;
+  zoom: 1;
+}
+
+@media screen and (max-width: 1023px) {
   .sg-header {
     text-align: center;
   }
 }
 
+.sg-info,
+.sg-base-styles {
+  padding-bottom: 24px;
+  /* For older browsers */
 
-.sg-info, .sg-base-styles {
-  padding-bottom: 24px; /* For older browsers */
   padding-bottom: 2rem;
 }
-
 
 /* -------------------------------------------------------------------------
  Utility Classes
 ---------------------------------------------------------------------------- */
+
 .sg-container {
-  overflow: hidden;
-  padding: 16px 24px; /* For older browsers */
+  padding: 16px 24px;
   padding: 1rem 1.5rem;
+  overflow: hidden;
+}
+
+.sg-body .sg-container {
+  padding-top: 0;
 }
 
 .sg-animated {
-  -webkit-transition: all 0.6s ease-out;  
+  -webkit-transition: all 0.6s ease-out;
      -moz-transition: all 0.6s ease-out;
       -ms-transition: all 0.6s ease-out;
        -o-transition: all 0.6s ease-out;
           transition: all 0.6s ease-out;
 }
-
 
 /* -------------------------------------------------------------------------
  Modules
@@ -62,19 +91,22 @@ body {margin: 0;}
 
 /* Branding
 ---------------------------------------------------------------------------- */
+
 .sg-logo {
   float: left;
-  font-size: 1.5em;
-  font-weight: normal;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 400;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
-  .sg-logo span {
-    font-weight: bold;
-  }
+.sg-logo span {
+  font-weight: 500;
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1023px) {
   .sg-logo {
     float: none;
     padding-bottom: .5em;
@@ -84,7 +116,8 @@ body {margin: 0;}
 
 /* Navigation
 ---------------------------------------------------------------------------- */
-.sg-nav{
+
+.sg-nav {
   float: right;
 }
 
@@ -92,54 +125,93 @@ body {margin: 0;}
   display: none;
 }
 
-.operamini .sg-nav {
-  display: none;
-}
-
-@media screen and (max-width: 650px) {
-  .sg-nav{
+@media screen and (max-width: 1023px) {
+  .sg-nav {
     display: inline;
     float: none;
   }
 }
 
+.sg-navlist,
+.sg-navlist li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sg-navlist {
+  margin-bottom: 3.5em;
+}
+
+.sg-navlist li {
+  margin-bottom: .5em;
+}
+
+.sg-navlist a {
+  display: block;
+  color: #333;
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: .35em 0 .35em .5em;
+  border-left: 2px solid transparent;
+  transition: all .15s ease-in;  
+}
+
+.sg-navlist a:hover {
+  background: #ecf0f1;
+  border-left: 2px solid #111313;
+
+}
+ 
 /* Headings
 ---------------------------------------------------------------------------- */
+
 .sg-h1,
 .sg-h2,
 .sg-h3 {
-  font-family: sans-serif;
-  font-weight: normal;
-  margin-bottom: 1em;
   margin-top: 0;
+  margin-bottom: 1em;
+  font-weight: 400;
 }
 
-.sg-h1 {    
-  font-size: 1.75em;
-  font-weight: bold;
+.sg-h1 {
   padding-bottom: .2em;
+  font-size: 36px;
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
 }
 
 .sg-h2 {
-  border-bottom: 2px solid #ddd;
-  font-size: 1.5em;
-  margin-bottom: .5em;
-  text-transform: capitalize; 
+  padding-bottom: .2em;
+  margin-bottom: .75em;
+  font-size: 1.75em;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 500;
+  text-transform: capitalize;
+  border-bottom: 1px solid #ddd;
 }
 
 .sg-h3 {
   font-size: 1.2em;
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 500;
 }
 
+.sg-about p {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.1em;
+}
 
 /* Buttons
 ---------------------------------------------------------------------------- */
+
 .sg-btn {
-  background: #cbcbcb;
-  color: #222;
   float: left;
   padding: .5em .9em;
+  color: #222;
   text-decoration: none;
+  background: #cbcbcb;
 }
 
 .sg-btn--top {
@@ -147,133 +219,172 @@ body {margin: 0;}
 }
 
 .sg-btn--select {
-  border-radius: 0 0.3em;
   position: absolute;
-  right: 1px;
   top: 14px;
+  right: 1px;
+  border-radius: 0 0.3em;
 }
 
-.sg-btn--select.is-active:hover:after{
-  background:#111;
-  background:rgba(0,0,0,.8);
-  border-radius:5px;
-  top:45px;
-  color:#fff;
-  content:"Selected code ready to be copied";
+.sg-btn--select.is-active:focus:after {
+  position: absolute;
+  top: 45px;
+  right: 5px;
+  z-index: 98;
+  display: block;
+  padding: 5px 15px;
   font-size: .8em;
-  display:block;
-  right:5px;
-  padding:5px 15px;
-  position:absolute;
-  white-space:nowrap;
-  z-index:98
+  color: #fff;
+  white-space: nowrap;
+  background: #111;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  content: "Selected code ready to be copied";
 }
 
-.sg-btn--select.is-active:hover:before{
-  border:solid;
-  border-color:#111 transparent;
-  border-width:0 6px 6px 6px;
-  top:40px;
-  content:"";
-  display:block;
-  left:75%;
-  position:absolute;
-  z-index:99
+.sg-btn--select.is-active:focus:before {
+  position: absolute;
+  top: 40px;
+  left: 75%;
+  z-index: 99;
+  display: block;
+  border: solid;
+  border-color: #111 transparent;
+  border-width: 0 6px 6px 6px;
+  content: "";
 }
 
 /* Hide specific buttons for use with JS */
+
 .sg-btn--source,
 .sg-btn--select {
   display: none;
 }
 
 /* Show specific buttons if JS enabled */
+
 .js .sg-btn--source,
 .js .sg-btn--select {
   display: block;
 }
 
-/* Hide specific buttons conditionally */
-.operamini .sg-btn--source,
-.legacy .sg-btn--source {
-  display: none;
-}
-
-
 /* Sections
 ---------------------------------------------------------------------------- */
+
 .sg-section {
-  margin-bottom: 32px; /* For older browsers */ 
+  margin-bottom: 32px;
+  /* For older browsers */
   margin-bottom: 3rem;
   overflow: hidden;
 }
 
-  .sg-anchor {
-    display: block;
-    padding-top: 1em;
-  }
-
-
+.sg-anchor {
+  display: block;
+}
+ 
 /* Colors
 ---------------------------------------------------------------------------- */
 .sg-color {
-  background: #fff;
-  border: 1px solid #bbb;
-  display: inline-block;
-  height: 89px;
-  margin: 0 .5em .5em 0;
-  padding: 5px;
-  position: relative;
-  width: 89px;
+  float: left;
+  width: 45%;
+  margin: 0 2.5% 1.5em 2.5%;
 }
 
-.sg-color-swatch {
+@media only screen and (min-width: 600px) {
+.sg-color {
+  width: 22%;
+  margin: 0 1.5% 1.5em 1.5%;
+}
+}
+
+.sg-color--grid {
+  margin: 0 -1%;
+  overflow: hidden;
+}
+
+.sg-color--swatch{
   display: block;
-  height: 100%;
   position: relative;
   width: 100%;
 }
 
-.sg-color-swatch span {
-  background: #000;
-  background: rgba(0,0,0,.7);
-  bottom: 0;
-  color: #fff;
-  font-size: .8em;
-  margin: 0;
-  opacity: 0;
-  padding: 5px 0;
-  position: absolute;
-  text-align: center;
-  text-transform: uppercase;
-  width: 100%;
+.sg-color--swatch:before{
+  content: "";
+  display: block;
+  padding-top: 60%;
 }
 
-.sg-color-swatch:hover span {
-  opacity: 1;
+.sg-color-swatch:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
 }
+
+.sg-color--label {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 500;
+  font-size: 1.2em;
+  padding: .5em 0;
+}
+
+.sg-color--name,
+.sg-color--value {
+  display: block;
+}
+
+.sg-color--value {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 400;
+}
+
 
 
 /* Fonts
 ---------------------------------------------------------------------------- */
-.sg-font {
-  font-size: 1.4em;
-  padding: 0 0 .2em 0;
+.sg-font-list,
+.sg-font-list li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
+.sg-font-list {
+  font-size: 1.2em;
+}
+
+.sg-font-list li{
+  border-top: 1px solid #ddd;
+  margin-top: 1em;
+  padding-top: 1em;
+  overflow: hidden; /* Used as a clearfix */
+}
+
+.sg-font-list li:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.sg-font--label{
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 500;
+  padding-right: 10px;
+}
 
 /* Markup
 ---------------------------------------------------------------------------- */
-.sg-markup {}
+
 
 .sg-doc {
-  border-bottom: 1px solid #ddd;
   margin-bottom: 1em;
+  border-bottom: 1px solid #ddd;
 }
 
 .sg-markup-controls {
-  overflow: hidden;
   padding-top: 1.5em;
+  overflow: hidden;
 }
 
 .sg-source {
@@ -281,12 +392,12 @@ body {margin: 0;}
 }
 
 .sg-source pre {
-  background: #333;
-  border-radius: .5em;
-  border: 1px solid #ddd;
-  color: #fff;
-  overflow-x: scroll;
   padding: .5em .3em;
+  overflow-x: scroll;
+  color: #fff;
+  background: #333;
+  border: 1px solid #ddd;
+  border-radius: .5em;
 }
 
 .sg-source pre code {
@@ -301,9 +412,8 @@ body {margin: 0;}
 .js .sg-source.is-active,
 .operamini .sg-source,
 .legacy .sg-source {
-  max-height: 2400px; 
+  max-height: 2400px;
 }
-
 
 /* -------------------------------------------------------------------------
  Prettyprint
