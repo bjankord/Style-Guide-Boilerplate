@@ -169,8 +169,7 @@ echo '<li role="presentation" class="divider"></li><li role="presentation" class
 <div class="row sg-base-styles">
   <h1 class="page-header">Base Styles</h1>
   <?php showMarkup('base'); ?>
-  <!--</div>/.sg-base-styles-->
-  
+  </div><!--/.sg-base-styles-->
   <div class="row sg-pattern-styles">
     <h1 class="page-header">Patterns<small> - Design and mark-up patterns unique to your site.</small></h1>
     <?php showMarkup('patterns'); ?>
