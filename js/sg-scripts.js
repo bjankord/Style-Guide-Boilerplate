@@ -45,7 +45,7 @@
 
   // Cut the mustard
   if ( !Array.prototype.forEach ) {
-    
+
     // Add legacy class for older browsers
     document.getElementsByTagName('body')[0].className+=' legacy';
 
@@ -71,20 +71,20 @@
     }, false);
   }
 
-  
+
   // Add operamini class to body
   if (window.operamini) {
-    document.getElementsByTagName('body')[0].className+=' operamini';    
-  } 
+    document.getElementsByTagName('body')[0].className+=' operamini';
+  }
   // Opera Mini has trouble with these enhancements
   // So we'll make sure they don't get them
   else {
     // Init prettyprint
     prettyPrint();
-  
+
     // Get nav form
     var nav = document.getElementById('js-sg-section-switcher');
-    
+
     // Toggle active class on navToggle click
     nav.onchange = function() {
       var val = this.value;
@@ -93,5 +93,5 @@
       }
     };
   }
- 
+
  })(document);

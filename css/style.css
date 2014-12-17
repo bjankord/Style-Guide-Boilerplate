@@ -30,8 +30,8 @@
  Alerts
 ---------------------------------------------------------------------------- */
 /**
- * Alert styles. Your patterns/styles will vary. 
- * You should link your main stylesheet up with Style Guide Boilerplate for 
+ * Alert styles. Your patterns/styles will vary.
+ * You should link your main stylesheet up with Style Guide Boilerplate for
  * best results. When you update your site's styles, your style guide will
  * update as well.
  */
@@ -75,8 +75,8 @@
  Breadcrumbs
 ---------------------------------------------------------------------------- */
 /**
- * Breadcrumb styles for first pattern. Your patterns/styles will vary. 
- * You should link your main stylesheet up with Style Guide Boilerplate for 
+ * Breadcrumb styles for first pattern. Your patterns/styles will vary.
+ * You should link your main stylesheet up with Style Guide Boilerplate for
  * best results. When you update your site's styles, your style guide will
  * update as well.
  */
@@ -106,7 +106,7 @@
   color: #004068;
 }
 
-.breadcrumb li .divider {  
+.breadcrumb li .divider {
   color: #aaa;
   padding: 0 5px;
 }

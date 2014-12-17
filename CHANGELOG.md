@@ -1,3 +1,9 @@
+2.5.2 / 2014-12-16
+==================
+
+ * Clean up extra white space in multiple files
+ * Minor adjustments to selector formatting
+
 2.5.1 / 2014-03-15
 ==================
 
@@ -28,12 +34,12 @@
 ==================
 
  * Add button that selects sample markup to be copied
- * Resolves issue #4 and issue #6 
+ * Resolves issue #4 and issue #6
 
 2.0.2 / 2013-07-09
 ==================
 
- * Resolved issue #3 
+ * Resolved issue #3
 
 2.0.1 / 2013-07-09
 ==================
@@ -42,7 +48,7 @@
 
 2.0.0 / 2013-06-18
 ==================
- 
+
  * Reworked navigation
  * Reworked layout
  * Added hex values to color swatches
@@ -54,13 +60,13 @@
 
 1.9.0 / 2013-06-07
 ==================
- 
+
  * Normalize formatting for all markup snippets
  * Update tabular data example
 
 1.8.1 / 2013-05-29
 ==================
- 
+
  * Update sources for video and audio elements
 
 1.8.0 / 2013-05-29
@@ -75,17 +81,17 @@
 
 1.7.1 / 2013-05-28
 ==================
-  
+
  * Fix dynamic output value on range slider
 
 1.7.0 / 2013-05-24
 ==================
-  
+
  * Add datalist fields
 
 1.6.0 / 2013-05-24
 ==================
- 
+
  * Reworked Form Buttons section
  * Add disabled buttons
  * Add fieldset examples
@@ -97,15 +103,15 @@
 
 1.5.0 / 2013-05-24
 ==================
- 
+
  * Add meter element
  * Add progress element
- 
+
 1.4.0 / 2013-05-24
 ==================
- 
+
  * Add details element
- 
+
 1.3.0 / 2013-05-24
 ==================
 
