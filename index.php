@@ -96,10 +96,28 @@
       </div><!--/.sg-color-grid-->
     </div><!--/.sg-colors-->
 
+    <!-- Manually add your fonts here. -->
     <div class="sg-font-stacks sg-section">
       <h2 class="sg-h2"><a id="sg-fontStacks" class="sg-anchor">Font Stacks</a></h2>
-      <p class="sg-font sg-font-primary">"HelveticaNeue", "Helvetica", Arial, sans-serif;</p>
-      <p class="sg-font sg-font-secondary">Georgia, Times, "Times New Roman", serif;</p>
+      <dl class="sg-font-list">
+        <dt>Primary Font:</dt>
+        <dd style='font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;'>"HelveticaNeue", Helvetica, Arial, sans-serif;</dd>
+
+        <dt>Primary Font Italic:</dt>
+        <dd style='font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-style: italic;'>"HelveticaNeue", Helvetica, Arial, sans-serif;</dd>
+
+        <dt>Primary Font Bold:</dt>
+        <dd style='font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 800;'>"HelveticaNeue", Helvetica, Arial, sans-serif;</dd>
+
+        <dt>Secondary Font:</dt>
+        <dd style='font-family: Georgia, Times, "Times New Roman", serif;'>Georgia, Times, "Times New Roman", serif;</dd>
+
+        <dt>Secondary Font Italic:</dt>
+        <dd style='font-family: Georgia, Times, "Times New Roman", serif; font-style: italic;'>Georgia, Times, "Times New Roman", serif;</dd>
+
+        <dt>Secondary Font Bold:</dt>
+        <dd style='font-family: Georgia, Times, "Times New Roman", serif; font-weight: 800;'>Georgia, Times, "Times New Roman", serif;</dd>
+      </dl>
       <div class="sg-markup-controls"><a class="sg-btn--top" href="#top">Back to Top</a></div>
     </div><!--/.sg-font-stacks-->
   </div><!--/.sg-info-->

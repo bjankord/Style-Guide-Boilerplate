@@ -232,14 +232,15 @@ body {
 .sg-color-name {
   font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding: .5em 0;
 }
 
 .sg-color-value {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  text-transform: uppercase;
 }
 
 
@@ -275,11 +276,38 @@ body {
 
 /* Fonts
 ---------------------------------------------------------------------------- */
-.sg-font {
-  font-size: 1.4em;
-  padding: 0 0 .2em 0;
+.sg-font-list,
+.sg-font-list li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+.sg-font-list {
+  font-size: 1.1em;
+}
+
+.sg-font-list dt {
+  display: block;
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+  padding-bottom: .25em;
+}
+
+.sg-font-list dd {
+  display: block;
+  margin-left: 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: .75em;
+  padding-bottom: .75em;
+}
+
+@media only screen and (min-width: 760px) {
+  .sg-font-list dt {
+    float: left;
+    padding-right: .25em;
+  }
+}
 
 /* Markup
 ---------------------------------------------------------------------------- */
