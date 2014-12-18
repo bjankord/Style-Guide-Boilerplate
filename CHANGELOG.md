@@ -1,3 +1,11 @@
+2.6.0 / 2014-12-18
+==================
+
+ * Moved functions in index.php to functions.php
+ * Changed Base Styles wording to Base HTML
+ * Changed Pattern Styles wording to Patterns
+ * Added lang attribute
+
 2.5.2 / 2014-12-16
 ==================
 
