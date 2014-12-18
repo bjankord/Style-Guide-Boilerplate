@@ -1,17 +1,7 @@
-  <?php
+<?php
 
-  // Build out URI to reload from form dropdown
-  // Need full url for this to work in Opera Mini
-  $pageURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
-
-  if (isset($_POST['sg_uri']) && isset($_POST['sg_section_switcher'])) {
-     $pageURL .= $_POST[sg_uri].$_POST[sg_section_switcher];
-     $pageURL = htmlspecialchars( filter_var( $pageURL, FILTER_SANITIZE_URL ) );
-     header("Location: $pageURL");
-  }
-
-  // Display title of each markup samples as a select option
-  function listMarkupAsOptions ($type) {
+  // Display title of each markup samples as a list item
+  function listMarkupAsListItems ($type) {
     $files = array();
     $handle=opendir('markup/'.$type);
     while (false !== ($file = readdir($handle))):
@@ -25,11 +15,11 @@
         $filename = preg_replace("/\.html$/i", "", $file);
         $title = preg_replace("/\-/i", " ", $filename);
         $title = ucwords($title);
-        echo '<option value="#sg-'.$filename.'">'.$title.'</option>';
+        echo '<li><a href="#sg-'.$filename.'">'.$title.'</a></li>';
     endforeach;
   }
 
-  // Display markup view & source
+  // Display markup view and source
   function showMarkup($type) {
     $files = array();
     $handle=opendir('markup/'.$type);
@@ -56,14 +46,14 @@
         echo '<h3 class="sg-h3">Example</h3>';
         include('markup/'.$type.'/'.$file);
         echo '</div>';
-        echo '<div class="sg-markup-controls"><a class="sg-btn sg-btn--source" href="#">View Source</a> <a class="sg-btn--top" href="#top">Back to Top</a> </div>';
-        echo '<div class="sg-source sg-animated">';
-        echo '<a class="sg-btn sg-btn--select" href="#">Copy Source</a>';
+         echo '<div class="sg-markup-controls"><button type="button" class="sg-btn sg-btn--source">View Source</button> <a class="sg-btn--top" href="#top">Back to Top</a> </div>';
++        echo '<div class="sg-source sg-animated">';
++        echo '<button type="button" class="sg-btn sg-btn--select">Copy Source</button>';
         echo '<pre class="prettyprint linenums"><code>';
         echo htmlspecialchars(file_get_contents('markup/'.$type.'/'.$file));
         echo '</code></pre>';
         echo '</div>';
         echo '</div>';
     endforeach;
-  }
+   }
   ?>
