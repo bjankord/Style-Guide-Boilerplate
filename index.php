@@ -15,23 +15,6 @@
 
 <div id="top" class="sg-header sg-container">
   <h1 class="sg-logo">STYLE GUIDE <span>BOILERPLATE</span></h1>
-  <form id="js-sg-nav" action=""  method="post" class="sg-nav">
-    <select id="js-sg-section-switcher" class="sg-section-switcher" name="sg_section_switcher">
-        <option value="">Jump To Section:</option>
-        <optgroup label="Intro">
-          <option value="#sg-about">About</option>
-          <option value="#sg-colors">Colors</option>
-          <option value="#sg-fontStacks">Font-Stacks</option>
-        </optgroup>
-        <optgroup label="Base HTML">
-          <?php listMarkupAsOptions('base'); ?>
-        </optgroup>
-        <optgroup label="Patterns">
-          <?php listMarkupAsOptions('patterns'); ?>
-        </optgroup>
-    </select>
-    <input type="hidden" name="sg_uri" value="<?php echo $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]; ?>">
-    <button type="submit" class="sg-submit-btn">Go</button>
   </form><!--/.sg-nav-->
 </div><!--/.sg-header-->
 
