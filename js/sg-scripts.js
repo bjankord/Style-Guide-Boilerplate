@@ -2,96 +2,48 @@
  * sg-scripts.js
  */
 (function (document, undefined) {
-  "use strict";
 
   // Add js class to body
-  document.getElementsByTagName('body')[0].className+=' js';
-
-
-  // Add functionality to toggle classes on elements
-  var hasClass = function (el, cl) {
-      var regex = new RegExp('(?:\\s|^)' + cl + '(?:\\s|$)');
-      return !!el.className.match(regex);
-  },
-
-  addClass = function (el, cl) {
-      el.className += ' ' + cl;
-  },
-
-  removeClass = function (el, cl) {
-      var regex = new RegExp('(?:\\s|^)' + cl + '(?:\\s|$)');
-      el.className = el.className.replace(regex, ' ');
-  },
-
-  toggleClass = function (el, cl) {
-      hasClass(el, cl) ? removeClass(el, cl) : addClass(el, cl);
-  };
-
-  var selectText = function(text) {
-      var doc = document;
-      if (doc.body.createTextRange) {
-          var range = doc.body.createTextRange();
-          range.moveToElementText(text);
-          range.select();
-      } else if (window.getSelection) {
-          var selection = window.getSelection();
-          var range = doc.createRange();
-          range.selectNodeContents(text);
-          selection.removeAllRanges();
-          selection.addRange(range);
-      }
-  };
-
+  $('body').addClass('js');
 
   // Cut the mustard
-  if ( !Array.prototype.forEach ) {
+  if( "querySelector" in document && document.addEventListener ){
 
-    // Add legacy class for older browsers
-    document.getElementsByTagName('body')[0].className+=' legacy';
-
-  } else {
-
-    // View Source Toggle
-    [].forEach.call( document.querySelectorAll('.sg-btn--source'), function(el) {
-      el.onclick = function() {
-        var that = this;
-        var sourceCode = that.parentNode.nextElementSibling;
-        toggleClass(sourceCode, 'is-active');
-        return false;
-      };
-    }, false);
-
-    // Select Code Button
-    [].forEach.call( document.querySelectorAll('.sg-btn--select'), function(el) {
-      el.onclick = function() {
-        selectText(this.nextSibling);
-        toggleClass(this, 'is-active');
-        return false;
-      };
-    }, false);
-  }
-
-
-  // Add operamini class to body
-  if (window.operamini) {
-    document.getElementsByTagName('body')[0].className+=' operamini';
-  }
-  // Opera Mini has trouble with these enhancements
-  // So we'll make sure they don't get them
-  else {
     // Init prettyprint
     prettyPrint();
 
-    // Get nav form
-    var nav = document.getElementById('js-sg-section-switcher');
+    function selectText(node) {
+      var doc = document,
+          range,
+          selection;
 
-    // Toggle active class on navToggle click
-    nav.onchange = function() {
-      var val = this.value;
-      if (val !== "") {
-        window.location = val;
+      if (doc.body.createTextRange) {
+          range = doc.body.createTextRange();
+          range.moveToElementText(node);
+          range.select();
+      } else if (window.getSelection) {
+          selection = window.getSelection();
+          range = doc.createRange();
+          range.selectNodeContents(node);
+          selection.removeAllRanges();
+          selection.addRange(range);
       }
-    };
+    }
+
+    // Toggle source code visibility
+    function toggleSource() {
+      $(this).parent().next('.sg-source').toggleClass('is-active');
+    }
+
+    // Highlight source code to be copy to clipboard
+    function highlightSource() {
+      selectText(this.nextSibling);
+      $(this).toggleClass('is-active');
+    }
+
+    $(document)
+      .on('click', '.sg-btn--source', toggleSource)
+      .on('click', '.sg-btn--select', highlightSource);
   }
 
  })(document);
