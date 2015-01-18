@@ -45,16 +45,26 @@ body {
 .sg-h1 {
   font-weight: bold;
   padding-bottom: .2em;
-  margin-top: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1.25em;
+  border-bottom-width: 3px;
 }
 .sg-h2 {
   margin-bottom: .5em;
   padding-bottom: .5em;
   text-transform: capitalize;
   margin-top: 1.5em;
+  border-bottom-width: 2px;
+}
+.sg-h3 {
+  padding-bottom: .25em;
+  border-color: #eee;
 }
 .sg-about {
   margin-top: 2em;
+}
+.row > .page-header {
+  padding-top: 2em;
 }
 /* Buttons
 ---------------------------------------------------------------------------- */

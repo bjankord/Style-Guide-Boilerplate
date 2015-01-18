@@ -1,8 +1,8 @@
 /* -------------------------------------------------------------------------
 
- Style Guide Boilerplate v2.0.1
- Repo: https://github.com/bjankord/Style-Guide-Boilerplate
- Author: Brett Jankord
+ Style Guide Boilerplate Bootstrap Edition v2.0.1
+ Repo: https://github.com/kemie/Style-Guide-Boilerplate-Bootstrap-Edition
+ Author: Brett Jankord (modified by Kemie Guaida)
  License: MIT
 
 ---------------------------------------------------------------------------- */
@@ -28,7 +28,7 @@ padding-top: 50px;}
 }
 
 .sg-animated {
-  -webkit-transition: all 0.6s ease-out;  
+  -webkit-transition: all 0.6s ease-out;
      -moz-transition: all 0.6s ease-out;
       -ms-transition: all 0.6s ease-out;
        -o-transition: all 0.6s ease-out;
@@ -53,20 +53,31 @@ padding-top: 50px;}
   margin-top: 0;
 }
 
-.sg-h1 {    
+.sg-h1 {
   font-weight: bold;
   padding-bottom: .2em;
-  margin-top: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1.25em;
+  border-bottom-width: 3px;
 }
 
 .sg-h2 {
   margin-bottom: .5em;
   padding-bottom: .5em;
-  text-transform: capitalize; 
+  text-transform: capitalize;
   margin-top: 1.5em;
+  border-bottom-width: 2px;
+}
+.sg-h3{
+    padding-bottom: .25em;
+    border-color: #eee;
 }
 .sg-about{
 	margin-top: 2em;
+}
+.row>.page-header{
+	padding-top: 2em;
+
 }
 
 /* Buttons
@@ -153,7 +164,7 @@ ul.scroll-menu {
 /* Sections
 ---------------------------------------------------------------------------- */
 .sg-section {
-  margin-bottom: 32px; /* For older browsers */ 
+  margin-bottom: 32px; /* For older browsers */
   margin-bottom: 3rem;
   overflow: hidden;
 }
@@ -282,7 +293,7 @@ div{ background-color: @gray-lighter;
 .js .sg-source.is-active,
 .operamini .sg-source,
 .legacy .sg-source {
-  max-height: 2400px; 
+  max-height: 2400px;
 }
 
 
@@ -294,29 +305,29 @@ div{ background-color: @gray-lighter;
 @media screen {
   .str,
   .string {color: #E6DB74;} /* string content */
-  
+
   .kwd,
   .keyword {color: #66D9EF;} /* a keyword */
-  
+
   .com,
   .comment {color: #75715E;} /* a comment */
-  
+
   .typ {color: #A6E22E;} /* a type name */
-  
+
   .lit,
   .number {color: #AE81FF;} /* a literal value */
-  
+
   /* punctuation, lisp open bracket, lisp close bracket */
   /* .pun, .opn, .clo { color: #660 } */
-  
+
   .tag {color: #F92672;} /* a markup tag name */
-  
+
   .atn {color: #A6E22E;} /* a markup attribute name */
-  
+
   .atv {color: #E6DB74;} /* a markup attribute value */
-  
+
   /*.dec, .var { color: #606 }*/ /* a declaration; a variable name */
-  
+
   .fun {color: #FF0000;} /* a function name */
 }
 
@@ -325,22 +336,22 @@ div{ background-color: @gray-lighter;
   .str {color: #060}
 
   .kwd {color: #006; font-weight: bold }
-  
+
   .com {color: #600; font-style: italic }
-  
+
   .typ {color: #404; font-weight: bold }
-  
+
   .lit {color: #044}
-  
-  .pun, 
-  .opn, 
-  
+
+  .pun,
+  .opn,
+
   .clo {color: #440}
-  
+
   .tag {color: #006; font-weight: bold }
-  
+
   .atn {color: #404}
-  
+
   .atv {color: #060}
 }
 
