@@ -1,13 +1,14 @@
 <form>
   <fieldset>
-    <div><label>Disabled text input</label> <input type="text" value="Disabled text input" disabled></div>
-    <div><label>Disabled select field</label> <select disabled><option>Option 01</option><option>Option 02</option></select></div>
-    <div><label>Disabled file input</label> <input type="file" disabled></div>
-    <div><label>Disabled radio input</label> <input type="radio" name="rad" disabled></div>
-    <div><label>Disabled checkbox input</label> <input type="checkbox" disabled></div>
-    <div><label>Disabled color input</label> <input type="color" value="#000000" disabled></div>
-    <div><label>Disabled range input</label> <input type="range" disabled></div>
-    <div><label>Disabled number input</label> <input type="number" value="5" min="0" max="10" disabled></div>
-    <div><label>Disabled textarea</label> <textarea cols="30" rows="5" disabled>Textarea text</textarea></div>
+    <legend>Disabled Form Fields</legend>
+    <div><label for="text-input-disabled">Disabled text input</label> <input id="text-input-disabled" type="text" value="Disabled text input" disabled></div>
+    <div><label for="select-field-disabled">Disabled select field</label> <select id="select-field-disabled" disabled><option>Option 01</option><option>Option 02</option></select></div>
+    <div><label for="file-input-disabled">Disabled file input</label> <input id="file-input-disabled" type="file" disabled></div>
+    <div><label>Disabled radio input <input type="radio" name="rad" disabled></label></div>
+    <div><label>Disabled checkbox input <input type="checkbox" disabled></label></div>
+    <div><label for="color-input-disabled">Disabled color input</label> <input id="color-input-disabled" type="color" value="#000000" disabled></div>
+    <div><label for="range-input-disabled">Disabled range input</label> <input id="range-input-disabled" type="range" disabled></div>
+    <div><label for="number-input-disabled">Disabled number input</label> <input id="number-input-disabled" type="number" value="5" min="0" max="10" disabled></div>
+    <div><label for="textarea-disabled">Disabled textarea</label> <textarea id="textarea-disabled" cols="30" rows="5" disabled>Textarea text</textarea></div>
   </fieldset>
 </form>

@@ -16,6 +16,7 @@
 <div id="top" class="sg-header sg-container">
   <h1 class="sg-logo">STYLE GUIDE <span>BOILERPLATE</span></h1>
   <form id="js-sg-nav" action=""  method="post" class="sg-nav">
+    <label for="js-sg-section-switcher" class="sg-visually-hidden">Navigation</label>
     <select id="js-sg-section-switcher" class="sg-section-switcher" name="sg_section_switcher">
         <option value="">Jump To Section:</option>
         <optgroup label="Intro">
