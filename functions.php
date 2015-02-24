@@ -49,7 +49,7 @@
         echo '<div class="sg-markup-controls"><button type="button" class="sg-btn sg-btn--source">View Source</button> <a class="sg-btn--top" href="#top">Back to Top</a> </div>';
         echo '<div class="sg-source sg-animated">';
         echo '<button type="button" class="sg-btn sg-btn--select">Copy Source</button>';
-        echo '<pre class="prettyprint linenums"><code>';
+        echo '<pre class="line-numbers"><code class="language-markup">';
         echo htmlspecialchars(file_get_contents('markup/'.$type.'/'.$file));
         echo '</code></pre>';
         echo '</div>';

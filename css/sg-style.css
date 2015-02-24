@@ -27,12 +27,8 @@ body {
   background: #000;
   color: #fff;
   zoom: 1;
-}
-
-@media screen and (max-width: 650px) {
-  .sg-header {
-    text-align: center;
-  }
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 
@@ -42,14 +38,79 @@ body {
   padding-bottom: 2rem;
 }
 
+.sg-wrapper {
+  position: relative; /* Used to help sidebar height go all the way down the page */
+}
+
+.sg-main,
+.sg-sidebar {
+  padding-top: 24px; /* For older browsers */
+  padding-top: 1.5rem;
+  padding-bottom: 16px; /* For older browsers */
+  padding-bottom: 1rem;
+}
+
+.sg-sidebar {
+  font-size: 80%;
+  padding-left: 16px; /* For older browsers */
+  padding-left: 0 1rem;
+  padding-right: 16px; /* For older browsers */
+  padding-right: 0 1rem;
+}
+
+.js .sg-sidebar {
+  /*display: none;*/
+  position: absolute;
+  top: -100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+     -moz-transition: opacity 0.6s ease-out;
+      -ms-transition: opacity 0.6s ease-out;
+       -o-transition: opacity 0.6s ease-out;
+          transition: opacity 0.6s ease-out;
+}
+
+.js.nav-is-active .sg-sidebar {
+  /*display: block;*/
+  position: static;
+  opacity: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .sg-sidebar,
+  .js .sg-sidebar,
+  .js.nav-is-active .sg-sidebar {
+    opacity: 1;
+    display: block !important;
+    float: left;
+    font-size: 100%;
+    width: 25%;
+    position: absolute;
+    /*position: fixed;
+    overflow: auto;*/
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.sg-dark-theme .sg-sidebar {
+  background: #3d3d3d;
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .sg-main {
+    float: right;
+    width: 75%;
+  }
+}
 
 /* -------------------------------------------------------------------------
  Utility Classes
 ---------------------------------------------------------------------------- */
 .sg-container {
-  overflow: hidden;
-  padding: 16px 24px; /* For older browsers */
-  padding: 1rem 1.5rem;
+  padding: 0 24px; /* For older browsers */
+  padding: 0 1.5rem;
 }
 
 .sg-animated {
@@ -60,51 +121,169 @@ body {
           transition: all 0.6s ease-out;
 }
 
+.sg-clearfix,
+.sg-container {
+  *zoom:1
+}
+
+.sg-container:before,
+.sg-container:after,
+.sg-clearfix:before,
+.sg-clearfix:after{
+  display:table;
+  content:"";
+  line-height:0
+}
+
+.sg-container:after,
+.sg-clearfix:after{
+  clear:both
+}
+
+
+.sg-section:before,
+.sg-section:after,
+.sg-markup-controls:before,
+.sg-markup-controls:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.sg-section:after,
+.sg-markup-controls:after {
+  clear: both;
+}
 
 /* -------------------------------------------------------------------------
  Modules
 ---------------------------------------------------------------------------- */
 
+/* Fonts
+---------------------------------------------------------------------------- */
+
+/* Helvetica Neue Light */
+.sg-font1,
+.sg-logo,
+.sg-about p,
+.sg-color-value  {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+}
+
+/* Helvetica Neue Medium */
+.sg-font2,
+.sg-logo em,
+.sg-nav-toggle,
+.sg-h1,
+.sg-h2,
+.sg-h3,
+.sg-color-name,
+.sg-font-list dt  {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   font-weight: 500;
+}
+
 /* Branding
 ---------------------------------------------------------------------------- */
 .sg-logo {
   float: left;
-  font-size: 1.5em;
-  font-weight: normal;
+  font-size: 1em;
+  line-height: 2;
   margin: 0;
   padding: 0;
 }
 
-  .sg-logo span {
-    font-weight: bold;
+.sg-logo-full {
+  display: none;
+}
+
+.sg-logo em {
+  font-style: normal;
+}
+
+@media screen and (min-width: 650px) {
+  .sg-logo-initials {
+    display: none;
   }
 
-@media screen and (max-width: 650px) {
-  .sg-logo {
-    float: none;
-    padding-bottom: .5em;
-    text-align: center;
+  .sg-logo-full {
+    display: inline;
   }
 }
+
+
 
 /* Navigation
 ---------------------------------------------------------------------------- */
-.sg-nav{
+.sg-nav-toggle {
+  border: 1px solid #7C7C7C;
+  border-radius: 5px;
+  color: #fff;
   float: right;
+  padding: 5px 8px;
+  text-decoration: none;
+  transition: all .15s ease-in;
 }
 
-.js .sg-submit-btn {
-  display: none;
+.sg-nav-toggle:hover {
+  border-color: #9c9c9c;
 }
 
-.operamini .sg-nav {
-  display: none;
+@media screen and (min-width: 1024px) {
+  .sg-nav-toggle {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 650px) {
-  .sg-nav{
-    display: inline;
-    float: none;
+.sg-nav-group {
+  margin-bottom: 2.5em;
+}
+
+.sg-navlist,
+.sg-navlist li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sg-navlist li {
+  margin-bottom: .5em;
+}
+
+.sg-navlist a {
+  display: block;
+  color: #333;
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: .35em 0 .35em .5em;
+  border-left: 2px solid transparent;
+  transition: all .15s ease-in;
+}
+
+.sg-navlist a:hover {
+  background: #ecf0f1;
+  border-left: 2px solid #111313;
+}
+
+.sg-dark-theme .sg-navlist a {
+  color: #fff;
+}
+
+.sg-dark-theme .sg-navlist a:hover {
+background: #565656;
+border-left: 2px solid #939393;
+color: #fff;
+}
+
+
+.js .sg-navlist {
+  /*display: none;*/
+}
+
+@media screen and (min-width: 1024px) {
+  .js .sg-navlist {
+    display: block !important;
   }
 }
 
@@ -113,22 +292,20 @@ body {
 .sg-h1,
 .sg-h2,
 .sg-h3 {
-  font-family: sans-serif;
-  font-weight: normal;
   margin-bottom: 1em;
   margin-top: 0;
 }
 
 .sg-h1 {
-  font-size: 1.75em;
-  font-weight: bold;
+  font-size: 2em;
   padding-bottom: .2em;
 }
 
 .sg-h2 {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 1px solid #ddd;
   font-size: 1.5em;
-  margin-bottom: .5em;
+  margin-bottom: .75em;
+  padding-bottom: .2em;
   text-transform: capitalize;
 }
 
@@ -136,13 +313,20 @@ body {
   font-size: 1.2em;
 }
 
+.sg-about p {
+  font-size: 1.1em;
+}
+
 
 /* Buttons
 ---------------------------------------------------------------------------- */
 .sg-btn {
   background: #cbcbcb;
+  border: none;
   color: #222;
   float: left;
+  font-size: 16px;
+  font-size: 1rem;
   padding: .5em .9em;
   text-decoration: none;
 }
@@ -151,11 +335,28 @@ body {
   float: right;
 }
 
+.sg-btn--source,
+.sg-btn--select {
+  display: none;
+}
+
+/* Show specific buttons if JS enabled */
+.js .sg-btn--source {
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .js .sg-btn--select {
+    display: block;
+  }
+}
+
 .sg-btn--select {
   border-radius: 0 0.3em;
   position: absolute;
   right: 1px;
-  top: 14px;
+  top: 1px;
+  z-index: 1;
 }
 
 .sg-btn--select.is-active:hover:after{
@@ -186,23 +387,6 @@ body {
   z-index:99
 }
 
-/* Hide specific buttons for use with JS */
-.sg-btn--source,
-.sg-btn--select {
-  display: none;
-}
-
-/* Show specific buttons if JS enabled */
-.js .sg-btn--source,
-.js .sg-btn--select {
-  display: block;
-}
-
-/* Hide specific buttons conditionally */
-.operamini .sg-btn--source,
-.legacy .sg-btn--source {
-  display: none;
-}
 
 
 /* Sections
@@ -210,13 +394,11 @@ body {
 .sg-section {
   margin-bottom: 32px; /* For older browsers */
   margin-bottom: 3rem;
-  overflow: hidden;
 }
 
-  .sg-anchor {
-    display: block;
-    padding-top: 1em;
-  }
+.sg-anchor {
+  display: block;
+}
 
 
 /* Colors
@@ -230,15 +412,11 @@ body {
 }
 
 .sg-color-name {
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 500;
   font-size: 1.1em;
   padding: .5em 0;
 }
 
 .sg-color-value {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 400;
   font-size: 1.1em;
   text-transform: uppercase;
 }
@@ -289,8 +467,6 @@ body {
 
 .sg-font-list dt {
   display: block;
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 500;
   padding-bottom: .25em;
 }
 
@@ -319,7 +495,6 @@ body {
 }
 
 .sg-markup-controls {
-  overflow: hidden;
   padding-top: 1.5em;
 }
 
@@ -327,6 +502,9 @@ body {
   position: relative;
 }
 
+/* prisim's styles pre elements with white-space: pre;
+ * which seems to causes some odd horizontal scrolling.
+ * Upping specificity on this styling here as to not modify prisim's css */
 .sg-source pre {
   background: #333;
   border-radius: .5em;
@@ -334,93 +512,26 @@ body {
   color: #fff;
   overflow-x: scroll;
   padding: .5em .3em;
+  white-space: pre-wrap !important; /* IMPORTANT - PREVENTS HORIZONTAL SCROLLING */
 }
 
 .sg-source pre code {
   background: transparent;
+  white-space: pre-wrap !important; /* IMPORTANT - PREVENTS HORIZONTAL SCROLLING */
 }
 
+/* Hide source code blocks off-screen */
 .js .sg-source {
-  max-height: 0;
-  overflow: hidden;
+  position: absolute;
+  top: -100%;
+  opacity: 0;
 }
 
+/* Show source code blocks when active or no-js enabled */
 .js .sg-source.is-active,
-.operamini .sg-source,
-.legacy .sg-source {
-  max-height: 2400px;
-}
-
-
-/* -------------------------------------------------------------------------
- Prettyprint
----------------------------------------------------------------------------- */
-.pln {color: #fff} /* plain text */
-
-@media screen {
-  .str,
-  .string {color: #E6DB74;} /* string content */
-
-  .kwd,
-  .keyword {color: #66D9EF;} /* a keyword */
-
-  .com,
-  .comment {color: #75715E;} /* a comment */
-
-  .typ {color: #A6E22E;} /* a type name */
-
-  .lit,
-  .number {color: #AE81FF;} /* a literal value */
-
-  /* punctuation, lisp open bracket, lisp close bracket */
-  /* .pun, .opn, .clo { color: #660 } */
-
-  .tag {color: #F92672;} /* a markup tag name */
-
-  .atn {color: #A6E22E;} /* a markup attribute name */
-
-  .atv {color: #E6DB74;} /* a markup attribute value */
-
-  /*.dec, .var { color: #606 }*/ /* a declaration; a variable name */
-
-  .fun {color: #FF0000;} /* a function name */
-}
-
-/* Use higher contrast and text-weight for printable form. */
-@media print, projection {
-  .str {color: #060}
-
-  .kwd {color: #006; font-weight: bold }
-
-  .com {color: #600; font-style: italic }
-
-  .typ {color: #404; font-weight: bold }
-
-  .lit {color: #044}
-
-  .pun,
-  .opn,
-
-  .clo {color: #440}
-
-  .tag {color: #006; font-weight: bold }
-
-  .atn {color: #404}
-
-  .atv {color: #060}
-}
-
-/* Specify class=linenums on a pre to get line numbering */
-ol.linenums {
-  border-left:1px solid #444;
-  margin: 0 0 0 3.3em; /* IE indents via margin-left */
-  padding: 0;
-}
-
-ol.linenums li {
-  color: #bebec5;
-  line-height: 1.5;
-  padding-left: .8em;
+.no-js .sg-source {
+  position: relative;
+  opacity: 1;
 }
 
 
