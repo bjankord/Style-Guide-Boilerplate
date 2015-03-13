@@ -1,6 +1,6 @@
-.PHONY: all clean make-dir copy build
+.PHONY: all clean make-dir copy create-html
  
-all: clean make-dir copy build
+all: clean make-dir copy create-html
  
 clean:
 	rm -rf dist
@@ -13,5 +13,5 @@ copy:
 	cp -r js dist/js
 	cp -r images dist/images
 
-build:
+create-html:
 	php index.php > dist/index.html
