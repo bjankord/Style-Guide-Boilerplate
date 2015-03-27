@@ -71,6 +71,16 @@ body {
   width: 1px;
 }
 
+.sg-visually-hidden-focusable:active,
+.sg-visually-hidden-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
 /* -------------------------------------------------------------------------
  Modules
 ---------------------------------------------------------------------------- */

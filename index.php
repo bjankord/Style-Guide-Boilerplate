@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<a href="#main" class="sg-visually-hidden sg-visually-hidden-focusable">Skip to main content</a>
 <div id="top" class="sg-header sg-container">
   <h1 class="sg-logo">STYLE GUIDE <span>BOILERPLATE</span></h1>
   <form id="js-sg-nav" action=""  method="post" class="sg-nav">
@@ -36,7 +36,7 @@
   </form><!--/.sg-nav-->
 </div><!--/.sg-header-->
 
-<div class="sg-body sg-container">
+<div id="main" class="sg-body sg-container">
   <div class="sg-info">
     <div class="sg-about sg-section">
       <h2 class="sg-h2"><a id="sg-about" class="sg-anchor">About</a></h2>
