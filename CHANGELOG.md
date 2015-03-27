@@ -1,3 +1,10 @@
+2.6.1 / 2015-03-26
+==================
+
+* Improved accessibility of form, media, and table markup examples
+* Added skip to main content link
+* Added .sg-visually-hidden and .sg-visually-hidden-focusable to style text intended for screen readers
+
 2.6.0 / 2014-12-18
 ==================
 
