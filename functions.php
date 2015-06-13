@@ -1,4 +1,4 @@
-  <?php
+<?php
 
   // Display title of each markup samples as a select option
   function listMarkupAsOptions ($type) {
@@ -19,7 +19,7 @@
     endforeach;
   }
 
-  // Display markup view & source
+  // Display markup view and source
   function showMarkup($type) {
     $files = array();
     $handle=opendir('markup/'.$type);
@@ -56,4 +56,4 @@
         echo '</div>';
     endforeach;
   }
-  ?>
+?>
