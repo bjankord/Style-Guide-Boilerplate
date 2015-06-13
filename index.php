@@ -1,6 +1,6 @@
 <?php include_once('functions.php'); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
   <title>Style Guide Boilerplate</title>
