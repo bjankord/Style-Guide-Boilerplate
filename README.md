@@ -110,8 +110,6 @@ review the [guidelines for contributing](CONTRIBUTING.md).
 * [Feature requests](CONTRIBUTING.md#features)
 * [Pull requests](CONTRIBUTING.md#pull-requests)
 
-
-
 ## Licensing
 **Style Guide Boilerplate** is licensed under the [MIT License](http://en.wikipedia.org/wiki/MIT_License)
 
