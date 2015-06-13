@@ -9,6 +9,7 @@
 * Updated "View Source" and "Copy Source" actions to button elements
 * Refactored listMarkupAsOptions function into listMarkupAsListItems function
 * Removed global form navigation
+* Removed code-prettify (prettyprint) styles
 * Cleaned up spacing and comment wording in functions.php
 * Cleaned up sg-scripts.js
 
