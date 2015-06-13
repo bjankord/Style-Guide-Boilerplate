@@ -4,6 +4,7 @@
 * Rework layout template and styles
 * Added 'no-js' class to HTML element to help with progressive enhancement
 * Added meta theme-color tag
+* Added minor accessibility improvements
 * Replaced code-prettify with prism syntax highlighting
 * Updated meta viewport tag
 * Updated font stack markup and styling

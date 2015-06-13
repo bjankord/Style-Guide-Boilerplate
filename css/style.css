@@ -25,25 +25,25 @@
 .alert-warning {
   background-color: #fcf8e3;
   border-color: #fbeed5;
-  color: #c09853;
+  color: #8b6d3a;
 }
 
 .alert-error {
   background-color: #f2dede;
   border-color: #eed3d7;
-  color: #b94a48;
+  color: #aa4342;
 }
 
 .alert-success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
-  color: #468847;
+  color: #3c773d;
 }
 
 .alert-info {
   background-color: #d9edf7;
   border-color: #bce8f1;
-  color: #3a87ad;
+  color: #2f7090;
 }
 
 
@@ -58,7 +58,6 @@
  * update as well.
  */
 .breadcrumb {
-   background-color: #eee;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
@@ -84,7 +83,7 @@
 }
 
 .breadcrumb li .divider {
-  color: #aaa;
+  color: #767676;
   padding: 0 5px;
 }
 

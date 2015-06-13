@@ -36,7 +36,7 @@
         $documentation = 'doc/'.$type.'/'.$file;
         echo '<div class="sg-markup sg-section">';
         echo '<div class="sg-display">';
-        echo '<h2 class="sg-h2"><a id="sg-'.$filename.'" class="sg-anchor">'.$title.'</a></h2>';
+        echo '<h2 id="sg-'.$filename.'" class="sg-h2">'.$title.'</h2>';
         if (file_exists($documentation)) {
           echo '<div class="sg-doc">';
           echo '<h3 class="sg-h3">Usage</h3>';

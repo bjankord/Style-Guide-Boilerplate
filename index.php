@@ -19,26 +19,29 @@
 <body>
   <a href="#main" class="sg-visually-hidden sg-visually-hidden-focusable">Skip to main content</a>
 
-  <div id="top" class="sg-header">
+  <div id="top" class="sg-header" role="banner">
     <div class="sg-container">
-      <h1 class="sg-logo"><span class="sg-logo-initials">SG</span><span class="sg-logo-full">STYLE GUIDE</span> <em>BOILERPLATE</em></h1>
+      <h1 class="sg-logo">
+        <span class="sg-logo-initials">SG</span>
+        <span class="sg-logo-full">STYLE GUIDE</span> <em>BOILERPLATE</em>
+      </h1>
       <a class="sg-nav-toggle" id="sg-nav-toggle" href="#nav">Menu</a>
     </div>
   </div><!--/.sg-header-->
 
   <div class="sg-wrapper sg-clearfix">
-    <div id="nav" class="sg-sidebar">
+    <div id="nav" class="sg-sidebar" role="navigation">
       <div class="sg-nav-group">
         <h2 class="sg-h2 sg-subnav-title">About</h2>
         <ul class="sg-navlist">
           <li>
-            <a href="#getting-started">Getting Started</a>
+            <a href="#sg-about">Getting Started</a>
           </li>
           <li>
-            <a href="#colors">Colors</a>
+            <a href="#sg-colors">Colors</a>
           </li>
           <li>
-            <a href="#fonts">Fonts</a>
+            <a href="#sg-fontStacks">Fonts</a>
           </li>
         </ul>
       </div>
@@ -56,17 +59,17 @@
       </div>
     </div><!--/.sg-sidebar-->
 
-    <div class="sg-main">
+    <div id="main" class="sg-main" role="main">
       <div class="sg-container">
         <div class="sg-info">
           <div class="sg-about sg-section">
-            <h2 class="sg-h2"><a id="sg-about" class="sg-anchor">Getting Started</a></h2>
+            <h2 id="sg-about" class="sg-h2">Getting Started</h2>
             <p>Comments and documentation about your style guide. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nobis enim labore facilis consequuntur! Veritatis neque est suscipit tenetur temporibus enim consequatur deserunt perferendis. Neque nemo iusto minima deserunt amet.</p>
           </div><!--/.sg-about-->
 
           <!-- Manually add your UI colors here. -->
           <div class="sg-colors sg-section">
-            <h2 class="sg-h2"><a id="sg-colors" class="sg-anchor">Colors</a></h2>
+            <h2 id="sg-colors" class="sg-h2">Colors</h2>
             <div class="sg-color-grid">
               <div class="sg-color">
                 <div class="sg-color-swatch" style="background-color: #1abc9c;"></div>
@@ -137,7 +140,7 @@
 
           <!-- Manually add your fonts here. -->
           <div class="sg-font-stacks sg-section">
-            <h2 class="sg-h2"><a id="sg-fontStacks" class="sg-anchor">Font Stacks</a></h2>
+            <h2 id="sg-fontStacks" class="sg-h2">Font Stacks</h2>
             <dl class="sg-font-list">
               <dt>Primary Font:</dt>
               <dd style='font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;'>"HelveticaNeue", Helvetica, Arial, sans-serif;</dd>
