@@ -26,14 +26,15 @@ body {
 .sg-header {
   background: #000;
   color: #fff;
-  zoom: 1;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 0.75rem;
+  padding-bottom: 12px; /* For older browsers */
+  padding-top: 0.75rem;
+  padding-top: 12px; /* For older browsers */
 }
 
 .sg-info,
 .sg-base-styles {
-  padding-bottom: 24px; /* For older browsers */
+  padding-bottom: 32px; /* For older browsers */
   padding-bottom: 2rem;
 }
 
@@ -50,6 +51,8 @@ body {
 }
 
 .sg-sidebar {
+  background: #3d3d3d;
+  color: #fff;
   font-size: 80%;
   padding-left: 16px; /* For older browsers */
   padding-left: 0 1rem;
@@ -58,10 +61,9 @@ body {
 }
 
 .js .sg-sidebar {
-  /*display: none;*/
+  opacity: 0;
   position: absolute;
   top: -100%;
-  opacity: 0;
   -webkit-transition: opacity 0.6s ease-out;
      -moz-transition: opacity 0.6s ease-out;
       -ms-transition: opacity 0.6s ease-out;
@@ -70,34 +72,23 @@ body {
 }
 
 .js.nav-is-active .sg-sidebar {
-  /*display: block;*/
-  position: static;
   opacity: 1;
+  position: static;
 }
 
 @media screen and (min-width: 1024px) {
   .sg-sidebar,
   .js .sg-sidebar,
   .js.nav-is-active .sg-sidebar {
-    opacity: 1;
-    display: block !important;
+    bottom: 0;
     float: left;
     font-size: 100%;
-    width: 25%;
+    opacity: 1;
     position: absolute;
-    /*position: fixed;
-    overflow: auto;*/
     top: 0;
-    bottom: 0;
+    width: 25%;
   }
-}
 
-.sg-dark-theme .sg-sidebar {
-  background: #3d3d3d;
-  color: #fff;
-}
-
-@media screen and (min-width: 1024px) {
   .sg-main {
     float: right;
     width: 75%;
@@ -120,35 +111,21 @@ body {
           transition: all 0.6s ease-out;
 }
 
-.sg-clearfix,
-.sg-container {
-  *zoom:1
-}
-
 .sg-container:before,
 .sg-container:after,
 .sg-clearfix:before,
-.sg-clearfix:after{
-  display:table;
+.sg-clearfix:after,
+.sg-section:before,
+.sg-section:after,
+.sg-markup-controls:before,
+.sg-markup-controls:after{
   content:"";
+  display:table;
   line-height:0
 }
 
 .sg-container:after,
-.sg-clearfix:after{
-  clear:both
-}
-
-
-.sg-section:before,
-.sg-section:after,
-.sg-markup-controls:before,
-.sg-markup-controls:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-
+.sg-clearfix:after,
 .sg-section:after,
 .sg-markup-controls:after {
   clear: both;
@@ -182,7 +159,7 @@ body {
 /* Fonts
 ---------------------------------------------------------------------------- */
 
-/* Helvetica Neue Light */
+/* SG Font 1 */
 .sg-font1,
 .sg-logo,
 .sg-about p,
@@ -191,7 +168,7 @@ body {
   font-weight: 400;
 }
 
-/* Helvetica Neue Medium */
+/* SG Font 2 */
 .sg-font2,
 .sg-logo em,
 .sg-nav-toggle,
@@ -235,13 +212,18 @@ body {
 /* Navigation
 ---------------------------------------------------------------------------- */
 .sg-nav-toggle {
-  border: 1px solid #7C7C7C;
   border-radius: 5px;
+  border: 1px solid #7C7C7C;
   color: #fff;
   float: right;
-  padding: 5px 8px;
+  padding: 5px 8px; /* For older browsers */
+  padding: 0.3125rem 0.5rem;
   text-decoration: none;
-  transition: all .15s ease-in;
+  -webkit-transition: all .15s ease-in;
+   -moz-transition: all .15s ease-in;
+    -ms-transition: all .15s ease-in;
+     -o-transition: all .15s ease-in;
+        transition: all .15s ease-in;
 }
 
 .sg-nav-toggle:hover {
@@ -270,39 +252,23 @@ body {
 }
 
 .sg-navlist a {
-  display: block;
-  color: #333;
-  font-size: 1.2em;
-  text-decoration: none;
-  padding: .35em 0 .35em .5em;
   border-left: 2px solid transparent;
-  transition: all .15s ease-in;
+  color: #fff;
+  display: block;
+  font-size: 1.2em;
+  padding: .35em 0 .35em .5em;
+  text-decoration: none;
+  -webkit-transition: all .15s ease-in;
+   -moz-transition: all .15s ease-in;
+    -ms-transition: all .15s ease-in;
+     -o-transition: all .15s ease-in;
+        transition: all .15s ease-in;
 }
 
 .sg-navlist a:hover {
-  background: #ecf0f1;
-  border-left: 2px solid #111313;
-}
-
-.sg-dark-theme .sg-navlist a {
+  background: #565656;
+  border-left: 2px solid #939393;
   color: #fff;
-}
-
-.sg-dark-theme .sg-navlist a:hover {
-background: #565656;
-border-left: 2px solid #939393;
-color: #fff;
-}
-
-
-.js .sg-navlist {
-  /*display: none;*/
-}
-
-@media screen and (min-width: 1024px) {
-  .js .sg-navlist {
-    display: block !important;
-  }
 }
 
 /* Typography
@@ -343,7 +309,7 @@ color: #fff;
   border: none;
   color: #222;
   float: left;
-  font-size: 16px;
+  font-size: 16px; /* For older browsers */
   font-size: 1rem;
   padding: .5em .9em;
   text-decoration: none;
@@ -370,39 +336,44 @@ color: #fff;
 }
 
 .sg-btn--select {
-  border-radius: 0 0.3em;
+  border-radius: 0 0.2em;
   position: absolute;
   right: 1px;
   top: 1px;
   z-index: 1;
 }
 
-.sg-btn--select.is-active:hover:after{
-  background:#111;
-  background:rgba(0,0,0,.8);
-  border-radius:5px;
-  top:45px;
-  color:#fff;
-  content:"Selected code ready to be copied";
-  font-size: .8em;
-  display:block;
-  right:5px;
-  padding:5px 15px;
-  position:absolute;
-  white-space:nowrap;
-  z-index:98
+.sg-btn--select-active:hover:after{
+  background: #111; /* For older browsers */
+  background: rgba(0,0,0,.8);
+  border-radius: 5px;
+  color: #fff;
+  content: "Selected code ready to be copied";
+  display: block;
+  padding: 8px 16px; /* For older browsers */
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 8px; /* For older browsers */
+  right: 0.5rem;
+  top: 48px; /* For older browsers */
+  top: 3rem;
+  white-space: nowrap;
+  z-index: 98;
 }
 
-.sg-btn--select.is-active:hover:before{
-  border:solid;
-  border-color:#111 transparent;
-  border-width:0 6px 6px 6px;
-  top:40px;
-  content:"";
-  display:block;
-  left:75%;
-  position:absolute;
-  z-index:99
+.sg-btn--select-active:hover:before{
+  border-color: transparent transparent #111 transparent;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  content: "";
+  display: block;
+  height: 0;
+  left: 45%;
+  position: absolute;
+  top: 40px;
+  top: 2.5rem;
+  width: 0;
+  z-index: 99;
 }
 
 /* Sections
@@ -410,10 +381,6 @@ color: #fff;
 .sg-section {
   margin-bottom: 32px; /* For older browsers */
   margin-bottom: 3rem;
-}
-
-.sg-anchor {
-  display: block;
 }
 
 /* Colors
@@ -473,7 +440,7 @@ color: #fff;
   margin: 0;
   padding: 0;
 }
-+
+
 .sg-font-list {
   font-size: 1.1em;
 }
@@ -484,10 +451,10 @@ color: #fff;
 }
 
 .sg-font-list dd {
-  display: block;
-  margin-left: 0;
   border-bottom: 1px solid #ddd;
+  display: block;
   margin-bottom: .75em;
+  margin-left: 0;
   padding-bottom: .75em;
 }
 
@@ -501,8 +468,6 @@ color: #fff;
 
 /* Markup
 ---------------------------------------------------------------------------- */
-.sg-markup {}
-
 .sg-doc {
   border-bottom: 1px solid #ddd;
   margin-bottom: 1em;
@@ -531,16 +496,16 @@ color: #fff;
 
 /* Hide source code blocks off-screen */
 .js .sg-source {
+  opacity: 0;
   position: absolute;
   top: -100%;
-  opacity: 0;
 }
 
 /* Show source code blocks when active or JS is not enabled */
-.js .sg-source.is-active,
+.js .sg-source-active,
 .no-js .sg-source {
-  position: relative;
   opacity: 1;
+  position: relative;
 }
 
 

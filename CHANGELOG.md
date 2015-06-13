@@ -15,6 +15,7 @@
 * Removed code-prettify (prettyprint) styles
 * Cleaned up spacing and comment wording in functions.php
 * Cleaned up sg-scripts.js
+* Cleaned up sg-style.css
 
 2.6.1 / 2015-03-26
 ==================

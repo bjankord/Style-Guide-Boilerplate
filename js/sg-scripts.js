@@ -67,7 +67,7 @@ var SGB = window.SGB || {};
     SGB.toggleSourceCode = function() {
       var sourceCode = this.parentNode.nextElementSibling;
 
-      _toggleClass(sourceCode, 'is-active');
+      _toggleClass(sourceCode, 'sg-source-active');
     };
 
     SGB.selectSourceCode = function() {
@@ -86,7 +86,7 @@ var SGB = window.SGB || {};
         selection.addRange(range);
       }
 
-       _toggleClass(this, 'is-active');
+       _toggleClass(this, 'sg-btn--select-active');
     };
   }
 
