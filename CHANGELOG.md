@@ -1,6 +1,7 @@
 3.0.0 / In Development
 ==================
 
+* Rework layout template and styles
 * Added 'no-js' class to HTML element to help with progressive enhancement
 * Added meta theme-color tag
 * Replaced code-prettify with prism syntax highlighting

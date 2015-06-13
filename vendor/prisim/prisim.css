@@ -12,7 +12,7 @@ pre[class*="language-"] {
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
   direction: ltr;
   text-align: left;
-  white-space: pre;
+  white-space: pre-wrap; /* Prevents horizontal scrolling if code blocks are too long */
   word-spacing: normal;
   word-break: normal;
   line-height: 1.5;
