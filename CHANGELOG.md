@@ -1,6 +1,7 @@
 3.0.0 / In Development
 ==================
 
+* Added meta theme-color tag
 * Replaced code-prettify with prism syntax highlighting
 * Updated meta viewport tag
 * Updated font stack markup and styling
