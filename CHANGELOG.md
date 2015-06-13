@@ -3,6 +3,7 @@
 
 * Updated font stack markup and styling
 * Updated color swatch markup and styling
+* Removed global form navigation
 
 2.6.1 / 2015-03-26
 ==================
