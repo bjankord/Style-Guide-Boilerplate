@@ -7,6 +7,7 @@
 * Refactored listMarkupAsOptions function into listMarkupAsListItems function
 * Removed global form navigation
 * Cleaned up spacing and comment wording in functions.php
+* Cleaned up sg-scripts.js
 
 2.6.1 / 2015-03-26
 ==================
