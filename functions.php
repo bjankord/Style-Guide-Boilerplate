@@ -1,7 +1,7 @@
 <?php
 
-  // Display title of each markup samples as a select option
-  function listMarkupAsOptions ($type) {
+  // Display title of each markup samples as a list item
+  function listMarkupAsListItems ($type) {
     $files = array();
     $handle=opendir('markup/'.$type);
     while (false !== ($file = readdir($handle))):
@@ -15,7 +15,7 @@
         $filename = preg_replace("/\.html$/i", "", $file);
         $title = preg_replace("/\-/i", " ", $filename);
         $title = ucwords($title);
-        echo '<option value="#sg-'.$filename.'">'.$title.'</option>';
+        echo '<li><a href="#sg-'.$filename.'">'.$title.'</a></li>';
     endforeach;
   }
 
