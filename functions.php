@@ -46,9 +46,9 @@
         echo '<h3 class="sg-h3">Example</h3>';
         include('markup/'.$type.'/'.$file);
         echo '</div>';
-        echo '<div class="sg-markup-controls"><a class="sg-btn sg-btn--source" href="#">View Source</a> <a class="sg-btn--top" href="#top">Back to Top</a> </div>';
+        echo '<div class="sg-markup-controls"><button type="button" class="sg-btn sg-btn--source">View Source</button> <a class="sg-btn--top" href="#top">Back to Top</a></div>';
         echo '<div class="sg-source sg-animated">';
-        echo '<a class="sg-btn sg-btn--select" href="#">Copy Source</a>';
+        echo '<button type="button" class="sg-btn sg-btn--select">Copy Source</button>';
         echo '<pre class="prettyprint linenums"><code>';
         echo htmlspecialchars(file_get_contents('markup/'.$type.'/'.$file));
         echo '</code></pre>';
