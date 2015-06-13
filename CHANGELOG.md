@@ -1,6 +1,7 @@
 3.0.0 / In Development
 ==================
 
+* Replaced code-prettify with prism syntax highlighting
 * Updated font stack markup and styling
 * Updated color swatch markup and styling
 * Updated "View Source" and "Copy Source" actions to button elements

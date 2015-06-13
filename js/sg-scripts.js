@@ -13,9 +13,6 @@ var SGB = window.SGB || {};
     docEl.className = docEl.className.replace(/no-js/gi,'');
     docEl.className+=' js';
 
-    // Init prettyprint
-    prettyPrint();
-
   // Cut the mustard
   if ("querySelector" in doc && Array.prototype.forEach) {
 

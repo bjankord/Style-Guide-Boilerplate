@@ -10,6 +10,9 @@
 
   <!-- Replace below stylesheet with your own stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Prisim Syntax Highlighting Styles -->
+  <link rel="stylesheet" href="vendor/prisim/prisim.css">
 </head>
 <body>
 <a href="#main" class="sg-visually-hidden sg-visually-hidden-focusable">Skip to main content</a>
@@ -132,7 +135,7 @@
     </div><!--/.sg-pattern-styles-->
   </div><!--/.sg-body-->
 
-  <script src="js/sg-plugins.js"></script>
+  <script src="vendor/prisim/prisim.js"></script>
   <script src="js/sg-scripts.js"></script>
 </body>
 </html>
