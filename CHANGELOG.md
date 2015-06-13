@@ -1,3 +1,8 @@
+3.0.0 / In Development
+==================
+
+* Updated font stack markup and styling
+
 2.6.1 / 2015-03-26
 ==================
 
