@@ -7,6 +7,7 @@
 * Added minor accessibility improvements
 * Added picture element to media.html example file
 * Replaced code-prettify with prism syntax highlighting
+* Updated README.md
 * Updated wording in "Getting Started" section
 * Updated meta viewport tag
 * Updated font stack markup and styling
