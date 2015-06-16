@@ -76,7 +76,7 @@ body {
   position: static;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .sg-sidebar,
   .js .sg-sidebar,
   .js.nav-is-active .sg-sidebar {
@@ -222,7 +222,7 @@ body {
   border-color: #9c9c9c;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .sg-nav-toggle {
     display: none;
   }
@@ -321,7 +321,7 @@ body {
   display: block;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .js .sg-btn--select {
     display: block;
   }

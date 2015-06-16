@@ -8,6 +8,7 @@
 * Added picture element to media.html example file
 * Replaced code-prettify with prism syntax highlighting
 * Updated README.md
+* Update media query breakpoints
 * Updated wording in "Getting Started" section
 * Updated meta viewport tag
 * Updated font stack markup and styling
