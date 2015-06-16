@@ -64,6 +64,10 @@ var SGB = window.SGB || {};
       _toggleClass(docEl, 'nav-is-active');
     };
 
+    SGB.hideNav = function() {
+      _removeClass(docEl, 'nav-is-active');
+    };
+
     SGB.toggleSourceCode = function() {
       var sourceCode = this.parentNode.nextElementSibling;
 
@@ -91,6 +95,7 @@ var SGB = window.SGB || {};
   }
 
   queryAll('#sg-nav-toggle').on('click', SGB.toggleNav);
+  queryAll('.sg-navlist a').on('click', SGB.hideNav);
   queryAll('.sg-btn--source').on('click', SGB.toggleSourceCode);
   queryAll('.sg-btn--select').on('click', SGB.selectSourceCode);
 }(this, SGB));
