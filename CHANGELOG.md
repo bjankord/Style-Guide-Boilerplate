@@ -11,6 +11,7 @@
 * Updated font stack markup and styling
 * Updated color swatch markup and styling
 * Updated "View Source" and "Copy Source" actions to button elements
+* Updated styling to prevent horizontal scrollbar on small viewports
 * Refactored listMarkupAsOptions function into listMarkupAsListItems function
 * Removed global form navigation
 * Removed code-prettify (prettyprint) styles

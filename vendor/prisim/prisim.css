@@ -12,15 +12,10 @@ pre[class*="language-"] {
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
   direction: ltr;
   text-align: left;
-  white-space: pre-wrap; /* Prevents horizontal scrolling if code blocks are too long */
-  word-spacing: normal;
-  word-break: normal;
   line-height: 1.5;
-
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
@@ -32,6 +27,7 @@ pre[class*="language-"] {
   padding: 1em;
   margin: .5em 0;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   border-radius: 0.3em;
 }
 
