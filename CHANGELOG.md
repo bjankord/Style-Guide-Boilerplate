@@ -19,6 +19,7 @@
 * Update new nav JavaScript to close nav when link item is clicked
 * Refactored listMarkupAsOptions function into listMarkupAsListItems function
 * Removed global form navigation
+* Removed example of fieldset with large amount of text
 * Removed code-prettify (prettyprint) styles
 * Cleaned up spacing and comment wording in functions.php
 * Cleaned up sg-scripts.js
