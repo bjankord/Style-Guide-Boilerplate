@@ -55,12 +55,6 @@ var SGB = window.SGB || {};
 
     // Public methods
     SGB.toggleNav = function() {
-      if ( event.preventDefault ) {
-        event.preventDefault();
-      }
-
-      event.returnValue = false;
-
       _toggleClass(docEl, 'nav-is-active');
     };
 
@@ -70,7 +64,6 @@ var SGB = window.SGB || {};
 
     SGB.toggleSourceCode = function() {
       var sourceCode = this.parentNode.nextElementSibling;
-
       _toggleClass(sourceCode, 'sg-source-active');
     };
 
@@ -94,7 +87,7 @@ var SGB = window.SGB || {};
     };
   }
 
-  queryAll('#sg-nav-toggle').on('click', SGB.toggleNav);
+  queryAll('.sg-nav-toggle').on('click', SGB.toggleNav);
   queryAll('.sg-navlist a').on('click', SGB.hideNav);
   queryAll('.sg-btn--source').on('click', SGB.toggleSourceCode);
   queryAll('.sg-btn--select').on('click', SGB.selectSourceCode);

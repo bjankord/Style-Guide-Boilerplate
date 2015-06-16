@@ -9,6 +9,7 @@
 * Replaced code-prettify with prism syntax highlighting
 * Updated README.md
 * Update media query breakpoints
+* Update nav toggle element to button
 * Updated wording in "Getting Started" section
 * Updated meta viewport tag
 * Updated font stack markup and styling

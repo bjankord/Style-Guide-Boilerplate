@@ -25,7 +25,7 @@
         <span class="sg-logo-initials">SG</span>
         <span class="sg-logo-full">STYLE GUIDE</span> <em>BOILERPLATE</em>
       </h1>
-      <a class="sg-nav-toggle" id="sg-nav-toggle" href="#nav">Menu</a>
+      <button type="button" class="sg-nav-toggle">Menu</button>
     </div>
   </div><!--/.sg-header-->
 
