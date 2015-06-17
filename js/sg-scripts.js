@@ -26,7 +26,7 @@ var SGB = window.SGB || {};
       this.addEventListener(name, fn)
     };
 
-    NodeList.prototype.__proto__ = Array.prototype;
+    NodeList.prototype.forEach = Array.prototype.forEach;
 
     NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn) {
       this.forEach(function (elem, i) {
@@ -85,10 +85,10 @@ var SGB = window.SGB || {};
 
        _toggleClass(this, 'sg-btn--select-active');
     };
-  }
 
-  queryAll('.sg-nav-toggle').on('click', SGB.toggleNav);
-  queryAll('.sg-navlist a').on('click', SGB.hideNav);
-  queryAll('.sg-btn--source').on('click', SGB.toggleSourceCode);
-  queryAll('.sg-btn--select').on('click', SGB.selectSourceCode);
+    queryAll('.sg-nav-toggle').on('click', SGB.toggleNav);
+    queryAll('.sg-navlist a').on('click', SGB.hideNav);
+    queryAll('.sg-btn--source').on('click', SGB.toggleSourceCode);
+    queryAll('.sg-btn--select').on('click', SGB.selectSourceCode);
+  }
 }(this, SGB));
