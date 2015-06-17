@@ -319,13 +319,13 @@ body {
   display: none;
 }
 
-/* Show specific buttons if JS enabled */
-.js .sg-btn--source {
+/* Show specific buttons we cut the mustard*/
+.sg-enhanced .sg-btn--source {
   display: block;
 }
 
 @media screen and (min-width: 1025px) {
-  .js .sg-btn--select {
+  .sg-enhanced .sg-btn--select {
     display: block;
   }
 }
@@ -490,7 +490,7 @@ body {
 }
 
 /* Hide source code blocks off-screen */
-.js .sg-source {
+.sg-enhanced .sg-source {
   opacity: 0;
   position: absolute;
   top: -100%;
@@ -503,8 +503,7 @@ body {
 }
 
 /* Show source code blocks when active or JS is not enabled */
-.js .sg-source-active,
-.no-js .sg-source {
+.sg-enhanced .sg-source-active {
   opacity: 1;
   position: relative;
   width: 100%;
@@ -528,27 +527,3 @@ body {
   width: 100%;
   z-index: 100;
 }
-
-
-/* -------------------------------------------------------------------------
- Legacy IE
----------------------------------------------------------------------------- */
-/**
- * IE 7 Fixes
- */
-.sg-color {
-  *display: inline;
-  zoom: 1;
-}
-/* End IE 7 Fixes */
-
-
-/**
- * IE 6 Fixes
- */
-pre{
-  _white-space: pre;
-  _white-space: pre-wrap;
-  _word-wrap: break-word;
-}
-/* End IE 6 Fixes */
