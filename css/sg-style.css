@@ -487,6 +487,7 @@ body {
 
 .sg-source pre code {
   background: transparent;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Hide source code blocks off-screen */
