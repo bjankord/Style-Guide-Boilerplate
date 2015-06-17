@@ -1,3 +1,28 @@
+3.0.0 / 2015-06-16
+==================
+
+* Added 'no-js' class to HTML element to help with progressive enhancement
+* Added meta theme-color tag
+* Added minor accessibility improvements
+* Added picture element to media.html example file
+* Changed nav toggle element to button
+* Changed "View Source" and "Copy Source" actions to button elements
+* Cleaned up spacing and comment wording in functions.php
+* Cleaned up sg-scripts.js
+* Cleaned up sg-style.css
+* Removed global form navigation
+* Removed example of fieldset with large amount of text
+* Removed code-prettify (prettyprint) styles
+* Reworked listMarkupAsOptions function into listMarkupAsListItems function
+* Reworked layout template and styles to be more responsive
+* Updated README.md
+* Updated media query breakpoints
+* Updated wording in "Getting Started" section
+* Updated meta viewport tag
+* Updated font stack markup and styling
+* Updated color swatch markup and styling
+* Updated JavaScript syntax highlighter to prism.js
+
 2.6.1 / 2015-03-26
 ==================
 

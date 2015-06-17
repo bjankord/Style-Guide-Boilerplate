@@ -1,4 +1,4 @@
-Style-Guide-Boilerplate v2.6.1
+Style-Guide-Boilerplate v3.0.0
 ==============================
 
 A starting point for crafting living style guides.
@@ -7,7 +7,7 @@ A starting point for crafting living style guides.
 
 *Note: Sample patterns have been included in the demo. Your site will have it's own unique patterns.*
 
-![Screenshot](http://bjankord.github.io/Style-Guide-Boilerplate/assets/screenshot-1.jpg)
+![Screenshot](http://brettjankord.com/projects/style-guide-boilerplate/style-guide-boilerplate-v3.0.0.jpg)
 
 ## Getting Started With Style Guide Boilerplate
 
@@ -53,6 +53,18 @@ For example, if you want to create doc for `markup/patterns/breadcrumbs.html`, c
 
 You should now be able to see the new doc at `yoursite.com/style-guide/`
 
+## Running the app
+You can run the application with PHP's built in web server. Simply run the following command:
+
+`php -S localhost:8000`
+
+Now, browse to [http://localhost:8000](http://localhost:8000) to see the website.
+
+## Generating static HTML style guide
+You can generate a static index.html version of style guide boilerplate by running the following command:
+
+`php index.php > index.html`
+
 ## Browser Support
 I've built **Style Guide Boilerplate** with progressive enhancement in mind to work on a wide range of browsers.
 
@@ -62,19 +74,16 @@ Known supported browsers include:
 * Firefox
 * Safari
 * Opera
-* IE6+
-* Stock Android Browser (4.0+)
-* Chrome for Android
-* Firefox for Android
-* Opera Mini
-* Opera Mobile
+* IE8+
 * Safari for iOS
-* Chrome for iOS
+* Stock Android Browser (4.0+)
 
 If you come across any bugs, or have any other issues with the boilerplate, please open an issue here on GitHub.
 
 
 ## Additional Resources
+[Styleguides.io](http://styleguides.io)
+
 [Front-end Style Guides](http://24ways.org/2011/front-end-style-guides/)
 
 [Front-end Style Guide Roundup](https://gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides)
@@ -100,6 +109,7 @@ Jeremy Keith for letting me build on top of [Pattern Primer](https://github.com/
 
 ## Ports
 * A nodejs port using handlebars is available at [Style-Guide-Boilerplate-nodejs](https://github.com/DeadlyBrad42/Style-Guide-Boilerplate-nodejs).
+* A ruby port avaiable at [Rails_App_Style_Guide](https://github.com/JoshuaMSchultz/Rails_App_Style_Guide)
 
 ## Contributing to this project
 
@@ -109,8 +119,6 @@ review the [guidelines for contributing](CONTRIBUTING.md).
 * [Bug reports](CONTRIBUTING.md#bugs)
 * [Feature requests](CONTRIBUTING.md#features)
 * [Pull requests](CONTRIBUTING.md#pull-requests)
-
-
 
 ## Licensing
 **Style Guide Boilerplate** is licensed under the [MIT License](http://en.wikipedia.org/wiki/MIT_License)
