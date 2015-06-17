@@ -7,7 +7,7 @@ A starting point for crafting living style guides.
 
 *Note: Sample patterns have been included in the demo. Your site will have it's own unique patterns.*
 
-![Screenshot](http://bjankord.github.io/Style-Guide-Boilerplate/assets/screenshot-1.jpg)
+![Screenshot](http://brettjankord.com/projects/style-guide-boilerplate/style-guide-boilerplate-v3.0.0.jpg)
 
 ## Getting Started With Style Guide Boilerplate
 
@@ -74,14 +74,9 @@ Known supported browsers include:
 * Firefox
 * Safari
 * Opera
-* IE6+
-* Stock Android Browser (4.0+)
-* Chrome for Android
-* Firefox for Android
-* Opera Mini
-* Opera Mobile
+* IE8+
 * Safari for iOS
-* Chrome for iOS
+* Stock Android Browser (4.0+)
 
 If you come across any bugs, or have any other issues with the boilerplate, please open an issue here on GitHub.
 
