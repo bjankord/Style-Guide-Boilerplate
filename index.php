@@ -9,6 +9,7 @@
 
   <!-- Style Guide Boilerplate Styles -->
   <link rel="stylesheet" href="css/sg-style.css">
+  <!--[if lt IE 9]><link rel="stylesheet" href="css/sg-style-old-ie.css"><![endif]-->
 
   <!-- Replace below stylesheet with your own stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -178,7 +179,7 @@
     </div><!--/.sg-main-->
   </div><!--/.sg-wrapper-->
 
-  <script src="vendor/prisim/prisim.js"></script>
+  <!--[if gt IE 8]><!--><script src="vendor/prisim/prisim.js"></script><!--<![endif]-->
   <script src="js/sg-scripts.js"></script>
 </body>
 </html>
