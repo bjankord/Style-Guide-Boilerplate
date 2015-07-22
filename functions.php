@@ -15,7 +15,11 @@
         $filename = preg_replace("/\.html$/i", "", $file);
         $title = preg_replace("/\-/i", " ", $filename);
         $title = ucwords($title);
-        echo '<li><a href="#sg-'.$filename.'">'.$title.'</a></li>';
+        if($type === 'pages'):
+          echo '<li><a href="markup/pages/'.$filename.'.html" target="_blank">'.$title.'</a></li>';
+        else:
+          echo '<li><a href="#sg-'.$filename.'">'.$title.'</a></li>';
+        endif;
     endforeach;
   }
 
