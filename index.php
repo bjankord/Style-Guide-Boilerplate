@@ -47,6 +47,12 @@
         </ul>
       </div>
       <div class="sg-nav-group">
+        <h2 class="sg-h2 sg-subnav-title">Pages</h2>
+        <ul class="sg-navlist">
+          <?php listMarkupAsListItems('pages'); ?>
+        </ul>
+      </div>
+      <div class="sg-nav-group">
         <h2 class="sg-h2 sg-subnav-title">Base HTML</h2>
         <ul class="sg-navlist">
           <?php listMarkupAsListItems('base'); ?>
@@ -183,4 +189,3 @@
   <script src="js/sg-scripts.js"></script>
 </body>
 </html>
-
