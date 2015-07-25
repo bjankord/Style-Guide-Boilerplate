@@ -32,20 +32,18 @@
 
   <div class="sg-wrapper sg-clearfix">
     <div id="nav" class="sg-sidebar" role="navigation">
-      <div class="sg-nav-group">
-        <h2 class="sg-h2 sg-subnav-title">About</h2>
-        <ul class="sg-navlist">
-          <li>
-            <a href="#sg-about">Getting Started</a>
-          </li>
-          <li>
-            <a href="#sg-colors">Colors</a>
-          </li>
-          <li>
-            <a href="#sg-fontStacks">Fonts</a>
-          </li>
-        </ul>
-      </div>
+      <h2 class="sg-h2 sg-subnav-title">About</h2>
+      <ul class="sg-nav-group">
+        <li>
+          <a href="#sg-about">Getting Started</a>
+        </li>
+        <li>
+          <a href="#sg-colors">Colors</a>
+        </li>
+        <li>
+          <a href="#sg-fontStacks">Fonts</a>
+        </li>
+      </ul>
 
       <?php listFilesInFolder('markup'); ?>
     </div><!--/.sg-sidebar-->
