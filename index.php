@@ -46,18 +46,8 @@
           </li>
         </ul>
       </div>
-      <div class="sg-nav-group">
-        <h2 class="sg-h2 sg-subnav-title">Base HTML</h2>
-        <ul class="sg-navlist">
-          <?php listMarkupAsListItems('base'); ?>
-        </ul>
-      </div>
-      <div class="sg-nav-group">
-        <h2 class="sg-h2 sg-subnav-title">Patterns</h2>
-        <ul class="sg-navlist">
-          <?php listMarkupAsListItems('patterns'); ?>
-        </ul>
-      </div>
+
+      <?php listFilesInFolder('markup'); ?>
     </div><!--/.sg-sidebar-->
 
     <div id="main" class="sg-main" role="main">
@@ -166,15 +156,7 @@
           </div><!--/.sg-font-stacks-->
         </div><!--/.sg-info-->
 
-        <div class="sg-base-styles">
-          <h1 class="sg-h1">Base HTML</h1>
-          <?php showMarkup('base'); ?>
-        </div><!--/.sg-base-styles-->
-
-        <div class="sg-pattern-styles">
-          <h1 class="sg-h1">Patterns<small> - Design and markup patterns unique to your site.</small></h1>
-          <?php showMarkup('patterns'); ?>
-        </div><!--/.sg-pattern-styles-->
+        <?php renderFilesInFolder('markup'); ?>
       </div><!--/.sg-container-->
     </div><!--/.sg-main-->
   </div><!--/.sg-wrapper-->
