@@ -33,7 +33,7 @@ body {
 }
 
 .sg-info,
-.sg-base-styles {
+.sg-section-group {
   padding-bottom: 32px; /* For older browsers */
   padding-bottom: 2rem;
 }
@@ -215,10 +215,10 @@ body {
   padding: 0.3125rem 0.5rem;
   text-decoration: none;
   -webkit-transition: all .15s ease-in;
-   -moz-transition: all .15s ease-in;
-    -ms-transition: all .15s ease-in;
-     -o-transition: all .15s ease-in;
-        transition: all .15s ease-in;
+     -moz-transition: all .15s ease-in;
+      -ms-transition: all .15s ease-in;
+       -o-transition: all .15s ease-in;
+          transition: all .15s ease-in;
 }
 
 .sg-nav-toggle:hover {
@@ -231,39 +231,44 @@ body {
   }
 }
 
-.sg-nav-group {
-  margin-bottom: 2.5em;
-}
-
-.sg-navlist,
-.sg-navlist li {
+.sg-nav-group,
+.sg-nav-group li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.sg-navlist li {
+.sg-nav-group li {
   margin-bottom: .5em;
 }
 
-.sg-navlist a {
+.sg-nav-group a {
   border-left: 2px solid transparent;
   color: #fff;
   display: block;
   font-size: 1.2em;
   padding: .35em 0 .35em .5em;
   text-decoration: none;
+  text-transform: capitalize;
   -webkit-transition: all .15s ease-in;
-   -moz-transition: all .15s ease-in;
-    -ms-transition: all .15s ease-in;
-     -o-transition: all .15s ease-in;
-        transition: all .15s ease-in;
+     -moz-transition: all .15s ease-in;
+      -ms-transition: all .15s ease-in;
+       -o-transition: all .15s ease-in;
+          transition: all .15s ease-in;
 }
 
-.sg-navlist a:hover {
+.sg-nav-group a:hover {
   background: #565656;
   border-left: 2px solid #939393;
   color: #fff;
+}
+
+.sg-nav-group .sg-subnav-parent {
+  margin: 2.5em 0;
+}
+
+.sg-nav-group:first-child > .sg-subnav-parent {
+  margin-top: 0;
 }
 
 /* Typography
@@ -278,6 +283,7 @@ body {
 .sg-h1 {
   font-size: 2em;
   padding-bottom: .2em;
+  text-transform: capitalize;
 }
 
 .sg-h2 {
@@ -319,7 +325,7 @@ body {
   display: none;
 }
 
-/* Show specific buttons we cut the mustard*/
+/* Show specific buttons we cut the mustard */
 .sg-enhanced .sg-btn--source {
   display: block;
 }
@@ -497,10 +503,10 @@ body {
   top: -100%;
   width: 1px;
   -webkit-transition: opacity 0.6s ease-out;
-   -moz-transition: opacity 0.6s ease-out;
-    -ms-transition: opacity 0.6s ease-out;
-     -o-transition: opacity 0.6s ease-out;
-        transition: opacity 0.6s ease-out;
+     -moz-transition: opacity 0.6s ease-out;
+      -ms-transition: opacity 0.6s ease-out;
+       -o-transition: opacity 0.6s ease-out;
+          transition: opacity 0.6s ease-out;
 }
 
 /* Show source code blocks when active or JS is not enabled */

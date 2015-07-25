@@ -37,7 +37,7 @@ Guidelines for bug reports:
    latest `master` or development branch in the repository.
 
 3. **Isolate the problem** &mdash; create a [reduced test
-   case](http://css-tricks.com/6263-reduced-test-cases/) and a live example.
+   case](http://css-tricks.com/reduced-test-cases/) and a live example.
 
 A good bug report shouldn't leave others needing to chase you up for more
 information. Please try to be as detailed as possible in your report. What is
