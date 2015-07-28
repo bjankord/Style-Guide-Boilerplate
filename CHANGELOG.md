@@ -1,3 +1,10 @@
+3.1.0 / 2015-07-27
+==================
+
+* Updated CONTRIBUTING.md broken link fix @mixedrays 6fbc031403836f87166f322d2ca80c9b8c4e2924
+* Added automatic project structuring based on markup/ directory @mixedrays 6fbc031403836f87166f322d2ca80c9b8c4e2924
+ * Updated functions.php, index.php, sg-scripts.js, and sg-styles.css @mixedrays 6fbc031403836f87166f322d2ca80c9b8c4e2924
+
 3.0.0 / 2015-06-16
 ==================
 
