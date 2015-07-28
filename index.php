@@ -32,32 +32,20 @@
 
   <div class="sg-wrapper sg-clearfix">
     <div id="nav" class="sg-sidebar" role="navigation">
-      <div class="sg-nav-group">
-        <h2 class="sg-h2 sg-subnav-title">About</h2>
-        <ul class="sg-navlist">
-          <li>
-            <a href="#sg-about">Getting Started</a>
-          </li>
-          <li>
-            <a href="#sg-colors">Colors</a>
-          </li>
-          <li>
-            <a href="#sg-fontStacks">Fonts</a>
-          </li>
-        </ul>
-      </div>
-      <div class="sg-nav-group">
-        <h2 class="sg-h2 sg-subnav-title">Base HTML</h2>
-        <ul class="sg-navlist">
-          <?php listMarkupAsListItems('base'); ?>
-        </ul>
-      </div>
-      <div class="sg-nav-group">
-        <h2 class="sg-h2 sg-subnav-title">Patterns</h2>
-        <ul class="sg-navlist">
-          <?php listMarkupAsListItems('patterns'); ?>
-        </ul>
-      </div>
+      <h2 class="sg-h2 sg-subnav-title">About</h2>
+      <ul class="sg-nav-group">
+        <li>
+          <a href="#sg-about">Getting Started</a>
+        </li>
+        <li>
+          <a href="#sg-colors">Colors</a>
+        </li>
+        <li>
+          <a href="#sg-fontStacks">Fonts</a>
+        </li>
+      </ul>
+
+      <?php listFilesInFolder('markup'); ?>
     </div><!--/.sg-sidebar-->
 
     <div id="main" class="sg-main" role="main">
@@ -166,15 +154,7 @@
           </div><!--/.sg-font-stacks-->
         </div><!--/.sg-info-->
 
-        <div class="sg-base-styles">
-          <h1 class="sg-h1">Base HTML</h1>
-          <?php showMarkup('base'); ?>
-        </div><!--/.sg-base-styles-->
-
-        <div class="sg-pattern-styles">
-          <h1 class="sg-h1">Patterns<small> - Design and markup patterns unique to your site.</small></h1>
-          <?php showMarkup('patterns'); ?>
-        </div><!--/.sg-pattern-styles-->
+        <?php renderFilesInFolder('markup'); ?>
       </div><!--/.sg-container-->
     </div><!--/.sg-main-->
   </div><!--/.sg-wrapper-->

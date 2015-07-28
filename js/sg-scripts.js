@@ -87,7 +87,7 @@ var SGB = window.SGB || {};
     };
 
     queryAll('.sg-nav-toggle').on('click', SGB.toggleNav);
-    queryAll('.sg-navlist a').on('click', SGB.hideNav);
+    queryAll('.sg-nav-group a').on('click', SGB.hideNav);
     queryAll('.sg-btn--source').on('click', SGB.toggleSourceCode);
     queryAll('.sg-btn--select').on('click', SGB.selectSourceCode);
   }
