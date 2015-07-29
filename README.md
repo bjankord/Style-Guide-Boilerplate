@@ -1,6 +1,8 @@
 Style-Guide-Boilerplate v3.1.0
 ==============================
 
+[![Join the chat at https://gitter.im/bjankord/Style-Guide-Boilerplate](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bjankord/Style-Guide-Boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A starting point for crafting living style guides.
 
 [View Demo](http://brettjankord.com/projects/style-guide-boilerplate/)
