@@ -7,7 +7,7 @@ A starting point for crafting living style guides.
 
 [View Demo](http://brettjankord.com/projects/style-guide-boilerplate/)
 
-*Note: Sample patterns have been included in the demo. Your site will have it's own unique patterns.*
+*Note: Sample patterns have been included in the demo. Your site will have its own unique patterns.*
 
 ![Screenshot](http://brettjankord.com/projects/style-guide-boilerplate/style-guide-boilerplate-v3.0.0.jpg)
 
