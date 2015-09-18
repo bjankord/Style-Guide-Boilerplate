@@ -64,6 +64,10 @@
     renderFileDoc($path);
     renderFileExample($content);
     renderFileSource($content);
+    renderSass($path);
+    echo '<div class="sg-clearfix">';
+    echo '<a class="sg-btn--top" href="#top">Back to Top</a>';
+    echo '</div>';
     echo '</div>';
   }
 
@@ -73,6 +77,24 @@
       echo '<div class="sg-sub-section sg-doc">';
       echo '<h3 class="sg-h3 sg-title">Usage</h3>';
       include($documentation);
+      echo '</div>';
+    }
+  }
+
+  function renderSass($path) {
+    $sass = 'sass'.strstr($path, "/");
+    $sass = str_replace(".html",".scss",$sass);
+    if (file_exists($sass)) {
+      echo '<div class="sg-sub-section">';
+      echo '<div class="sg-markup-controls">';
+      echo '<button type="button" class="sg-btn sg-btn--source">View Sass</button>';
+      echo '</div>';
+      echo '<div class="sg-source">';
+      echo '<button type="button" class="sg-btn sg-btn--select">Copy Sass</button>';
+      echo '<pre class="line-numbers"><code class="language-scss">';
+      echo file_get_contents($sass);
+      echo '</code></pre>';
+      echo '</div>';
       echo '</div>';
     }
   }
@@ -91,7 +113,6 @@
       echo '<div class="sg-sub-section">';
       echo '<div class="sg-markup-controls">';
       echo '<button type="button" class="sg-btn sg-btn--source">View Source</button>';
-      echo '<a class="sg-btn--top" href="#top">Back to Top</a>';
       echo '</div>';
       echo '<div class="sg-source">';
       echo '<button type="button" class="sg-btn sg-btn--select">Copy Source</button>';
