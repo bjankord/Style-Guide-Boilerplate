@@ -64,7 +64,7 @@
     renderFileDoc($path);
     renderFileExample($content);
     renderFileSource($content);
-    renderSass($path);
+    renderScss($path);
     echo '<div class="sg-clearfix">';
     echo '<a class="sg-btn--top" href="#top">Back to Top</a>';
     echo '</div>';
@@ -81,18 +81,19 @@
     }
   }
 
-  function renderSass($path) {
-    $sass = 'sass'.strstr($path, "/");
-    $sass = str_replace(".html",".scss",$sass);
-    if (file_exists($sass)) {
+  function renderScss($path) {
+    $scss = 'scss'.strstr($path, "/");
+    $scss = str_replace(".html",".scss",$scss);
+    $scss = strrev(implode(strrev('/_'), explode('/', strrev($scss), 2)));
+    if (file_exists($scss)) {
       echo '<div class="sg-sub-section">';
       echo '<div class="sg-markup-controls">';
-      echo '<button type="button" class="sg-btn sg-btn--source">View Sass</button>';
+      echo '<button type="button" class="sg-btn sg-btn--source">View Scss</button>';
       echo '</div>';
       echo '<div class="sg-source">';
-      echo '<button type="button" class="sg-btn sg-btn--select">Copy Sass</button>';
+      echo '<button type="button" class="sg-btn sg-btn--select">Copy Scss</button>';
       echo '<pre class="line-numbers"><code class="language-scss">';
-      echo file_get_contents($sass);
+      echo file_get_contents($scss);
       echo '</code></pre>';
       echo '</div>';
       echo '</div>';
