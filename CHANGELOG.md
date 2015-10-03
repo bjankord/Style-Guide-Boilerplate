@@ -1,3 +1,12 @@
+3.2.0 / 2015-10-03
+==================
+
+* Added markdown support for docs
+* Added markdown styling via [github-markdown.css](https://github.com/sindresorhus/github-markdown-css)
+* Increased .sg-h2 and .sg-h3 font size to better align with github markdown heading sizes
+* Converted sample documentation .html files to .md files
+* Removed "Usage" heading that appeared above docs
+
 3.1.0 / 2015-07-27
 ==================
 

@@ -1,4 +1,4 @@
-Style-Guide-Boilerplate v3.1.0
+Style-Guide-Boilerplate v3.2.0
 ==============================
 
 [![Join the chat at https://gitter.im/bjankord/Style-Guide-Boilerplate](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bjankord/Style-Guide-Boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -47,11 +47,11 @@ Save the file as `pattern-name.html` into the `markup/patterns` directory inside
 You should now be able to see the new patterns at `yoursite.com/style-guide/`
 
 ### Create personalized documentation
-To create personalized documentation for your markup examples, create a new .html file and name it whatever your markup snippet is named.
+You can use markdown or html to create personalized documentation for your examples. Create a new .md or .html file and name it whatever your markup snippet file is named.
 
-Save the file as `markup-name.html` into the `doc/base` or `doc/patterns` directory inside of your `style-guide` directory.
+Save the file as `markup-name.md` or `markup-name.html` into the `doc/base` or `doc/patterns` directory inside of your `style-guide` directory.
 
-For example, if you want to create doc for `markup/patterns/breadcrumbs.html`, create a file called `breadcrumbs.html` and save it into `doc/patterns`.
+For example, if you want to create doc for `markup/patterns/breadcrumbs.html`, create a file called `breadcrumbs.md` or `breadcrumbs.html` and save it into `doc/patterns`.
 
 You should now be able to see the new doc at `yoursite.com/style-guide/`
 

@@ -68,12 +68,29 @@
   }
 
   function renderFileDoc($path) {
-    $documentation = 'doc'.strstr($path, "/");
-    if (file_exists($documentation)) {
+    $doc = 'doc'.strstr($path, "/");
+    $doc = str_replace(".html",".md",$doc);
+
+    require_once 'Parsedown.php';
+    $Parsedown = new Parsedown();
+
+
+    // Check if markdown doc exists
+    if (is_readable($doc)) {
       echo '<div class="sg-sub-section sg-doc">';
-      echo '<h3 class="sg-h3 sg-title">Usage</h3>';
-      include($documentation);
+      echo '<div class="markdown-body">';
+      echo $Parsedown->text(file_get_contents($doc));
       echo '</div>';
+      echo '</div>';
+    } else {
+      $doc = 'doc'.strstr($path, "/");
+
+      // Check if html doc exists
+      if (file_exists($doc)) {
+        echo '<div class="sg-sub-section sg-doc">';
+        include($doc);
+        echo '</div>';
+      }
     }
   }
 

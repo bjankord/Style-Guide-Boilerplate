@@ -288,14 +288,14 @@ body {
 
 .sg-h2 {
   border-bottom: 1px solid #ddd;
-  font-size: 1.5em;
+  font-size: 1.75em;
   margin-bottom: .75em;
   padding-bottom: .2em;
   text-transform: capitalize;
 }
 
 .sg-h3 {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .sg-about p {
