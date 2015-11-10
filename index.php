@@ -17,8 +17,8 @@
   <!-- Replace below stylesheet with your own stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Prisim Syntax Highlighting Styles -->
-  <link rel="stylesheet" href="vendor/prisim/prisim.css">
+  <!-- prism Syntax Highlighting Styles -->
+  <link rel="stylesheet" href="vendor/prism/prism.css">
 </head>
 <body>
   <a href="#main" class="sg-visually-hidden sg-visually-hidden-focusable">Skip to main content</a>
@@ -162,7 +162,7 @@
     </div><!--/.sg-main-->
   </div><!--/.sg-wrapper-->
 
-  <!--[if gt IE 8]><!--><script src="vendor/prisim/prisim.js"></script><!--<![endif]-->
+  <!--[if gt IE 8]><!--><script src="vendor/prism/prism.js"></script><!--<![endif]-->
   <script src="js/sg-scripts.js"></script>
 </body>
 </html>
