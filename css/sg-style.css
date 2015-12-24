@@ -242,7 +242,8 @@ body {
   margin-bottom: .5em;
 }
 
-.sg-nav-group a {
+.sg-nav-group a,
+.sg-nav-group a:visited {
   border-left: 2px solid transparent;
   color: #fff;
   display: block;
@@ -257,7 +258,8 @@ body {
           transition: all .15s ease-in;
 }
 
-.sg-nav-group a:hover {
+.sg-nav-group a:hover,
+.sg-nav-group a:focus {
   background: #565656;
   border-left: 2px solid #939393;
   color: #fff;
