@@ -1,6 +1,7 @@
 3.3.0 / 2015-12-24
 ==================
 
+* Fixed issue with scandir picking up hidden system files where the filename starts with a dot [\#30](https://github.com/bjankord/Style-Guide-Boilerplate/issues/30)
 * Added :visited and :focus styles to nav links [\#31](https://github.com/bjankord/Style-Guide-Boilerplate/issues/31)
 
 3.2.0 / 2015-10-03

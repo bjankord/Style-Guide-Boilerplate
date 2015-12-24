@@ -2,23 +2,21 @@
 
   // Display title of each markup samples as a list item
   function listFilesInFolder($dir) {
-    $files = scandir($dir);
+    $files = preg_grep('/^([^.])/', scandir($dir));
     sort($files);
 
     echo '<ul class="sg-nav-group">';
     foreach ($files as $file) {
-      if ($file != '.' && $file != '..') {
-        $path = $dir.'/'.$file;
-        if (is_dir($path)) {
-          echo '<li class="sg-subnav-parent">';
-          renderTitleFromPath($path, 'h2');
-          listFilesInFolder($path);
-          echo '</li>';
-        } else {
-          echo '<li>';
-          renderTitleFromPath($path, '');
-          echo '</li>';
-        }
+      $path = $dir.'/'.$file;
+      if (is_dir($path)) {
+        echo '<li class="sg-subnav-parent">';
+        renderTitleFromPath($path, 'h2');
+        listFilesInFolder($path);
+        echo '</li>';
+      } else {
+        echo '<li>';
+        renderTitleFromPath($path, '');
+        echo '</li>';
       }
     }
     echo '</ul>';
@@ -26,20 +24,18 @@
 
   // Scan specified directory recursively and render files
   function renderFilesInFolder($dir) {
-    $files = scandir($dir);
+    $files = preg_grep('/^([^.])/', scandir($dir));
     sort($files);
 
     echo '<div class="sg-section-group">';
     foreach ($files as $file) {
-        if ($file != '.' && $file != '..') {
-          $path = $dir.'/'.$file;
-          if (is_dir($path)) {
-            renderTitleFromPath($path, 'h1');
-            renderFilesInFolder($path);
-          } else {
-            renderFile($path);
-          }
-        }
+      $path = $dir.'/'.$file;
+      if (is_dir($path)) {
+        renderTitleFromPath($path, 'h1');
+        renderFilesInFolder($path);
+      } else {
+        renderFile($path);
+      }
     }
     echo '</div>';
   }
