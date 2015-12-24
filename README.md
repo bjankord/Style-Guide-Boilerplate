@@ -1,4 +1,4 @@
-Style-Guide-Boilerplate v3.2.0
+Style-Guide-Boilerplate v3.3.0
 ==============================
 
 [![Join the chat at https://gitter.im/bjankord/Style-Guide-Boilerplate](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bjankord/Style-Guide-Boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
