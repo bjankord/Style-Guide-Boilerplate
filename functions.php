@@ -108,7 +108,7 @@
       echo '</div>';
       echo '<div class="sg-source">';
       echo '<button type="button" class="sg-btn sg-btn--select">Copy Source</button>';
-      echo '<pre class="line-numbers"><code class="language-markup">';
+      echo '<pre class="line-numbers prettyprint"><code class="language-markup">';
       echo htmlspecialchars($content);
       echo '</code></pre>';
       echo '</div>';
