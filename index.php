@@ -13,10 +13,7 @@
 
   <!-- https://github.com/sindresorhus/github-markdown-css -->
   <link rel="stylesheet" href="css/github-markdown.css">
-
-  <!-- Replace below stylesheet with your own stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-
+  
   <!-- prism Syntax Highlighting Styles -->
   <link rel="stylesheet" href="vendor/prism/prism.css">
   <!-- Latest compiled and minified CSS -->
@@ -29,6 +26,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!-- Makes pretty Mark up -->
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
+  
+  <!-- CUSTOM CSS --- THEME CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body onload="prettyPrint()">
   <a href="#main" class="sg-visually-hidden sg-visually-hidden-focusable">Skip to main content</a>
@@ -36,8 +36,8 @@
   <div id="top" class="sg-header" role="banner">
     <div class="sg-container">
       <h1 class="sg-logo">
-        <span class="sg-logo-initials">SG</span>
-        <span class="sg-logo-full">STYLE GUIDE</span> <em>BOILERPLATE</em>
+        <span class="sg-logo-initials">FT</span>
+        <span class="sg-logo-full">Frontline Education</span> <em>Style Guide</em>
       </h1>
       <button type="button" class="sg-nav-toggle">Menu</button>
     </div>

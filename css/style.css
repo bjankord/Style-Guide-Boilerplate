@@ -94,3 +94,11 @@ img, svg, video, audio {
 .breadcrumb .active {
   color: #555;
 }
+
+/* -------------------------------------------------------------------------
+ ADJUSTMENT FOR PRETTY PRINT CODE STYLES
+---------------------------------------------------------------------------- */
+
+.pre.prettyprint {
+  width: 100%;
+}
