@@ -66,8 +66,7 @@
         <div class="sg-info">
           <div class="sg-about sg-section">
             <h2 id="sg-about" class="sg-h2">Getting Started</h2>
-            <p>A living style guide is a great tool to promote visual consistency, unify UX designers and front-end developers, as well as speed up development times. Add some documentation here on how to get started with your new style guide and start customizing this boilerplate to your liking.</p>
-            <p>If you are looking for resources on style guides, check out <a href="http://styleguides.io">styleguides.io</a>. There are a ton of great articles, books, podcasts, talks, and other style guide tools!</p>
+            <p>Welcome to frontline’s awesome we guideline. This tool is to help unify our web designers and developers around a consistent style but in turn also speed up development. </p>
           </div><!--/.sg-about-->
 
           <!-- Manually add your UI colors here. -->
@@ -75,31 +74,31 @@
             <h2 id="sg-colors" class="sg-h2">Colors</h2>
             <div class="sg-color-grid">
               <div class="sg-color">
-                <div class="sg-color-swatch" style="background-color: #1abc9c;"></div>
-                <div class="sg-color-name">Turquoise</div>
-                <div class="sg-color-value">#1abc9c</div>
+                <div class="sg-color-swatch" style="background-color: #6ECEB2;"></div>
+                <div class="sg-color-name">Pantone 338 C</div>
+                <div class="sg-color-value">#6ECEB2</div>
               </div>
               <div class="sg-color">
-                <div class="sg-color-swatch" style="background-color: #2ecc71;"></div>
-                <div class="sg-color-name">Emerald</div>
-                <div class="sg-color-value">#2ecc71</div>
+                <div class="sg-color-swatch" style="background-color: #7A4183"></div>
+                <div class="sg-color-name">Pantone 7662 C</div>
+                <div class="sg-color-value">#7A4183</div>
               </div>
               <div class="sg-color">
-                <div class="sg-color-swatch" style="background-color: #3498db;"></div>
-                <div class="sg-color-name">Peter River</div>
-                <div class="sg-color-value">#3498db</div>
+                <div class="sg-color-swatch" style="background-color: #E56A54;"></div>
+                <div class="sg-color-name">Pantone 7416 C</div>
+                <div class="sg-color-value">#E56A54</div>
               </div>
               <div class="sg-color">
-                <div class="sg-color-swatch" style="background-color: #9b59b6;"></div>
-                <div class="sg-color-name">Amethyst</div>
-                <div class="sg-color-value">#9b59b6</div>
+                <div class="sg-color-swatch" style="background-color: #3F2A56"></div>
+                <div class="sg-color-name">Pantone 669 C</div>
+                <div class="sg-color-value">#3F2A56</div>
               </div>
             </div><!--/.sg-color-grid-->
             <div class="sg-color-grid">
               <div class="sg-color">
-                <div class="sg-color-swatch" style="background-color: #f1c40f;"></div>
-                <div class="sg-color-name">Sun Flower</div>
-                <div class="sg-color-value">#f1c40f</div>
+                <div class="sg-color-swatch" style="background-color: #2E4D58;"></div>
+                <div class="sg-color-name">Pantone 2216 C</div>
+                <div class="sg-color-value">#2E4D58</div>
               </div>
               <div class="sg-color">
                 <div class="sg-color-swatch" style="background-color: #e67e22;"></div>
@@ -124,19 +123,19 @@
                 <div class="sg-color-value">#ecf0f1</div>
               </div>
               <div class="sg-color">
-                <div class="sg-color-swatch" style="background-color: #95a5a6;"></div>
+                <div class="sg-color-swatch" style="background-color: #D0D3D4;"></div>
                 <div class="sg-color-name">Silver</div>
-                <div class="sg-color-value">#95a5a6</div>
+                <div class="sg-color-value">#D0D3D4</div>
               </div>
               <div class="sg-color">
-                <div class="sg-color-swatch" style="background-color: #697374;"></div>
+                <div class="sg-color-swatch" style="background-color: #A2AAAD;"></div>
                 <div class="sg-color-name">Concrete</div>
-                <div class="sg-color-value">#697374</div>
+                <div class="sg-color-value">#A2AAAD</div>
               </div>
               <div class="sg-color">
-                <div class="sg-color-swatch" style="background-color: #111313;"></div>
+                <div class="sg-color-swatch" style="background-color: #5B6770;"></div>
                 <div class="sg-color-name">Obsidian</div>
-                <div class="sg-color-value">#111313</div>
+                <div class="sg-color-value">#5B6770</div>
               </div>
             </div><!--/.sg-color-grid-->
           </div><!--/.sg-colors-->
