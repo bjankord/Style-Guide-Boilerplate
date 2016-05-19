@@ -1,5 +1,6 @@
  body {
-  font-family: "HelveticaNeue", "Helvetica", Arial, sans-serif;
+  font-family: 'Lato', "HelveticaNeue", "Helvetica", Arial, sans-serif;
+  color: #5B6770;
 }
 
 img, svg, video, audio {
@@ -99,6 +100,7 @@ img, svg, video, audio {
  ADJUSTMENT FOR PRETTY PRINT CODE STYLES
 ---------------------------------------------------------------------------- */
 
-.pre.prettyprint {
+pre.prettyprint {
   width: 100%;
 }
+
