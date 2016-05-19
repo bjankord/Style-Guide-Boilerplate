@@ -15,9 +15,12 @@
   <link rel="stylesheet" href="css/github-markdown.css">
   
   <!-- prism Syntax Highlighting Styles -->
-  <link rel="stylesheet" href="vendor/prism/prism.css">
+  <!-- <link rel="stylesheet" href="vendor/prism/prism.css"> -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  
+  <!-- Google Font Lato -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,900' rel='stylesheet' type='text/css'>
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
