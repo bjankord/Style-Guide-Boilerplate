@@ -77,19 +77,19 @@
             <h2 id="sg-colors" class="sg-h2">Colors</h2>
             <div class="sg-color-grid">
               <div class="sg-color">
-                <div class="sg-color-swatch" style="background-color: #6ECEB2;"></div>
-                <div class="sg-color-name">Pantone 338 C</div>
-                <div class="sg-color-value">#6ECEB2</div>
+                <div class="sg-color-swatch" style="background-color: #6bccb3;"></div>
+                <div class="sg-color-name">Aqua</div>
+                <div class="sg-color-value">#6bccb3</div>
               </div>
               <div class="sg-color">
-                <div class="sg-color-swatch" style="background-color: #7A4183"></div>
-                <div class="sg-color-name">Pantone 7662 C</div>
-                <div class="sg-color-value">#7A4183</div>
+                <div class="sg-color-swatch" style="background-color: #7e4082"></div>
+                <div class="sg-color-name">Purple Haze</div>
+                <div class="sg-color-value">#7e4082</div>
               </div>
               <div class="sg-color">
-                <div class="sg-color-swatch" style="background-color: #E56A54;"></div>
-                <div class="sg-color-name">Pantone 7416 C</div>
-                <div class="sg-color-value">#E56A54</div>
+                <div class="sg-color-swatch" style="background-color: #402b56;"></div>
+                <div class="sg-color-name">Deep Purple</div>
+                <div class="sg-color-value">#402b56</div>
               </div>
               <div class="sg-color">
                 <div class="sg-color-swatch" style="background-color: #3F2A56"></div>
