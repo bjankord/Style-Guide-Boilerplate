@@ -1,6 +1,13 @@
 <?php
-
+  require_once "vendor/autoload.php";
   // Display title of each markup samples as a list item
+
+  
+
+  
+
+
+
   function listFilesInFolder($dir) {
     $files = preg_grep('/^([^.])/', scandir($dir));
     sort($files);
@@ -54,11 +61,34 @@
   }
 
   function renderFile($path) {
+
+    $file_info = pathinfo($path);
+
     $content = file_get_contents($path);
+
+    $renderedContent = $content;
+
+    if($file_info['extension'] == "twig") {
+      $dataPath = str_replace(["markup","twig"],["data","json"], $path);
+      $data = [];
+      if(is_file($dataPath)) {
+        $data = json_decode(file_get_contents($dataPath),true);
+
+        if(is_null($data)) {
+          die($dataPath." is invalid JSON file. Cannot continue");
+        }
+
+      }
+      $loader = new Twig_Loader_Filesystem('./');
+      $twig = new Twig_Environment($loader);
+      $renderedContent = $twig->render($path, $data);
+
+    }
+    
     echo '<div class="sg-section">';
     renderTitleFromPath($path, 'h2');
     renderFileDoc($path);
-    renderFileExample($content);
+    renderFileExample($renderedContent);
     renderFileSource($content);
     echo '</div>';
   }
