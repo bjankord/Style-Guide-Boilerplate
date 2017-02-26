@@ -55,9 +55,9 @@ body {
   color: #fff;
   font-size: 80%;
   padding-left: 16px; /* For older browsers */
-  padding-left: 0 1rem;
+  padding-left: 1rem;
   padding-right: 16px; /* For older browsers */
-  padding-right: 0 1rem;
+  padding-right: 1rem;
 }
 
 .js .sg-sidebar {
