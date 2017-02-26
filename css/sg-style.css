@@ -24,7 +24,7 @@ body {
 }
 
 .sg-header {
-  background: #000;
+  background: #7A4183;
   color: #fff;
   padding-bottom: 0.75rem;
   padding-bottom: 12px; /* For older browsers */
@@ -51,7 +51,7 @@ body {
 }
 
 .sg-sidebar {
-  background: #3d3d3d;
+  background: #5b6770;
   color: #fff;
   font-size: 80%;
   padding-left: 16px; /* For older browsers */
@@ -260,8 +260,7 @@ body {
 
 .sg-nav-group a:hover,
 .sg-nav-group a:focus {
-  background: #565656;
-  border-left: 2px solid #939393;
+  background: #A2AAAD;
   color: #fff;
 }
 

@@ -1,5 +1,10 @@
  body {
-  font-family: "HelveticaNeue", "Helvetica", Arial, sans-serif;
+  font-family: 'Lato', "HelveticaNeue", "Helvetica", Arial, sans-serif;
+  color: #5B6770;
+}
+
+a {
+  text-decoration: none;
 }
 
 img, svg, video, audio {
@@ -94,3 +99,12 @@ img, svg, video, audio {
 .breadcrumb .active {
   color: #555;
 }
+
+/* -------------------------------------------------------------------------
+ ADJUSTMENT FOR PRETTY PRINT CODE STYLES
+---------------------------------------------------------------------------- */
+
+pre.prettyprint {
+  width: 100%;
+}
+
