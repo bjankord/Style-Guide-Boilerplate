@@ -1,4 +1,9 @@
-<?php include_once('functions.php'); ?>
+<?php 
+  include_once('functions.php'); 
+  if (preg_match('/\.(?:png|jpg|jpeg|gif|js|css)$/', $_SERVER["REQUEST_URI"])) {
+    return false; 
+  }
+?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
