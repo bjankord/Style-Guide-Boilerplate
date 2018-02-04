@@ -112,8 +112,7 @@ Jeremy Keith for letting me build on top of [Pattern Primer](https://github.com/
 * A ruby port avaiable at [Rails_App_Style_Guide](https://github.com/JoshuaMSchultz/Rails_App_Style_Guide)
 
 ## Contributing to this project
-
-Anyone and everyone is welcome to contribute. Please take a moment to
+Please take a moment to
 review the [guidelines for contributing](CONTRIBUTING.md).
 
 * [Bug reports](CONTRIBUTING.md#bugs)
