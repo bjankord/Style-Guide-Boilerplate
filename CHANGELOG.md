@@ -1,3 +1,7 @@
+3.3.2 / 2018-10-6
+==================
+* Added package.json file to help deploy to gh-pages
+
 3.3.1 / 2018-10-6
 ==================
 * Fixed broken padding values on navigation sidebar
