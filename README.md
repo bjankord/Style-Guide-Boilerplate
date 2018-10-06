@@ -16,26 +16,27 @@ You can clone, fork, or download the repo from GitHub.
 Once you have the files for **Style Guide Boilerplate**, you'll create a directory on your site for them.
 
 ### Set up a directory on your site for the style guide
-I recommend creating a directory named `style-guide` in your site's root directory. I think it would be awesome if I could go to `anysite.com/style-guide/` and check out that site's style guide.
+I recommend creating a directory named `style-guide` in your site's root directory.
 
 ### Upload the Style Guide Boilerplate files
-**Style Guide Boilerplate** is currently PHP based so you will need a server that supports PHP. Just upload the files from the GitHub repo to your newly created directory and your almost done.
+**Style Guide Boilerplate** is currently PHP based so you will need a server that supports PHP. Upload the files from the GitHub repo to your newly created directory.
 
 ### Hook up your own CSS into the style guide
 In the `<head>` of **Style Guide Boilerplate** are custom styles for the boilerplate itself. These have all been prefixed with sg- so they hopefully shouldn't cause any conflicts with your website's own styles.
 
 Below the custom styles for the boilerplate, you will add in your own custom stylesheet(s) which you use on your live site.
 
-    <!-- Style Guide Boilerplate Styles -->
-    <link rel="stylesheet" href="css/sg-style.css">
+```html
+<!-- Style Guide Boilerplate Styles -->
+<link rel="stylesheet" href="css/sg-style.css">
 
-    <!-- Replace below stylesheet with your own stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-
+<!-- Replace below stylesheet with your own stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+```
 
 ### Review your live site CSS
 You should be able to go to `yoursite.com/style-guide/` and see how your live site's CSS affects base elements.
-The last step is creating your sites custom patterns/modules.
+The last step is creating your site's custom patterns/modules.
 
 ### Create custom patterns
 To create custom patterns like buttons, breadcrumbs, alert messages, etc., create a new .html file and add your HTML markup into the file.
@@ -54,7 +55,7 @@ For example, if you want to create doc for `markup/patterns/breadcrumbs.html`, c
 You should now be able to see the new doc at `yoursite.com/style-guide/`
 
 ## Running the app
-You can run the application with PHP's built in web server. Simply run the following command:
+You can run the application with PHP's built in web server. Run the following command:
 
 `php -S localhost:8000`
 
