@@ -7,7 +7,7 @@ A starting point for crafting living style guides.
 
 *Note: Sample patterns have been included in the demo. Your site will have its own unique patterns.*
 
-![Screenshot](http://bjankord.github.io/Style-Guide-Boilerplate/screenshot.png)
+![Screenshot](http://bjankord.github.io/Style-Guide-Boilerplate/images/screenshot.png)
 
 ## Getting Started With Style Guide Boilerplate
 
