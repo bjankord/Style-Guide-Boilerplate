@@ -1,3 +1,7 @@
+3.3.1 / 2018-10-6
+==================
+* Fixed broken padding values on navigation sidebar
+
 3.3.0 / 2015-12-24
 ==================
 
