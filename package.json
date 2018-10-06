@@ -1,6 +1,6 @@
 {
   "name": "style-guide-boilerplate",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "description": "A starting point for crafting living style guides.",
   "scripts": {
     "deploy": "gh-pages -d gh-pages",
