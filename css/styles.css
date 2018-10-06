@@ -9,7 +9,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 body {
   background:  #fff;
   color: #474747;
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "HelveticaNeue", "Helvetica", Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -54,11 +54,14 @@ blockquote {border-left: 4px solid #dddddd; padding: 0 1em;}
 blockquote > :first-child {margin-top: 0;}
 blockquote > :last-child {margin-bottom: 0;}
 
+img, svg, video, audio {
+  max-width: 100%;
+}
 
 /* Layout
 -------------------------------------------------------------- */
 .site-header {
-	background: url('../assets/site-header.jpg') no-repeat top center #196b91;
+	background: url('../images/site-header.jpg') no-repeat top center #196b91;
 	padding: 5em 0;
 	color: #fff;
 	text-align: center;
