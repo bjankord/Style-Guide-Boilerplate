@@ -3,11 +3,11 @@ Style-Guide-Boilerplate v3.3.0
 
 A starting point for crafting living style guides.
 
-[View Demo](http://brettjankord.com/projects/style-guide-boilerplate/)
+[View Demo](http://bjankord.github.io/Style-Guide-Boilerplate/demo.html)
 
 *Note: Sample patterns have been included in the demo. Your site will have its own unique patterns.*
 
-![Screenshot](http://brettjankord.com/projects/style-guide-boilerplate/style-guide-boilerplate-v3.0.0.jpg)
+![Screenshot](http://bjankord.github.io/Style-Guide-Boilerplate/screenshot.png)
 
 ## Getting Started With Style Guide Boilerplate
 
