@@ -69,6 +69,8 @@ You can generate a static index.html version of style guide boilerplate by runni
 ## Browser Support
 I've built **Style Guide Boilerplate** with progressive enhancement in mind to work on a wide range of browsers.
 
+
+
 Known supported browsers include:
 
 * Chrome
@@ -78,6 +80,10 @@ Known supported browsers include:
 * IE8+
 * Safari for iOS
 * Stock Android Browser (4.0+)
+
+Tested with [BrowserStack](https://www.browserstack.com/).
+
+[![BrowserStack](https://raw.githubusercontent.com/bjankord/Style-Guide-Boilerplate/master/browserstack-logo-600x315.png)](https://www.browserstack.com/)
 
 If you come across any bugs, or have any other issues with the boilerplate, please open an issue here on GitHub.
 
