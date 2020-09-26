@@ -160,6 +160,10 @@ img, svg, video, audio {
 	background: #218fc2;
 }
 
+.btn--cta-alt:hover {
+	background:#0f4c75;
+}
+
 
 
 /* Lists
