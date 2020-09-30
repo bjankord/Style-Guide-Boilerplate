@@ -38,7 +38,7 @@
       <h2 class="sg-h2 sg-subnav-title">About</h2>
       <ul class="sg-nav-group">
         <li>
-          <a href="#sg-about">Getting Started</a>
+          <a href="#sg-about">Let's Get Started</a>
         </li>
         <li>
           <a href="#sg-colors">Colors</a>
