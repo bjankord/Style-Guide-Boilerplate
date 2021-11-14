@@ -3,6 +3,7 @@
   "version": "3.3.2",
   "description": "A tool for crafting living style guides.",
   "scripts": {
+    "lint": "eslint --ext .js",
     "test": "echo \"Error: no test specified\"",
     "deploy": "gh-pages -d gh-pages",
     "release:major": "npm test && npm version major -m \"Released version %s\" && npm publish --access=public && git push --follow-tags",
@@ -24,11 +25,18 @@
   },
   "dependencies": {
     "escape-html": "^1.0.3",
+    "fs-extra": "^10.0.0",
+    "github-markdown-css": "^5.0.0",
     "marked": "^3.0.8",
+    "node-watch": "^0.7.2",
+    "prismjs": "^1.25.0",
     "resolve-from": "^5.0.0",
     "sanitize-html": "^2.5.3"
   },
   "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
     "gh-pages": "^2.0.1"
   }
 }

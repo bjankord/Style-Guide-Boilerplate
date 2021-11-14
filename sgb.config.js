@@ -1,4 +1,17 @@
 module.exports = {
-  styleGuidDir: '', // directory sgb will look in for markup/base, markup/patterns, docs/base, and docs/patterns
+  baseExamplesDir: 'style-guide-docs/markup/base',
+  baseDocsDir: 'style-guide-docs/docs/base',
+  patternsExamplesDir: 'style-guide-docs/markup/patterns',
+  patternsDocsDir: 'style-guide-docs/docs/patterns',
   buildDir: 'build', // generated directory that built files are written to
+  // title: 'My Custom Style Guide',
+  // lang: '',
+  // htmlClasses: '',
+  // viewport: null,
+  customHead: 'style-guide-docs/head.html',
+  // customFooter: 'style-guide-docs/footer.html',
+  customDocs: 'style-guide-docs/docs.html',
+  staticAssetsDirs: [
+    'style-guide-docs/css',
+  ],
 };
