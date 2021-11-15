@@ -24,10 +24,12 @@
     "sgb": "./index.js"
   },
   "dependencies": {
+    "chokidar": "^3.5.2",
     "escape-html": "^1.0.3",
     "fs-extra": "^10.0.0",
     "github-markdown-css": "^5.0.0",
     "marked": "^3.0.8",
+    "node-static": "^0.7.11",
     "node-watch": "^0.7.2",
     "prismjs": "^1.25.0",
     "resolve-from": "^5.0.0",

@@ -4,7 +4,7 @@ module.exports = {
   patternsExamplesDir: 'style-guide-docs/markup/patterns',
   patternsDocsDir: 'style-guide-docs/docs/patterns',
   buildDir: 'build', // generated directory that built files are written to
-  // title: 'My Custom Style Guide',
+  title: 'My Custom Style Guide',
   // lang: '',
   // htmlClasses: '',
   // viewport: null,
